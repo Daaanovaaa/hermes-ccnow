@@ -1,0 +1,87 @@
+# ============================================================
+# HERMES CC NOW! — .gitignore
+# Everything below stays OFF GitHub. No exceptions.
+# ============================================================
+
+# --- Credentials & API keys (never commit these) ---
+.env
+*.env
+.env.*
+!.env.example
+google_token.json
+google_client_secret.json
+*_secret.json
+*_credentials.json
+auth.json
+*.key
+*.pem
+
+# --- Plaid & bank tokens ---
+plaid_access_token.txt
+hermes_backup_plaid_*.env
+hermes_backup_paypal_*.yaml
+*_ACCESS_TOKEN*
+
+# --- Hermes internal state & sessions ---
+.hermes/
+hermes_backup_*.yaml
+hermes_backup_*.env
+gateway_state.json
+models_dev_cache.json
+channel_directory.json
+
+# --- Operational data (private / changes daily) ---
+automation/state.json
+automation/logs/
+accountability/memory_log.csv
+sales/
+store_sheet.csv
+sync_test.txt
+inboxes/
+
+# --- Activity logs ---
+*.log
+activity_*.log
+morning_activity_log.txt
+morning_activities_log.txt
+evening-plans.log
+
+# --- Draft files ---
+draft_*.txt
+*_email_body.txt
+*_full_email.txt
+nathan_*.txt
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+.venv/
+pip-log.txt
+.pytest_cache/
+
+# --- Node / npm ---
+node_modules/
+npm-debug.log*
+.npm/
+
+# --- OS files ---
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# --- IDE ---
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# --- Sensitive draft content ---
+prayer_ministries*.txt
+prayer_ministries*.json
