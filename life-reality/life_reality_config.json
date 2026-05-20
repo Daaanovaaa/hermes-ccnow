@@ -1,0 +1,102 @@
+{
+  "personal_context": {
+    "name": "Carlos DaNova Villanueva",
+    "location": "Puerto Rico west coast (Mayagüez / Hormigueros)",
+    "timezone": "America/Puerto_Rico",
+    "utc_offset_hours": -4,
+    "north_star": "El Pabellón de Victoria — Hormigueros, PR"
+  },
+
+  "life_circumstances": {
+    "housing": {
+      "type": "Section 8",
+      "authority": "Housing Authority of Puerto Rico",
+      "notes": "Annual recertification required. Keep all income documentation current. Contact authority at least 60 days before deadline."
+    },
+    "food_assistance": {
+      "type": "SNAP / Food Stamps",
+      "notes": "Recertification period varies. Check SNAP notice for exact date. Bring income verification and ID."
+    },
+    "health": {
+      "type": "Medicare",
+      "notes": "Annual Open Enrollment: October 15 – December 7. Review plan each October. Keep Medicare card accessible."
+    },
+    "transport": {
+      "type": "Vehicle owned",
+      "notes": "Puerto Rico marbete (registration) and insurance both require annual renewal. CESCO renewal — bring: inspection certificate, insurance proof, ID."
+    },
+    "financial_context": "Post-bankruptcy — building from ground up. Every dollar is intentional. No margin for surprises.",
+    "emergency_fund_status": "LOW MARGIN — flag any unexpected expense immediately",
+    "emergency_threshold_dollars": 50,
+    "emergency_protocol": "Any unplanned expense over $50: send Telegram alert, triage before spending."
+  },
+
+  "daily_schedule": {
+    "morning": {
+      "cron_fires_utc": "05:00",
+      "ast_equivalent": "01:00",
+      "block_label": "MORNING BLOCK (5AM–12PM AST)",
+      "check_asks_about": "Last night / current morning intentions",
+      "planned_tasks": [
+        "05:00–05:30 HONEY — Wake, coffee, high-protein breakfast",
+        "05:30–08:30 FUNNY — RAP WORK (airplane mode — no interruptions)",
+        "08:30–09:30 HONEY/SPIRIT — Planet Fitness (TESTING) or Devotional + Prayer"
+      ]
+    },
+    "afternoon": {
+      "cron_fires_utc": "12:00",
+      "ast_equivalent": "08:00",
+      "block_label": "AFTERNOON BLOCK (12PM–6PM AST)",
+      "check_asks_about": "Morning block completion",
+      "planned_tasks": [
+        "10:00–12:00 MONEY — CC NOW! Deep Work (content, product, output)",
+        "12:00–12:30 HONEY — Pescatarian Lunch",
+        "13:00–15:00 HERMES — Admin Batch (delegation window)",
+        "15:00–17:00 MONEY — Sales, marketing, outreach, revenue actions"
+      ]
+    },
+    "evening": {
+      "cron_fires_utc": "18:00",
+      "ast_equivalent": "14:00",
+      "block_label": "EVENING BLOCK (6PM–10PM AST)",
+      "check_asks_about": "Afternoon block completion",
+      "planned_tasks": [
+        "17:00–19:00 MONEY — Learning / Ministry / La Fortaleza PR magazine",
+        "21:00–21:30 HERMES — Next-Day Prep + Hermes debrief",
+        "21:30–22:00 HONEY — Honey Time / Wind-down"
+      ]
+    },
+    "night": {
+      "cron_fires_utc": "22:00",
+      "ast_equivalent": "18:00",
+      "block_label": "NIGHT BLOCK (10PM–5AM AST)",
+      "check_asks_about": "Evening block completion",
+      "planned_tasks": [
+        "Wind-down / sleep",
+        "Post-midnight creative session (FUNNY pillar — if energy permits)"
+      ]
+    }
+  },
+
+  "check_in_cron_ids": {
+    "morning":   "a7d8b530f9c2",
+    "afternoon": "df3bab3a3a16",
+    "evening":   "b8e24093c66b",
+    "night":     "6f3ce34d61f5"
+  },
+
+  "threshold_keywords": ["URGENT", "CRISIS", "PROJECT LANDED", "THRESHOLD"],
+
+  "telegram_target": "telegram",
+  "telegram_chat_id": "1401562511",
+
+  "adaptive_learner": {
+    "min_weeks_before_suggestions": 4,
+    "flag_threshold_completion_pct": 60,
+    "protected_blocks": [
+      "RAP WORK — airplane mode",
+      "The Gathering Church — Audio Engineer",
+      "The Gathering — Audio Engineer Rehearsal"
+    ]
+  }
+}
