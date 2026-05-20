@@ -1,33 +1,46 @@
 {
-  "_instructions": "Update due_date fields when you receive a renewal notice. Format: YYYY-MM-DD. Leave as YYYY-MM-DD if the date is not yet known — the tracker will skip unknown dates safely.",
+  "_instructions": "Update due_date fields when you receive a renewal notice. Format: YYYY-MM-DD. Leave as YYYY-MM-DD if the date is not yet known \u2014 the tracker will skip unknown dates safely.",
   "last_updated": "2026-05-20",
-
   "obligations": [
     {
       "id": "section8_recertification",
       "name": "Section 8 Annual Recertification",
       "category": "housing",
-      "due_date": "YYYY-MM-DD",
+      "due_date": "2027-05-10",
       "recurrence": "annual",
       "contact": "Housing Authority of Puerto Rico",
       "what_to_bring": "Income verification, lease agreement, government-issued ID, any changes in household composition",
       "notes": "Contact housing authority at least 60 days before due date. Missing this deadline can result in loss of housing assistance.",
-      "urgency": "CRITICAL — do not miss",
-      "alert_days": [30, 14, 7, 1],
-      "alert_sent": {}
+      "urgency": "CRITICAL \u2014 do not miss",
+      "alert_days": [
+        30,
+        14,
+        7,
+        1
+      ],
+      "alert_sent": {},
+      "last_completed": "2026-05-10",
+      "status": "COMPLETED"
     },
     {
       "id": "snap_recertification",
       "name": "SNAP / Food Stamps Recertification",
       "category": "food_assistance",
-      "due_date": "YYYY-MM-DD",
+      "due_date": "2027-05-07",
       "recurrence": "periodic",
       "contact": "ASES / Departamento de la Familia Puerto Rico",
       "what_to_bring": "Income verification, ID, proof of address, household information",
       "notes": "Recertification periods vary. Check your SNAP notice or call your caseworker for exact date. Missing this means a gap in food assistance.",
-      "urgency": "HIGH — affects food security",
-      "alert_days": [30, 14, 7, 1],
-      "alert_sent": {}
+      "urgency": "HIGH \u2014 affects food security",
+      "alert_days": [
+        30,
+        14,
+        7,
+        1
+      ],
+      "alert_sent": {},
+      "last_completed": "2026-05-07",
+      "status": "COMPLETED \u2014 documents submitted, awaiting counselor"
     },
     {
       "id": "medicare_open_enrollment",
@@ -37,9 +50,14 @@
       "recurrence": "annual",
       "contact": "Medicare.gov or 1-800-MEDICARE",
       "what_to_bring": "Medicare card, list of current medications, current plan information",
-      "notes": "Open Enrollment runs Oct 15 – Dec 7 every year. Review your plan each October — drug formularies and premiums change annually. Changes take effect January 1.",
-      "urgency": "IMPORTANT — annual window only",
-      "alert_days": [30, 14, 7, 1],
+      "notes": "Open Enrollment runs Oct 15 \u2013 Dec 7 every year. Review your plan each October \u2014 drug formularies and premiums change annually. Changes take effect January 1.",
+      "urgency": "IMPORTANT \u2014 annual window only",
+      "alert_days": [
+        30,
+        14,
+        7,
+        1
+      ],
       "alert_sent": {}
     },
     {
@@ -49,10 +67,15 @@
       "due_date": "YYYY-MM-DD",
       "recurrence": "annual",
       "contact": "CESCO Puerto Rico",
-      "what_to_bring": "Inspection certificate (marbete de inspección), insurance proof, ID, payment",
+      "what_to_bring": "Inspection certificate (marbete de inspecci\u00f3n), insurance proof, ID, payment",
       "notes": "Must have current vehicle inspection before renewing marbete. Cannot drive without valid registration in PR.",
       "urgency": "LEGAL REQUIREMENT",
-      "alert_days": [30, 14, 7, 1],
+      "alert_days": [
+        30,
+        14,
+        7,
+        1
+      ],
       "alert_sent": {}
     },
     {
@@ -63,9 +86,14 @@
       "recurrence": "annual",
       "contact": "Your insurance provider",
       "what_to_bring": "Current policy, payment method",
-      "notes": "Required for marbete renewal. Keep coverage continuous — lapse means unregisterable vehicle.",
+      "notes": "Required for marbete renewal. Keep coverage continuous \u2014 lapse means unregisterable vehicle.",
       "urgency": "LEGAL REQUIREMENT",
-      "alert_days": [30, 14, 7, 1],
+      "alert_days": [
+        30,
+        14,
+        7,
+        1
+      ],
       "alert_sent": {}
     }
   ]
