@@ -1,0 +1,89 @@
+{
+  "_description": "Document Vault — known categories and expected documents. Scanned from leeegaaal@gmail.com Google Drive. Update documents_confirmed when you upload a file.",
+  "last_scanned": null,
+  "profile": "leeegaaal",
+  "categories": {
+    "section8": {
+      "label": "Section 8 / Housing Assistance",
+      "drive_search_terms": ["section 8", "housing authority", "HUD", "HAP", "rental assistance", "recertification"],
+      "expected_documents": [
+        "Current lease agreement",
+        "HAP contract (Housing Assistance Payment)",
+        "Income verification letter",
+        "Annual recertification notice",
+        "Inspection pass certificate"
+      ],
+      "documents_confirmed": []
+    },
+    "snap_pan": {
+      "label": "SNAP / PAN / Food Assistance",
+      "drive_search_terms": ["SNAP", "PAN", "food stamps", "Departamento de la Familia", "ASES", "recertification"],
+      "expected_documents": [
+        "Current SNAP award letter",
+        "Recertification notice",
+        "Income verification submitted"
+      ],
+      "documents_confirmed": []
+    },
+    "medicare": {
+      "label": "Medicare",
+      "drive_search_terms": ["Medicare", "CMS", "Medicare card", "plan summary"],
+      "expected_documents": [
+        "Medicare card (copy)",
+        "Current plan information",
+        "Open enrollment confirmation"
+      ],
+      "documents_confirmed": []
+    },
+    "bankruptcy": {
+      "label": "Bankruptcy — Chapter 7",
+      "drive_search_terms": ["bankruptcy", "Chapter 7", "Marggie", "Rodriguez", "discharge", "petition", "creditor"],
+      "expected_documents": [
+        "Credit report — Experian",
+        "Credit report — Equifax",
+        "Credit report — TransUnion",
+        "Proof of income (last 6 months)",
+        "Complete creditor list",
+        "List of assets",
+        "Bank statements (last 3 months)",
+        "Tax returns (last 2 years)",
+        "Photo ID (copy)",
+        "Social Security card (copy)"
+      ],
+      "documents_confirmed": []
+    },
+    "credit_history": {
+      "label": "Credit History",
+      "drive_search_terms": ["credit report", "Experian", "Equifax", "TransUnion", "Continental Finance", "Surge", "Celtic Bank"],
+      "expected_documents": [
+        "Experian credit report",
+        "Equifax credit report",
+        "TransUnion credit report"
+      ],
+      "documents_confirmed": []
+    },
+    "vehicle": {
+      "label": "Vehicle — Registration & Insurance",
+      "drive_search_terms": ["marbete", "CESCO", "vehiculo", "vehicle", "seguro", "insurance", "inspeccion"],
+      "expected_documents": [
+        "Current marbete (registration)",
+        "Vehicle inspection certificate",
+        "Insurance policy card",
+        "Insurance policy document"
+      ],
+      "documents_confirmed": []
+    },
+    "legal_correspondence": {
+      "label": "Legal Correspondence",
+      "drive_search_terms": ["legal services", "attorney", "court", "tribunal", "Mayaguez", "demanda", "notificacion", "resolucion"],
+      "expected_documents": [
+        "Any court notices received",
+        "Attorney correspondence",
+        "Case filing documents"
+      ],
+      "documents_confirmed": []
+    }
+  },
+  "known_drive_files": {},
+  "last_alert_sent": null
+}

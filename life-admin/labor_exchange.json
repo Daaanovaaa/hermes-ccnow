@@ -1,0 +1,13 @@
+{
+  "_description": "Landlord Labor Exchange Log. Records labor/maintenance performed in exchange for rent consideration or as part of Section 8 inspection preparation. Each entry is an official record — be specific.",
+  "_telegram_command": "To add an entry, tell Hermes: 'Log labor: [description], [hours], [value], [Section8_inspection or general]'",
+  "last_updated": "2026-05-20",
+  "summary": {
+    "total_entries": 0,
+    "total_hours_carlos": 0.0,
+    "total_hours_landlord": 0.0,
+    "total_value_usd": 0.0,
+    "section8_related_entries": 0
+  },
+  "entries": []
+}
