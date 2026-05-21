@@ -67,6 +67,9 @@ KEYWORD_MAP = [
     (['landlord', 'labor', 'exchange', 'maintenance', 'repair', 'inspection prep'],
      'landlord_labor_exchange_log.md',
      'Landlord Labor Exchange'),
+    (['identity', 'license', 'id card', 'cesco', 'antecedentes', 'dtop id', 'real id', 'v451'],
+     'identity_PR_license_and_ID.md',
+     'PR Driver\'s License & ID Card'),
 ]
 
 LOG_ENTRIES_MARKER = '## LOG ENTRIES (newest first)'
