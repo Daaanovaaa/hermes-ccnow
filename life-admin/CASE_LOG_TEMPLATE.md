@@ -24,3 +24,12 @@ Date closed:
 Key documents:
 Lessons learned:
 God's provision:
+
+---
+
+## EVIDENCE LOG (CYA — Cover Your Assets)
+*Every document, email, screenshot, or proof that shows you acted, filed, responded, or won*
+
+| Date | Document | What it proves | Location |
+|------|----------|----------------|----------|
+| [date] | [filename] | [what it proves] | [Drive folder path] |

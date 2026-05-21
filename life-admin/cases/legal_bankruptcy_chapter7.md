@@ -82,3 +82,15 @@ Date closed:
 Key documents:
 Lessons learned:
 God's provision:
+
+---
+
+## EVIDENCE LOG (CYA — Cover Your Assets)
+*Every document, email, screenshot, or proof that shows you acted, filed, responded, or won*
+
+| Date | Document | What it proves | Location |
+|------|----------|----------------|----------|
+| 2026-01-19 | Marggie Rodriguez document list email | Proves attorney engagement and Chapter 7 intent | leeegaaal Gmail |
+| 2026-04-21 | Marggie Rodriguez reply email | Confirms she is available and responsive | leeegaaal Gmail |
+| 2026-05-21 | Outreach email sent to Marggie | Carlos confirmed Chapter 7 intent and requested pro bono consultation | leeegaaal Gmail sent |
+| 2026-05-14 to present | Halsted Financial emails | Documents active collection pressure — supports urgency of bankruptcy filing | leeegaaal Gmail |

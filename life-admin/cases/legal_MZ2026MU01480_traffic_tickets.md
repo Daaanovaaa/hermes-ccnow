@@ -48,3 +48,17 @@ Date closed: 2026-05-13 (ruling) / 2026-05-20 (resolution received)
 Key documents: OAT 960 petitions, Pastor Boucet letter, marbete proof, court resolution — all in leeegaaal Google Drive / LEGAL folder
 Lessons learned: Document everything. Show up. Tell your truth. A pro se petition with supporting letters and proof of correction can win against a simple violation.
 God's provision: The delayed work payments arrived exactly when needed to renew the marbete — the same day the tickets were issued. The provision was already in motion before the problem fully landed.
+
+---
+
+## EVIDENCE LOG (CYA — Cover Your Assets)
+*Every document, email, screenshot, or proof that shows you acted, filed, responded, or won*
+
+| Date | Document | What it proves | Location |
+|------|----------|----------------|----------|
+| 2026-05-09 | Petitions OAT 960 (x3) | Proves Carlos filed pro se appeals | leeegaaal Drive/LEGAL/MZ2026MU01480 |
+| 2026-05-09 | Support letter Pastor Hector Boucet | Character witness for appeal | leeegaaal Drive/LEGAL/MZ2026MU01480 |
+| 2026-05-09 | MalbeteAndInsuranceApril2026.pdf | Proves marbete renewed same day as tickets | leeegaaal Drive/LEGAL/MZ2026MU01480 |
+| 2026-05-13 | Court Resolution signed Judge Vazquez | Official ruling — all 3 tickets dismissed | leeegaaal Drive/LEGAL/MZ2026MU01480 |
+| 2026-05-20 | NOTIFICACIÓN DE RESOLUCIÓN email | Official court notification to Carlos and DTOP | leeegaaal Drive/LEGAL/MZ2026MU01480 |
+| 2026-05-20 | Case Summary Google Doc | Complete case narrative in English | leeegaaal Drive/LEGAL/MZ2026MU01480 |
