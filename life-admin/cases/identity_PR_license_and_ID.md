@@ -47,6 +47,13 @@ Standard CESCO Digital requirements:
 
 ## LOG ENTRIES (newest first)
 
+### 2026-05-21 — VitalChek Birth Certificate Ordered
+What happened: Ordered certified birth certificate via VitalChek. Order #221149859 | PIN: 192457. Paid $59.50 ($19 certificate + $15 VitalChek fee + $25.50 shipping). Processed by Illinois Dept. of Public Health. Expected arrival June 18–25, 2026 (20–25 business days). Documents saved to leeegaaal Google Drive / IDENTIFICATION & DRIVERS LICENSE folder.
+Next step: When certificate arrives, schedule CESCO appointment immediately.
+Documents added: VitalChek Order #221149859 receipt (leeegaaal Drive/IDENTIFICATION & DRIVERS LICENSE)
+Deadline: Certificate expected June 18–25, 2026. License expires September 16, 2026.
+
+
 ### 2026-05-21 — Case Opened
 What happened: Identified that Carlos has no PR ID card and driver's license expires Sep 16, 2026. Antecedentes retrieval blocked partly by lack of acceptable ID at police department.
 Next step: Gather residence proof documents and schedule CESCO appointment.
@@ -60,9 +67,10 @@ Deadline: September 16, 2026
 
 | Date | Document | What it proves | Location |
 |------|----------|----------------|----------|
-| on file | Birth certificate | Identity | leeegaaal Drive |
+| on file | Birth certificate (certified copy ordered) | Identity — certified copy arriving June 18–25 | leeegaaal Drive / IDENTIFICATION & DRIVERS LICENSE |
 | on file | SSI card | Social Security | leeegaaal Drive |
 | needed | Proof of residence x2 | PR address | gather |
+| 2026-05-21 | VitalChek Order #221149859 receipt | Proves certified birth certificate ordered and paid | leeegaaal Drive/IDENTIFICATION & DRIVERS LICENSE |
 | needed | CESCO appointment confirmation | ID renewal scheduled | TBD |
 
 ---
