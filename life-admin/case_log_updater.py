@@ -70,6 +70,17 @@ KEYWORD_MAP = [
     (['identity', 'license', 'id card', 'cesco', 'antecedentes', 'dtop id', 'real id', 'v451'],
      'identity_PR_license_and_ID.md',
      'PR Driver\'s License & ID Card'),
+    (['fafsa', 'student loan', 'studentaid', 'student debt', 'federal loan', 'brunner'],
+     'debt_fafsa_student_loan.md',
+     'FAFSA / Student Loan Debt'),
+
+    (['health', 'medical', 'appointment', 'medication', 'exercise', 'sleep', 'diet', 'mental health', 'prayer health', 'wellness'],
+     'health_log_carlos.md',
+     'Health Log'),
+
+    (['education', 'certification', 'ordination', 'degree', 'diploma', 'course', 'school', 'transcript'],
+     'education_certifications.md',
+     'Education & Certifications'),
 ]
 
 LOG_ENTRIES_MARKER = '## LOG ENTRIES (newest first)'

@@ -1,6 +1,6 @@
 # MASTER CASE INDEX — Hermes Life Admin Layer
 Last updated: 2026-05-21
-Total cases: 11 | Open: 9 | Closed: 1 | Unknown: 1
+Total cases: 14 | Open: 12 | Closed: 1 | Unknown: 1
 
 ---
 
@@ -17,6 +17,9 @@ Total cases: 11 | Open: 9 | Closed: 1 | Unknown: 1
 | 9 | Songtrust Royalties | OPEN | Business / Music | 2026-05-20 | Log into Songtrust — verify all music registered + PRO active | ASAP | `business_songtrust_royalties.md` |
 | 10 | Landlord Labor Exchange | OPEN | Housing / Legal | 2026-05-20 | Start logging past and current labor entries via Telegram | None | `landlord_labor_exchange_log.md` |
 | 11 | PR Driver's License & ID Card | **OPEN — URGENT** | Legal / Identity | 2026-05-21 | Gather proof of residence + schedule CESCO appointment | **2026-09-16** | `identity_PR_license_and_ID.md` |
+| 12 | FAFSA / Student Loan Debt | OPEN | Legal / Financial / Debt | 2026-05-21 | Log into studentaid.gov — find balance and servicer | Before bankruptcy consult | `debt_fafsa_student_loan.md` |
+| 13 | Health Log | OPEN | Health / Wellness | 2026-05-21 | Begin logging entries via Telegram: "Health log: [category] \| [entry]" | Ongoing | `health_log_carlos.md` |
+| 14 | Education & Certifications | OPEN | Education / Professional | 2026-05-21 | Gather diplomas, ordination docs, upload to leeegaaal Drive/EDUCATION | Before bankruptcy consult | `education_certifications.md` |
 
 ---
 
@@ -64,4 +67,4 @@ Example:
 
 Hermes matches the keyword to the correct file and prepends a new dated entry.
 
-Keywords: traffic/MZ2026 | section8/housing | snap/pan/food | bankruptcy/marggie/chapter7 | vehicle/marbete/JVL660 | civil/CC004806 | medicare | fulkrum/nathan/video | songtrust/music/royalty | landlord/labor/exchange | identity/license/ID/cesco/antecedentes
+Keywords: traffic/MZ2026 | section8/housing | snap/pan/food | bankruptcy/marggie/chapter7 | vehicle/marbete/JVL660 | civil/CC004806 | medicare | fulkrum/nathan/video | songtrust/music/royalty | landlord/labor/exchange | identity/license/ID/cesco/antecedentes | fafsa/student loan/studentaid | health/medical/exercise/sleep/diet | education/certification/ordination
