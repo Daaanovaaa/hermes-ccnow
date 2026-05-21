@@ -1,16 +1,20 @@
 #!/usr/bin/env python3
 """
 Life Admin Layer — Correspondence Tracker
-Monitors leeegaaal@gmail.com for emails matching life-admin keywords.
+Monitors TWO Gmail accounts for category-matched emails.
+
+  leeegaaal@gmail.com        — life-admin: housing, benefits, legal, bankruptcy
+  faaaithmusicmovies@gmail.com — opportunities: music, film, booking, licensing, collabs
+
 Sends immediate Telegram alerts on new matches.
-Sends weekly Monday 8 AM AST (12 UTC) summary of pending correspondence.
+Sends weekly Monday 8 AM AST (12 UTC) summary across both accounts.
 
 Runs:
-  Every 2 hours (hourly scan): python3 correspondence_tracker.py --scan
-  Monday 12 UTC (summary):     python3 correspondence_tracker.py --weekly
+  Every 2 hours (scan):   python3 correspondence_tracker.py --scan
+  Monday 12 UTC (weekly): python3 correspondence_tracker.py --weekly
 
 Output → stdout → Hermes no_agent Telegram delivery.
-Prints [SILENT] if nothing new.
+Prints [SILENT] if nothing new across either account.
 """
 
 import json
@@ -20,56 +24,101 @@ import sys
 from datetime import date, datetime, timezone
 from pathlib import Path
 
-ADMIN_DIR   = Path(__file__).parent
-STATE_FILE  = ADMIN_DIR / 'correspondence_state.json'
-GWS_SCRIPT  = Path('/root/.hermes/skills/productivity/google-workspace/scripts/google_api.py')
-LEEGAL_HOME = '/root/.hermes/profiles/leeegaaal'
+ADMIN_DIR      = Path(__file__).parent
+GWS_SCRIPT     = Path('/root/.hermes/skills/productivity/google-workspace/scripts/google_api.py')
 
-# Keywords that trigger alerts — case-insensitive search applied in Gmail
-KEYWORD_GROUPS = {
-    'Housing': ['Section 8', 'HUD', 'Housing Authority', 'HAP contract', 'housing assistance'],
-    'Food Assistance': ['SNAP', 'PAN', 'food stamps', 'Departamento de la Familia', 'ASES'],
-    'Healthcare': ['Medicare'],
-    'Legal / Bankruptcy': [
-        'bankruptcy', 'Chapter 7', 'Marggie', 'Rodriguez',
-        'legal services', 'tribunal', 'notificacion', 'resolucion'
-    ],
+# ── Account configs ────────────────────────────────────────────────────────────
+
+ACCOUNTS = {
+    'leeegaaal': {
+        'email':      'leeegaaal@gmail.com',
+        'home':       '/root/.hermes/profiles/leeegaaal',
+        'state_file': ADMIN_DIR / 'correspondence_state.json',
+        'label':      'LIFE ADMIN',
+        'keyword_groups': {
+            'Housing':          ['Section 8', 'HUD', 'Housing Authority', 'HAP contract', 'housing assistance'],
+            'Food Assistance':  ['SNAP', 'PAN', 'food stamps', 'Departamento de la Familia', 'ASES'],
+            'Healthcare':       ['Medicare'],
+            'Legal/Bankruptcy': [
+                'bankruptcy', 'Chapter 7', 'Marggie', 'Rodriguez',
+                'legal services', 'tribunal', 'notificacion', 'resolucion',
+            ],
+        },
+        'emoji': {
+            'Housing':          '🏠',
+            'Food Assistance':  '🍽️',
+            'Healthcare':       '⚕️',
+            'Legal/Bankruptcy': '⚖️',
+        },
+    },
+    'faaaithmusicmovies': {
+        'email':      'faaaithmusicmovies@gmail.com',
+        'home':       '/root/.hermes/profiles/faaaithmusicmovies',
+        'state_file': ADMIN_DIR / 'correspondence_state_faith.json',
+        'label':      'MUSIC & FILM',
+        'keyword_groups': {
+            'Music Opportunity': [
+                'booking', 'book you', 'performance', 'show', 'concert', 'gig',
+                'feature', 'collab', 'collaboration', 'remix', 'verse', 'feature request',
+                'record label', 'label deal', 'A&R', 'distribution deal', 'DistroKid',
+                'Spotify', 'Apple Music', 'playlist', 'curator',
+            ],
+            'Film / Media':      [
+                'film', 'movie', 'documentary', 'soundtrack', 'score', 'sync',
+                'TV', 'television', 'Netflix', 'Amazon Prime', 'Hulu', 'streaming deal',
+                'music video', 'director', 'producer', 'casting',
+            ],
+            'Licensing':         [
+                'license', 'licensing', 'sync license', 'master rights', 'publishing rights',
+                'royalty', 'royalties', 'ASCAP', 'BMI', 'PRO', 'Songtrust',
+                'mechanical', 'performance rights',
+            ],
+            'Press / Media':     [
+                'interview', 'press', 'feature story', 'article', 'podcast', 'blog',
+                'magazine', 'journalist', 'writer', 'review', 'premiere',
+            ],
+            'Business':          [
+                'sponsorship', 'sponsor', 'partnership', 'brand deal', 'endorsement',
+                'investment', 'investor', 'funding', 'grant', 'pitch',
+            ],
+        },
+        'emoji': {
+            'Music Opportunity': '🎵',
+            'Film / Media':      '🎬',
+            'Licensing':         '📜',
+            'Press / Media':     '📰',
+            'Business':          '🤝',
+        },
+    },
 }
 
-# Gmail search query covering all keywords (OR logic)
-ALL_KEYWORDS = [kw for group in KEYWORD_GROUPS.values() for kw in group]
+# ── Helpers ────────────────────────────────────────────────────────────────────
 
-# Category emoji map
-CATEGORY_EMOJI = {
-    'Housing': '🏠',
-    'Food Assistance': '🍽️',
-    'Healthcare': '⚕️',
-    'Legal / Bankruptcy': '⚖️',
-}
-
-
-def load_state():
-    if STATE_FILE.exists():
-        with open(STATE_FILE) as f:
+def load_state(account_key):
+    state_file = ACCOUNTS[account_key]['state_file']
+    if state_file.exists():
+        with open(state_file) as f:
             return json.load(f)
     return {
-        'last_scanned': None,
+        'account':          account_key,
+        'last_scanned':     None,
         'seen_message_ids': [],
-        'pending_reply': [],
+        'pending_reply':    [],
         'last_weekly_summary': None,
     }
 
 
-def save_state(state):
+def save_state(account_key, state):
+    state_file = ACCOUNTS[account_key]['state_file']
     state['last_scanned'] = date.today().isoformat()
-    with open(STATE_FILE, 'w') as f:
+    with open(state_file, 'w') as f:
         json.dump(state, f, indent=2)
 
 
-def gws(args, timeout=30):
-    """Call google_api.py with leeegaaal profile."""
+def gws(account_key, args, timeout=30):
+    """Call google_api.py with the given account's profile."""
     env = os.environ.copy()
-    env['HERMES_HOME'] = LEEGAL_HOME
+    env['HERMES_HOME'] = ACCOUNTS[account_key]['home']
     try:
         result = subprocess.run(
             [sys.executable, str(GWS_SCRIPT)] + args,
@@ -82,171 +131,211 @@ def gws(args, timeout=30):
     return None
 
 
-def build_gmail_query():
-    """Build a Gmail search query matching any keyword."""
-    # Wrap multi-word terms in quotes, join with OR
-    terms = []
-    for kw in ALL_KEYWORDS:
-        if ' ' in kw:
-            terms.append(f'"{kw}"')
-        else:
-            terms.append(kw)
+def build_query(account_key):
+    """Build a Gmail OR search query from all keywords for this account."""
+    all_kws = [
+        kw
+        for group in ACCOUNTS[account_key]['keyword_groups'].values()
+        for kw in group
+    ]
+    terms = [f'"{kw}"' if ' ' in kw else kw for kw in all_kws]
     return ' OR '.join(terms)
 
 
-def categorize_message(msg):
-    """Return the first matching category for a message."""
-    subject = (msg.get('subject') or '').lower()
-    sender  = (msg.get('from') or '').lower()
-    snippet = (msg.get('snippet') or '').lower()
-    text    = f"{subject} {sender} {snippet}"
-
-    for category, keywords in KEYWORD_GROUPS.items():
+def categorize(account_key, msg):
+    """Return the first matching category label for this message."""
+    text = ' '.join([
+        (msg.get('subject') or ''),
+        (msg.get('from') or ''),
+        (msg.get('snippet') or ''),
+    ]).lower()
+    for category, keywords in ACCOUNTS[account_key]['keyword_groups'].items():
         for kw in keywords:
             if kw.lower() in text:
                 return category
     return 'Uncategorized'
 
 
-def format_new_alert(new_messages):
-    lines = [
-        'CORRESPONDENCE ALERT — leeegaaal@gmail.com',
-        f'Date: {datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")}',
-        '─' * 38,
-        '',
-    ]
+# ── Scan ───────────────────────────────────────────────────────────────────────
+
+def scan_account(account_key):
+    """
+    Scan one account for new keyword-matched messages.
+    Returns list of new message dicts (with 'account' and 'category' added).
+    Updates state file in place.
+    """
+    state = load_state(account_key)
+    seen  = set(state.get('seen_message_ids', []))
+
+    results = gws(account_key, ['gmail', 'search', build_query(account_key), '--max', '50'])
+    if results is None:
+        return []
+
+    new_messages = []
+    for msg in results:
+        mid = msg.get('id', '')
+        if not mid or mid in seen:
+            continue
+        seen.add(mid)
+        cat = categorize(account_key, msg)
+        enriched = {**msg, 'account': account_key, 'category': cat,
+                    'first_seen': date.today().isoformat()}
+        new_messages.append(enriched)
+
+        pending_ids = {m.get('id') for m in state.get('pending_reply', [])}
+        if mid not in pending_ids:
+            state.setdefault('pending_reply', []).append({
+                'id':         mid,
+                'subject':    msg.get('subject', '(no subject)'),
+                'from':       msg.get('from', '?'),
+                'date':       msg.get('date', '?'),
+                'category':   cat,
+                'account':    account_key,
+                'first_seen': date.today().isoformat(),
+                'replied':    False,
+            })
+
+    state['seen_message_ids'] = list(seen)
+    save_state(account_key, state)
+    return new_messages
+
+
+# ── Format ─────────────────────────────────────────────────────────────────────
+
+def format_alert(new_messages):
+    """Format a combined alert for new messages across any accounts."""
+    now = datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M UTC')
+    lines = [f'CORRESPONDENCE ALERT — {now}', '─' * 40, '']
+
+    # Group by account for clean display
+    by_account = {}
     for msg in new_messages:
-        cat   = categorize_message(msg)
-        emoji = CATEGORY_EMOJI.get(cat, '📧')
-        lines += [
-            f'{emoji} {cat.upper()}',
-            f'From:    {msg.get("from", "?")}',
-            f'Subject: {msg.get("subject", "(no subject)")}',
-            f'Date:    {msg.get("date", "?")[:25]}',
-            '',
-        ]
-    lines += [
-        'Action: Review leeegaaal@gmail.com and reply if needed.',
-        'Tell Hermes to mark as replied when done.',
-    ]
+        by_account.setdefault(msg['account'], []).append(msg)
+
+    for acct_key, msgs in by_account.items():
+        acct    = ACCOUNTS[acct_key]
+        emoji_map = acct['emoji']
+        lines.append(f"📬 {acct['label']} — {acct['email']} ({len(msgs)} new)")
+        lines.append('')
+        for msg in msgs:
+            cat   = msg.get('category', 'Uncategorized')
+            emoji = emoji_map.get(cat, '📧')
+            lines += [
+                f'{emoji} {cat.upper()}',
+                f'From:    {msg.get("from", "?")}',
+                f'Subject: {msg.get("subject", "(no subject)")}',
+                f'Date:    {msg.get("date", "?")[:25]}',
+                '',
+            ]
+
+    lines.append('Review and reply as needed. Tell Hermes "mark [subject] as replied" to clear.')
     return '\n'.join(lines)
 
 
-def format_weekly_summary(pending, state):
+def format_weekly(states_and_pendings):
+    """Format weekly summary across all accounts."""
     today = date.today().isoformat()
     lines = [
-        'WEEKLY CORRESPONDENCE SUMMARY — leeegaaal@gmail.com',
+        'WEEKLY CORRESPONDENCE SUMMARY',
         f'Week ending: {today}',
-        '─' * 40,
+        '═' * 42,
         '',
     ]
 
-    if not pending:
-        lines += [
-            '✓ No pending correspondence in tracked categories.',
-            '',
-            'Monitored categories:',
-        ]
-        for cat, emoji in CATEGORY_EMOJI.items():
-            lines.append(f'  {emoji} {cat}')
-        return '\n'.join(lines)
+    any_pending = False
+    for acct_key, pending in states_and_pendings:
+        acct      = ACCOUNTS[acct_key]
+        emoji_map = acct['emoji']
+        lines.append(f"── {acct['label']} ({acct['email']}) ──")
 
-    # Group by category
-    by_cat = {}
-    for msg in pending:
-        cat = msg.get('category', categorize_message(msg))
-        by_cat.setdefault(cat, []).append(msg)
+        if not pending:
+            lines.append('  ✓ No pending correspondence.')
+            lines.append('')
+            continue
 
-    lines.append(f'PENDING CORRESPONDENCE ({len(pending)} items):')
-    lines.append('')
-    for cat, msgs in sorted(by_cat.items()):
-        emoji = CATEGORY_EMOJI.get(cat, '📧')
-        lines.append(f'{emoji} {cat} ({len(msgs)} message{"s" if len(msgs) != 1 else ""})')
-        for msg in msgs[:5]:
-            subj = msg.get('subject', '(no subject)')[:55]
-            sndr = msg.get('from', '?')[:30]
-            lines.append(f'   • {subj}')
-            lines.append(f'     from: {sndr}')
-        if len(msgs) > 5:
-            lines.append(f'   ... and {len(msgs) - 5} more')
+        any_pending = True
+        by_cat = {}
+        for msg in pending:
+            cat = msg.get('category', categorize(acct_key, msg))
+            by_cat.setdefault(cat, []).append(msg)
+
+        lines.append(f'  Pending: {len(pending)} message(s)')
         lines.append('')
+        for cat, msgs in sorted(by_cat.items()):
+            emoji = emoji_map.get(cat, '📧')
+            lines.append(f'  {emoji} {cat} ({len(msgs)})')
+            for msg in msgs[:4]:
+                lines.append(f'     • {msg.get("subject","(no subject)")[:55]}')
+                lines.append(f'       from: {msg.get("from","?")[:35]}')
+            if len(msgs) > 4:
+                lines.append(f'     ... and {len(msgs) - 4} more')
+            lines.append('')
 
     lines += [
-        '─' * 40,
-        'Review each item and reply or file as resolved.',
+        '─' * 42,
         'Tell Hermes "mark [subject] as replied" to clear from pending.',
     ]
     return '\n'.join(lines)
 
 
+# ── Commands ───────────────────────────────────────────────────────────────────
+
 def cmd_scan():
-    """Scan Gmail for new matching messages. Alert on new ones."""
-    state = load_state()
-    seen  = set(state.get('seen_message_ids', []))
+    """Scan both accounts. Alert if any new messages found."""
+    all_new = []
+    for acct_key in ACCOUNTS:
+        all_new.extend(scan_account(acct_key))
 
-    query   = build_gmail_query()
-    results = gws(['gmail', 'search', query, '--max', '50'])
-
-    if results is None:
-        # Gmail unreachable — suppress silently
+    if not all_new:
         print('[SILENT]')
         return
 
-    new_messages = []
-    for msg in results:
-        mid = msg.get('id', '')
-        if mid and mid not in seen:
-            seen.add(mid)
-            cat = categorize_message(msg)
-            new_messages.append({**msg, 'category': cat, 'first_seen': date.today().isoformat()})
-            # Add to pending_reply if not already there
-            pending_ids = {m.get('id') for m in state.get('pending_reply', [])}
-            if mid not in pending_ids:
-                state.setdefault('pending_reply', []).append({
-                    'id':         mid,
-                    'subject':    msg.get('subject', '(no subject)'),
-                    'from':       msg.get('from', '?'),
-                    'date':       msg.get('date', '?'),
-                    'category':   cat,
-                    'first_seen': date.today().isoformat(),
-                    'replied':    False,
-                })
-
-    state['seen_message_ids'] = list(seen)
-    save_state(state)
-
-    if not new_messages:
-        print('[SILENT]')
-        return
-
-    print(format_new_alert(new_messages))
+    print(format_alert(all_new))
 
 
 def cmd_weekly():
-    """Print weekly summary of pending correspondence."""
-    state   = load_state()
-    pending = [m for m in state.get('pending_reply', []) if not m.get('replied')]
+    """Print weekly summary across both accounts."""
+    pairs = []
+    for acct_key in ACCOUNTS:
+        state   = load_state(acct_key)
+        pending = [m for m in state.get('pending_reply', []) if not m.get('replied')]
+        state['last_weekly_summary'] = date.today().isoformat()
+        save_state(acct_key, state)
+        pairs.append((acct_key, pending))
 
-    state['last_weekly_summary'] = date.today().isoformat()
-    save_state(state)
-
-    print(format_weekly_summary(pending, state))
+    print(format_weekly(pairs))
 
 
 def cmd_mark_replied(subject_fragment):
-    """Mark messages matching subject fragment as replied."""
-    state   = load_state()
-    matched = 0
-    for msg in state.get('pending_reply', []):
-        if subject_fragment.lower() in msg.get('subject', '').lower():
-            msg['replied']     = True
-            msg['replied_date'] = date.today().isoformat()
-            matched += 1
-    save_state(state)
-    if matched:
-        print(f'Marked {matched} message(s) as replied.')
+    """Mark matching messages as replied in both account state files."""
+    total = 0
+    for acct_key in ACCOUNTS:
+        state   = load_state(acct_key)
+        matched = 0
+        for msg in state.get('pending_reply', []):
+            if subject_fragment.lower() in msg.get('subject', '').lower():
+                msg['replied']      = True
+                msg['replied_date'] = date.today().isoformat()
+                matched += 1
+        if matched:
+            save_state(acct_key, state)
+            total += matched
+    if total:
+        print(f'Marked {total} message(s) as replied.')
     else:
         print(f'No pending messages matched: "{subject_fragment}"')
+
+
+def cmd_status():
+    """Print one-line status for both accounts."""
+    for acct_key in ACCOUNTS:
+        acct    = ACCOUNTS[acct_key]
+        state   = load_state(acct_key)
+        pending = [m for m in state.get('pending_reply', []) if not m.get('replied')]
+        print(f"{acct['email']}")
+        print(f"  Pending reply: {len(pending)} | "
+              f"Total seen: {len(state.get('seen_message_ids',[]))} | "
+              f"Last scanned: {state.get('last_scanned','never')}")
 
 
 def main():
@@ -263,11 +352,7 @@ def main():
         else:
             print('Usage: correspondence_tracker.py --mark-replied "subject fragment"')
     elif '--status' in args:
-        state = load_state()
-        pending = [m for m in state.get('pending_reply', []) if not m.get('replied')]
-        print(f'Pending reply: {len(pending)} messages')
-        print(f'Total seen:    {len(state.get("seen_message_ids", []))} messages')
-        print(f'Last scanned:  {state.get("last_scanned", "never")}')
+        cmd_status()
     else:
         print(__doc__)
 
