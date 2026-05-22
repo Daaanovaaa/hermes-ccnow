@@ -1,6 +1,6 @@
 {
   "_instructions": "Update due_date fields when you receive a renewal notice. Format: YYYY-MM-DD. Leave as YYYY-MM-DD if the date is not yet known \u2014 the tracker will skip unknown dates safely.",
-  "last_updated": "2026-05-20",
+  "last_updated": "2026-05-22",
   "obligations": [
     {
       "id": "section8_recertification",
@@ -95,6 +95,43 @@
         1
       ],
       "alert_sent": {}
+    },
+    {
+      "id": "driver_license_renewal",
+      "name": "Driver License Renewal (V451-100-75-336-0)",
+      "category": "identity",
+      "due_date": "2026-09-16",
+      "recurrence": "annual",
+      "contact": "CESCO Puerto Rico \u2014 cescodigital.pr.gov | (787) 793-1000",
+      "what_to_bring": "Current license, proof of residence x2, Social Security card",
+      "notes": "Renew license AND apply for PR ID card in same CESCO visit. VitalChek birth certificate arriving June 18-25 is needed for PR ID card.",
+      "urgency": "LEGAL REQUIREMENT",
+      "alert_days": [
+        30,
+        14,
+        7,
+        1
+      ],
+      "alert_sent": {},
+      "last_completed": null,
+      "status": "OPEN \u2014 awaiting VitalChek birth certificate (arriving June 18-25)"
+    },
+    {
+      "id": "vitalchek_birth_certificate",
+      "name": "VitalChek Birth Certificate Arrival",
+      "category": "identity",
+      "due_date": "2026-06-25",
+      "recurrence": "one-time",
+      "contact": "VitalChek \u2014 Order #221149859 | Illinois Dept. of Public Health",
+      "what_to_bring": "N/A \u2014 delivery to mailbox",
+      "notes": "Ordered 2026-05-21. Expected arrival June 18-25. When it arrives, go to CESCO immediately. Hermes reminder set for June 18.",
+      "urgency": "HIGH \u2014 blocks PR ID card application",
+      "alert_days": [
+        1
+      ],
+      "alert_sent": {},
+      "last_completed": null,
+      "status": "ORDERED \u2014 awaiting delivery"
     }
   ]
 }

@@ -1,0 +1,46 @@
+{
+  "goal": 10000,
+  "current_subscribers": 0,
+  "monthly_target": 500,
+  "platform": "Substack",
+  "substack_url": "https://substack.com/@dominaloconcristo",
+  "tiers": {
+    "free": {
+      "name": "Conscious Culture Reader",
+      "price": 0,
+      "benefits": [
+        "La Fortaleza PR USA magazine issues",
+        "CCN blog posts and ministry updates",
+        "YouTube content notifications",
+        "Weekly Conscious Culture devotional"
+      ]
+    },
+    "paid": {
+      "name": "RACE(2)10k Member",
+      "price": 1.00,
+      "plus_fee": true,
+      "benefits": [
+        "Full magazine archive access",
+        "Exclusive ministry teaching content",
+        "Priority access to virtual concerts",
+        "Member prayer network",
+        "Direct message access to Pastor DaNova",
+        "Monthly member-only video teaching"
+      ]
+    },
+    "event": {
+      "name": "Virtual Concert Ticket",
+      "price": 25.00,
+      "benefits": [
+        "Live virtual concert access",
+        "Post-concert replay for 48 hours",
+        "Digital program booklet"
+      ]
+    }
+  },
+  "scaling": {
+    "phase_1": "RACE(2)10k — 0 to 10,000",
+    "phase_2": "RACE(2)100k — 10,000 to 100,000",
+    "phase_3": "RACE(2)1M — 100,000 to 1,000,000"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "weekly_budget": 1.00,
+  "platform": "Fidelity",
+  "prayer_verse": "Mark 4:26-29",
+  "pw_id_format": "ticker-YYYYMMDD",
+  "filters": {
+    "max_price": 20.00,
+    "fractional_eligible": true,
+    "preferred_sectors": ["technology", "healthcare", "media", "faith"],
+    "platform_accessible": "Fidelity"
+  },
+  "scoring_weights": {
+    "stability": 0.25,
+    "mission_alignment": 0.25,
+    "fractional_availability": 0.20,
+    "momentum": 0.30
+  }
+}

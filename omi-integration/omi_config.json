@@ -1,0 +1,22 @@
+{
+  "webhook_port": 5007,
+  "webhook_host": "0.0.0.0",
+  "email_source": "faaaithmusicmovies@gmail.com",
+  "omi_email_sender": "transcripts@omiapp.ai",
+  "route_to_telegram": true,
+  "route_to_obsidian": true,
+  "route_to_case_logs": true,
+  "raw_transcript_dir": "/root/hermes-ccnow/omi-integration/raw",
+  "obsidian_output_dir": "/root/hermes-ccnow/obsidian-vault/08-Omi-Transcripts",
+  "case_log_keywords": {
+    "section8": ["section 8", "housing", "elizabeth", "recertification"],
+    "bankruptcy": ["marggie", "bankruptcy", "chapter 7", "debt", "halsted"],
+    "identity": ["cesco", "license", "birth certificate", "vitalchek", "id card"],
+    "health": ["doctor", "medication", "exercise", "gym", "planet fitness"],
+    "snap": ["snap", "pan", "food stamps"],
+    "vehicle": ["marbete", "car", "vehicle", "jvl660"]
+  },
+  "action_keywords": ["i need to", "i should", "remind me", "don't forget", "follow up", "call", "email", "schedule"],
+  "ministry_keywords": ["sermon", "teaching", "song", "lyric", "content", "post", "record", "write"],
+  "business_keywords": ["contact", "opportunity", "deal", "partnership", "collaboration", "meeting"]
+}
