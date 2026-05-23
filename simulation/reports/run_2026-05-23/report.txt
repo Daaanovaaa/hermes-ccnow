@@ -1,6 +1,6 @@
 HERMES SIMULATION RUN
 Run date:        2026-05-23
-Sim days:        7
+Sim days:        30
 HERMES_HOME:     /root/hermes-sim/
 Modules loaded:  4
 Module filter:   none (all)
@@ -116,12 +116,377 @@ Module filter:   none (all)
     Scenario 'missed_obligations_warning': PASS
     Scenario 'crisis_keyword_trigger': PASS
 
+  [2026-05-30] MODULE: budget_monitor  schedule=daily
+    Scenario 'healthy': PASS
+    Scenario 'watch_low_buffer': PASS
+    Scenario 'alert_emergency_floor': PASS
+
+  [2026-05-30] MODULE: obligations_tracker  schedule=daily
+    Scenario 'all_clear_silent': PASS
+    Scenario 'threshold_7day_alert': PASS
+    Scenario 'overdue_critical': PASS
+
+  [2026-05-30] MODULE: prayer_finance_engine  schedule=weekly
+    Scenario 'strong_ipo_candidates': PASS
+    Scenario 'no_ipo_hold_seed': PASS
+    Scenario 'seed_confirmed': PASS
+
+  [2026-05-30] MODULE: reality_checkin  schedule=daily
+    Scenario 'normal': PASS
+    Scenario 'missed_obligations_warning': PASS
+    Scenario 'crisis_keyword_trigger': PASS
+
+  [2026-05-31] MODULE: budget_monitor  schedule=daily
+    Scenario 'healthy': PASS
+    Scenario 'watch_low_buffer': PASS
+    Scenario 'alert_emergency_floor': PASS
+
+  [2026-05-31] MODULE: obligations_tracker  schedule=daily
+    Scenario 'all_clear_silent': PASS
+    Scenario 'threshold_7day_alert': PASS
+    Scenario 'overdue_critical': PASS
+
+  [2026-05-31] MODULE: reality_checkin  schedule=daily
+    Scenario 'normal': PASS
+    Scenario 'missed_obligations_warning': PASS
+    Scenario 'crisis_keyword_trigger': PASS
+
+  [2026-06-01] MODULE: budget_monitor  schedule=daily
+    Scenario 'healthy': PASS
+    Scenario 'watch_low_buffer': PASS
+    Scenario 'alert_emergency_floor': PASS
+
+  [2026-06-01] MODULE: obligations_tracker  schedule=daily
+    Scenario 'all_clear_silent': PASS
+    Scenario 'threshold_7day_alert': PASS
+    Scenario 'overdue_critical': PASS
+
+  [2026-06-01] MODULE: reality_checkin  schedule=daily
+    Scenario 'normal': PASS
+    Scenario 'missed_obligations_warning': PASS
+    Scenario 'crisis_keyword_trigger': PASS
+
+  [2026-06-02] MODULE: budget_monitor  schedule=daily
+    Scenario 'healthy': PASS
+    Scenario 'watch_low_buffer': PASS
+    Scenario 'alert_emergency_floor': PASS
+
+  [2026-06-02] MODULE: obligations_tracker  schedule=daily
+    Scenario 'all_clear_silent': PASS
+    Scenario 'threshold_7day_alert': PASS
+    Scenario 'overdue_critical': PASS
+
+  [2026-06-02] MODULE: reality_checkin  schedule=daily
+    Scenario 'normal': PASS
+    Scenario 'missed_obligations_warning': PASS
+    Scenario 'crisis_keyword_trigger': PASS
+
+  [2026-06-03] MODULE: budget_monitor  schedule=daily
+    Scenario 'healthy': PASS
+    Scenario 'watch_low_buffer': PASS
+    Scenario 'alert_emergency_floor': PASS
+
+  [2026-06-03] MODULE: obligations_tracker  schedule=daily
+    Scenario 'all_clear_silent': PASS
+    Scenario 'threshold_7day_alert': PASS
+    Scenario 'overdue_critical': PASS
+
+  [2026-06-03] MODULE: reality_checkin  schedule=daily
+    Scenario 'normal': PASS
+    Scenario 'missed_obligations_warning': PASS
+    Scenario 'crisis_keyword_trigger': PASS
+
+  [2026-06-04] MODULE: budget_monitor  schedule=daily
+    Scenario 'healthy': PASS
+    Scenario 'watch_low_buffer': PASS
+    Scenario 'alert_emergency_floor': PASS
+
+  [2026-06-04] MODULE: obligations_tracker  schedule=daily
+    Scenario 'all_clear_silent': PASS
+    Scenario 'threshold_7day_alert': PASS
+    Scenario 'overdue_critical': PASS
+
+  [2026-06-04] MODULE: reality_checkin  schedule=daily
+    Scenario 'normal': PASS
+    Scenario 'missed_obligations_warning': PASS
+    Scenario 'crisis_keyword_trigger': PASS
+
+  [2026-06-05] MODULE: budget_monitor  schedule=daily
+    Scenario 'healthy': PASS
+    Scenario 'watch_low_buffer': PASS
+    Scenario 'alert_emergency_floor': PASS
+
+  [2026-06-05] MODULE: obligations_tracker  schedule=daily
+    Scenario 'all_clear_silent': PASS
+    Scenario 'threshold_7day_alert': PASS
+    Scenario 'overdue_critical': PASS
+
+  [2026-06-05] MODULE: reality_checkin  schedule=daily
+    Scenario 'normal': PASS
+    Scenario 'missed_obligations_warning': PASS
+    Scenario 'crisis_keyword_trigger': PASS
+
+  [2026-06-06] MODULE: budget_monitor  schedule=daily
+    Scenario 'healthy': PASS
+    Scenario 'watch_low_buffer': PASS
+    Scenario 'alert_emergency_floor': PASS
+
+  [2026-06-06] MODULE: obligations_tracker  schedule=daily
+    Scenario 'all_clear_silent': PASS
+    Scenario 'threshold_7day_alert': PASS
+    Scenario 'overdue_critical': PASS
+
+  [2026-06-06] MODULE: prayer_finance_engine  schedule=weekly
+    Scenario 'strong_ipo_candidates': PASS
+    Scenario 'no_ipo_hold_seed': PASS
+    Scenario 'seed_confirmed': PASS
+
+  [2026-06-06] MODULE: reality_checkin  schedule=daily
+    Scenario 'normal': PASS
+    Scenario 'missed_obligations_warning': PASS
+    Scenario 'crisis_keyword_trigger': PASS
+
+  [2026-06-07] MODULE: budget_monitor  schedule=daily
+    Scenario 'healthy': PASS
+    Scenario 'watch_low_buffer': PASS
+    Scenario 'alert_emergency_floor': PASS
+
+  [2026-06-07] MODULE: obligations_tracker  schedule=daily
+    Scenario 'all_clear_silent': PASS
+    Scenario 'threshold_7day_alert': PASS
+    Scenario 'overdue_critical': PASS
+
+  [2026-06-07] MODULE: reality_checkin  schedule=daily
+    Scenario 'normal': PASS
+    Scenario 'missed_obligations_warning': PASS
+    Scenario 'crisis_keyword_trigger': PASS
+
+  [2026-06-08] MODULE: budget_monitor  schedule=daily
+    Scenario 'healthy': PASS
+    Scenario 'watch_low_buffer': PASS
+    Scenario 'alert_emergency_floor': PASS
+
+  [2026-06-08] MODULE: obligations_tracker  schedule=daily
+    Scenario 'all_clear_silent': PASS
+    Scenario 'threshold_7day_alert': PASS
+    Scenario 'overdue_critical': PASS
+
+  [2026-06-08] MODULE: reality_checkin  schedule=daily
+    Scenario 'normal': PASS
+    Scenario 'missed_obligations_warning': PASS
+    Scenario 'crisis_keyword_trigger': PASS
+
+  [2026-06-09] MODULE: budget_monitor  schedule=daily
+    Scenario 'healthy': PASS
+    Scenario 'watch_low_buffer': PASS
+    Scenario 'alert_emergency_floor': PASS
+
+  [2026-06-09] MODULE: obligations_tracker  schedule=daily
+    Scenario 'all_clear_silent': PASS
+    Scenario 'threshold_7day_alert': PASS
+    Scenario 'overdue_critical': PASS
+
+  [2026-06-09] MODULE: reality_checkin  schedule=daily
+    Scenario 'normal': PASS
+    Scenario 'missed_obligations_warning': PASS
+    Scenario 'crisis_keyword_trigger': PASS
+
+  [2026-06-10] MODULE: budget_monitor  schedule=daily
+    Scenario 'healthy': PASS
+    Scenario 'watch_low_buffer': PASS
+    Scenario 'alert_emergency_floor': PASS
+
+  [2026-06-10] MODULE: obligations_tracker  schedule=daily
+    Scenario 'all_clear_silent': PASS
+    Scenario 'threshold_7day_alert': PASS
+    Scenario 'overdue_critical': PASS
+
+  [2026-06-10] MODULE: reality_checkin  schedule=daily
+    Scenario 'normal': PASS
+    Scenario 'missed_obligations_warning': PASS
+    Scenario 'crisis_keyword_trigger': PASS
+
+  [2026-06-11] MODULE: budget_monitor  schedule=daily
+    Scenario 'healthy': PASS
+    Scenario 'watch_low_buffer': PASS
+    Scenario 'alert_emergency_floor': PASS
+
+  [2026-06-11] MODULE: obligations_tracker  schedule=daily
+    Scenario 'all_clear_silent': PASS
+    Scenario 'threshold_7day_alert': PASS
+    Scenario 'overdue_critical': PASS
+
+  [2026-06-11] MODULE: reality_checkin  schedule=daily
+    Scenario 'normal': PASS
+    Scenario 'missed_obligations_warning': PASS
+    Scenario 'crisis_keyword_trigger': PASS
+
+  [2026-06-12] MODULE: budget_monitor  schedule=daily
+    Scenario 'healthy': PASS
+    Scenario 'watch_low_buffer': PASS
+    Scenario 'alert_emergency_floor': PASS
+
+  [2026-06-12] MODULE: obligations_tracker  schedule=daily
+    Scenario 'all_clear_silent': PASS
+    Scenario 'threshold_7day_alert': PASS
+    Scenario 'overdue_critical': PASS
+
+  [2026-06-12] MODULE: reality_checkin  schedule=daily
+    Scenario 'normal': PASS
+    Scenario 'missed_obligations_warning': PASS
+    Scenario 'crisis_keyword_trigger': PASS
+
+  [2026-06-13] MODULE: budget_monitor  schedule=daily
+    Scenario 'healthy': PASS
+    Scenario 'watch_low_buffer': PASS
+    Scenario 'alert_emergency_floor': PASS
+
+  [2026-06-13] MODULE: obligations_tracker  schedule=daily
+    Scenario 'all_clear_silent': PASS
+    Scenario 'threshold_7day_alert': PASS
+    Scenario 'overdue_critical': PASS
+
+  [2026-06-13] MODULE: prayer_finance_engine  schedule=weekly
+    Scenario 'strong_ipo_candidates': PASS
+    Scenario 'no_ipo_hold_seed': PASS
+    Scenario 'seed_confirmed': PASS
+
+  [2026-06-13] MODULE: reality_checkin  schedule=daily
+    Scenario 'normal': PASS
+    Scenario 'missed_obligations_warning': PASS
+    Scenario 'crisis_keyword_trigger': PASS
+
+  [2026-06-14] MODULE: budget_monitor  schedule=daily
+    Scenario 'healthy': PASS
+    Scenario 'watch_low_buffer': PASS
+    Scenario 'alert_emergency_floor': PASS
+
+  [2026-06-14] MODULE: obligations_tracker  schedule=daily
+    Scenario 'all_clear_silent': PASS
+    Scenario 'threshold_7day_alert': PASS
+    Scenario 'overdue_critical': PASS
+
+  [2026-06-14] MODULE: reality_checkin  schedule=daily
+    Scenario 'normal': PASS
+    Scenario 'missed_obligations_warning': PASS
+    Scenario 'crisis_keyword_trigger': PASS
+
+  [2026-06-15] MODULE: budget_monitor  schedule=daily
+    Scenario 'healthy': PASS
+    Scenario 'watch_low_buffer': PASS
+    Scenario 'alert_emergency_floor': PASS
+
+  [2026-06-15] MODULE: obligations_tracker  schedule=daily
+    Scenario 'all_clear_silent': PASS
+    Scenario 'threshold_7day_alert': PASS
+    Scenario 'overdue_critical': PASS
+
+  [2026-06-15] MODULE: reality_checkin  schedule=daily
+    Scenario 'normal': PASS
+    Scenario 'missed_obligations_warning': PASS
+    Scenario 'crisis_keyword_trigger': PASS
+
+  [2026-06-16] MODULE: budget_monitor  schedule=daily
+    Scenario 'healthy': PASS
+    Scenario 'watch_low_buffer': PASS
+    Scenario 'alert_emergency_floor': PASS
+
+  [2026-06-16] MODULE: obligations_tracker  schedule=daily
+    Scenario 'all_clear_silent': PASS
+    Scenario 'threshold_7day_alert': PASS
+    Scenario 'overdue_critical': PASS
+
+  [2026-06-16] MODULE: reality_checkin  schedule=daily
+    Scenario 'normal': PASS
+    Scenario 'missed_obligations_warning': PASS
+    Scenario 'crisis_keyword_trigger': PASS
+
+  [2026-06-17] MODULE: budget_monitor  schedule=daily
+    Scenario 'healthy': PASS
+    Scenario 'watch_low_buffer': PASS
+    Scenario 'alert_emergency_floor': PASS
+
+  [2026-06-17] MODULE: obligations_tracker  schedule=daily
+    Scenario 'all_clear_silent': PASS
+    Scenario 'threshold_7day_alert': PASS
+    Scenario 'overdue_critical': PASS
+
+  [2026-06-17] MODULE: reality_checkin  schedule=daily
+    Scenario 'normal': PASS
+    Scenario 'missed_obligations_warning': PASS
+    Scenario 'crisis_keyword_trigger': PASS
+
+  [2026-06-18] MODULE: budget_monitor  schedule=daily
+    Scenario 'healthy': PASS
+    Scenario 'watch_low_buffer': PASS
+    Scenario 'alert_emergency_floor': PASS
+
+  [2026-06-18] MODULE: obligations_tracker  schedule=daily
+    Scenario 'all_clear_silent': PASS
+    Scenario 'threshold_7day_alert': PASS
+    Scenario 'overdue_critical': PASS
+
+  [2026-06-18] MODULE: reality_checkin  schedule=daily
+    Scenario 'normal': PASS
+    Scenario 'missed_obligations_warning': PASS
+    Scenario 'crisis_keyword_trigger': PASS
+
+  [2026-06-19] MODULE: budget_monitor  schedule=daily
+    Scenario 'healthy': PASS
+    Scenario 'watch_low_buffer': PASS
+    Scenario 'alert_emergency_floor': PASS
+
+  [2026-06-19] MODULE: obligations_tracker  schedule=daily
+    Scenario 'all_clear_silent': PASS
+    Scenario 'threshold_7day_alert': PASS
+    Scenario 'overdue_critical': PASS
+
+  [2026-06-19] MODULE: reality_checkin  schedule=daily
+    Scenario 'normal': PASS
+    Scenario 'missed_obligations_warning': PASS
+    Scenario 'crisis_keyword_trigger': PASS
+
+  [2026-06-20] MODULE: budget_monitor  schedule=daily
+    Scenario 'healthy': PASS
+    Scenario 'watch_low_buffer': PASS
+    Scenario 'alert_emergency_floor': PASS
+
+  [2026-06-20] MODULE: obligations_tracker  schedule=daily
+    Scenario 'all_clear_silent': PASS
+    Scenario 'threshold_7day_alert': PASS
+    Scenario 'overdue_critical': PASS
+
+  [2026-06-20] MODULE: prayer_finance_engine  schedule=weekly
+    Scenario 'strong_ipo_candidates': PASS
+    Scenario 'no_ipo_hold_seed': PASS
+    Scenario 'seed_confirmed': PASS
+
+  [2026-06-20] MODULE: reality_checkin  schedule=daily
+    Scenario 'normal': PASS
+    Scenario 'missed_obligations_warning': PASS
+    Scenario 'crisis_keyword_trigger': PASS
+
+  [2026-06-21] MODULE: budget_monitor  schedule=daily
+    Scenario 'healthy': PASS
+    Scenario 'watch_low_buffer': PASS
+    Scenario 'alert_emergency_floor': PASS
+
+  [2026-06-21] MODULE: obligations_tracker  schedule=daily
+    Scenario 'all_clear_silent': PASS
+    Scenario 'threshold_7day_alert': PASS
+    Scenario 'overdue_critical': PASS
+
+  [2026-06-21] MODULE: reality_checkin  schedule=daily
+    Scenario 'normal': PASS
+    Scenario 'missed_obligations_warning': PASS
+    Scenario 'crisis_keyword_trigger': PASS
+
 ============================================================
 SIMULATION SUMMARY
 ============================================================
 Modules run:       4
   budget_monitor, obligations_tracker, prayer_finance_engine, reality_checkin
-Scenarios passed:  66
+Scenarios passed:  285
 Scenarios failed:  0
-Total scenarios:   66
+Total scenarios:   285
 ============================================================
