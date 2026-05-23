@@ -134,6 +134,23 @@
       "alert_sent": {},
       "last_completed": null,
       "status": "ORDERED — awaiting delivery"
+    },
+    {
+      "id": "pr_tax_return_2025",
+      "name": "Puerto Rico Tax Return 2025 (Planilla)",
+      "category": "government",
+      "due_date": "2026-06-30",
+      "recurrence": "annual",
+      "contact": "Departamento de Hacienda PR — hacienda.pr.gov | (787) 721-2020",
+      "what_to_bring": "W-2s or 1099s if any, prior year return, Social Security number",
+      "notes": "Original deadline passed. Zero income year — still required to file. Also verify 2024 return was filed. Call Hacienda or check online at hacienda.pr.gov to confirm status of both years.",
+      "urgency": "URGENT — overdue",
+      "alert_days": [
+        7,
+        1
+      ],
+      "alert_sent": {},
+      "status": "OPEN — overdue, also verify 2024 return was filed"
     }
   ]
 }
