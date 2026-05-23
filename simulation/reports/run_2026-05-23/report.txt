@@ -3,29 +3,29 @@ Run date:        2026-05-23
 Sim days:        3
 HERMES_HOME:     /root/hermes-sim/
 Modules loaded:  1
-Module filter:   budget_monitor
+Module filter:   obligations_tracker
 ============================================================
 
-  [2026-05-23] MODULE: budget_monitor  schedule=daily
-    Scenario 'healthy': PASS
-    Scenario 'watch_low_buffer': PASS
-    Scenario 'alert_emergency_floor': PASS
+  [2026-05-23] MODULE: obligations_tracker  schedule=daily
+    Scenario 'all_clear_silent': PASS
+    Scenario 'threshold_7day_alert': PASS
+    Scenario 'overdue_critical': PASS
 
-  [2026-05-24] MODULE: budget_monitor  schedule=daily
-    Scenario 'healthy': PASS
-    Scenario 'watch_low_buffer': PASS
-    Scenario 'alert_emergency_floor': PASS
+  [2026-05-24] MODULE: obligations_tracker  schedule=daily
+    Scenario 'all_clear_silent': PASS
+    Scenario 'threshold_7day_alert': PASS
+    Scenario 'overdue_critical': PASS
 
-  [2026-05-25] MODULE: budget_monitor  schedule=daily
-    Scenario 'healthy': PASS
-    Scenario 'watch_low_buffer': PASS
-    Scenario 'alert_emergency_floor': PASS
+  [2026-05-25] MODULE: obligations_tracker  schedule=daily
+    Scenario 'all_clear_silent': PASS
+    Scenario 'threshold_7day_alert': PASS
+    Scenario 'overdue_critical': PASS
 
 ============================================================
 SIMULATION SUMMARY
 ============================================================
 Modules run:       1
-  budget_monitor
+  obligations_tracker
 Scenarios passed:  9
 Scenarios failed:  0
 Total scenarios:   9
