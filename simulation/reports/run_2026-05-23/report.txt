@@ -1,32 +1,127 @@
 HERMES SIMULATION RUN
 Run date:        2026-05-23
-Sim days:        3
+Sim days:        7
 HERMES_HOME:     /root/hermes-sim/
-Modules loaded:  1
-Module filter:   obligations_tracker
+Modules loaded:  4
+Module filter:   none (all)
 ============================================================
+
+  [2026-05-23] MODULE: budget_monitor  schedule=daily
+    Scenario 'healthy': PASS
+    Scenario 'watch_low_buffer': PASS
+    Scenario 'alert_emergency_floor': PASS
 
   [2026-05-23] MODULE: obligations_tracker  schedule=daily
     Scenario 'all_clear_silent': PASS
     Scenario 'threshold_7day_alert': PASS
     Scenario 'overdue_critical': PASS
 
+  [2026-05-23] MODULE: prayer_finance_engine  schedule=weekly
+    Scenario 'strong_ipo_candidates': PASS
+    Scenario 'no_ipo_hold_seed': PASS
+    Scenario 'seed_confirmed': PASS
+
+  [2026-05-23] MODULE: reality_checkin  schedule=daily
+    Scenario 'normal': PASS
+    Scenario 'missed_obligations_warning': PASS
+    Scenario 'crisis_keyword_trigger': PASS
+
+  [2026-05-24] MODULE: budget_monitor  schedule=daily
+    Scenario 'healthy': PASS
+    Scenario 'watch_low_buffer': PASS
+    Scenario 'alert_emergency_floor': PASS
+
   [2026-05-24] MODULE: obligations_tracker  schedule=daily
     Scenario 'all_clear_silent': PASS
     Scenario 'threshold_7day_alert': PASS
     Scenario 'overdue_critical': PASS
+
+  [2026-05-24] MODULE: reality_checkin  schedule=daily
+    Scenario 'normal': PASS
+    Scenario 'missed_obligations_warning': PASS
+    Scenario 'crisis_keyword_trigger': PASS
+
+  [2026-05-25] MODULE: budget_monitor  schedule=daily
+    Scenario 'healthy': PASS
+    Scenario 'watch_low_buffer': PASS
+    Scenario 'alert_emergency_floor': PASS
 
   [2026-05-25] MODULE: obligations_tracker  schedule=daily
     Scenario 'all_clear_silent': PASS
     Scenario 'threshold_7day_alert': PASS
     Scenario 'overdue_critical': PASS
 
+  [2026-05-25] MODULE: reality_checkin  schedule=daily
+    Scenario 'normal': PASS
+    Scenario 'missed_obligations_warning': PASS
+    Scenario 'crisis_keyword_trigger': PASS
+
+  [2026-05-26] MODULE: budget_monitor  schedule=daily
+    Scenario 'healthy': PASS
+    Scenario 'watch_low_buffer': PASS
+    Scenario 'alert_emergency_floor': PASS
+
+  [2026-05-26] MODULE: obligations_tracker  schedule=daily
+    Scenario 'all_clear_silent': PASS
+    Scenario 'threshold_7day_alert': PASS
+    Scenario 'overdue_critical': PASS
+
+  [2026-05-26] MODULE: reality_checkin  schedule=daily
+    Scenario 'normal': PASS
+    Scenario 'missed_obligations_warning': PASS
+    Scenario 'crisis_keyword_trigger': PASS
+
+  [2026-05-27] MODULE: budget_monitor  schedule=daily
+    Scenario 'healthy': PASS
+    Scenario 'watch_low_buffer': PASS
+    Scenario 'alert_emergency_floor': PASS
+
+  [2026-05-27] MODULE: obligations_tracker  schedule=daily
+    Scenario 'all_clear_silent': PASS
+    Scenario 'threshold_7day_alert': PASS
+    Scenario 'overdue_critical': PASS
+
+  [2026-05-27] MODULE: reality_checkin  schedule=daily
+    Scenario 'normal': PASS
+    Scenario 'missed_obligations_warning': PASS
+    Scenario 'crisis_keyword_trigger': PASS
+
+  [2026-05-28] MODULE: budget_monitor  schedule=daily
+    Scenario 'healthy': PASS
+    Scenario 'watch_low_buffer': PASS
+    Scenario 'alert_emergency_floor': PASS
+
+  [2026-05-28] MODULE: obligations_tracker  schedule=daily
+    Scenario 'all_clear_silent': PASS
+    Scenario 'threshold_7day_alert': PASS
+    Scenario 'overdue_critical': PASS
+
+  [2026-05-28] MODULE: reality_checkin  schedule=daily
+    Scenario 'normal': PASS
+    Scenario 'missed_obligations_warning': PASS
+    Scenario 'crisis_keyword_trigger': PASS
+
+  [2026-05-29] MODULE: budget_monitor  schedule=daily
+    Scenario 'healthy': PASS
+    Scenario 'watch_low_buffer': PASS
+    Scenario 'alert_emergency_floor': PASS
+
+  [2026-05-29] MODULE: obligations_tracker  schedule=daily
+    Scenario 'all_clear_silent': PASS
+    Scenario 'threshold_7day_alert': PASS
+    Scenario 'overdue_critical': PASS
+
+  [2026-05-29] MODULE: reality_checkin  schedule=daily
+    Scenario 'normal': PASS
+    Scenario 'missed_obligations_warning': PASS
+    Scenario 'crisis_keyword_trigger': PASS
+
 ============================================================
 SIMULATION SUMMARY
 ============================================================
-Modules run:       1
-  obligations_tracker
-Scenarios passed:  9
+Modules run:       4
+  budget_monitor, obligations_tracker, prayer_finance_engine, reality_checkin
+Scenarios passed:  66
 Scenarios failed:  0
-Total scenarios:   9
+Total scenarios:   66
 ============================================================
