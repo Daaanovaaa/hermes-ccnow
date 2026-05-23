@@ -3,29 +3,29 @@ Run date:        2026-05-23
 Sim days:        3
 HERMES_HOME:     /root/hermes-sim/
 Modules loaded:  1
-Module filter:   reality_checkin
+Module filter:   budget_monitor
 ============================================================
 
-  [2026-05-23] MODULE: reality_checkin  schedule=daily
-    Scenario 'normal': PASS
-    Scenario 'missed_obligations_warning': PASS
-    Scenario 'crisis_keyword_trigger': PASS
+  [2026-05-23] MODULE: budget_monitor  schedule=daily
+    Scenario 'healthy': PASS
+    Scenario 'watch_low_buffer': PASS
+    Scenario 'alert_emergency_floor': PASS
 
-  [2026-05-24] MODULE: reality_checkin  schedule=daily
-    Scenario 'normal': PASS
-    Scenario 'missed_obligations_warning': PASS
-    Scenario 'crisis_keyword_trigger': PASS
+  [2026-05-24] MODULE: budget_monitor  schedule=daily
+    Scenario 'healthy': PASS
+    Scenario 'watch_low_buffer': PASS
+    Scenario 'alert_emergency_floor': PASS
 
-  [2026-05-25] MODULE: reality_checkin  schedule=daily
-    Scenario 'normal': PASS
-    Scenario 'missed_obligations_warning': PASS
-    Scenario 'crisis_keyword_trigger': PASS
+  [2026-05-25] MODULE: budget_monitor  schedule=daily
+    Scenario 'healthy': PASS
+    Scenario 'watch_low_buffer': PASS
+    Scenario 'alert_emergency_floor': PASS
 
 ============================================================
 SIMULATION SUMMARY
 ============================================================
 Modules run:       1
-  reality_checkin
+  budget_monitor
 Scenarios passed:  9
 Scenarios failed:  0
 Total scenarios:   9
