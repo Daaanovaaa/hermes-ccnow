@@ -191,9 +191,9 @@ Two Google accounts:
 - Obsidian vault sync
 - GitHub MCP (26 tools)
 - Plaid MCP
+- Simulation framework (sim_runner.py + 4 modules — 285/285 scenarios, 30-day run clean)
 
 **IN PROGRESS / PENDING:**
-- Simulation framework (`simulation/` folder — next build session)
 - Omi webhook configuration in Omi app
 - Fill actual dates in `life-reality/obligations.json`
 - Fill TBD budget amounts in CCN Personal Budget Google Sheet (before June 1)
