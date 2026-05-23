@@ -122,11 +122,11 @@ def run(data: dict):
 
 ## Current Modules
 
-These four `.sim.py` wrappers will be built in the next session:
+All four `.sim.py` wrappers are complete. Last full run: **285/285 scenarios passed** over 30 days (2026-05-23 → 2026-06-21).
 
-| Module | Real file | Schedule |
-|---|---|---|
-| `reality_checkin` | `life-reality/reality_checkin.py` | daily |
-| `budget_monitor` | `life-admin/budget_monitor.py` | daily |
-| `obligations_tracker` | `life-reality/obligations_tracker.py` | daily |
-| `prayer_finance_engine` | `prayer-finance/prayer_finance_engine.py` | weekly |
+| Module | Real file | Schedule | Status |
+|---|---|---|---|
+| `reality_checkin` | `life-reality/reality_checkin.py` | daily | ✅ complete |
+| `budget_monitor` | `life-admin/budget_monitor.py` | daily | ✅ complete |
+| `obligations_tracker` | `life-reality/obligations_tracker.py` | daily | ✅ complete |
+| `prayer_finance_engine` | `prayer-finance/prayer_finance_engine.py` | weekly | ✅ complete |
