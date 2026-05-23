@@ -1,0 +1,16 @@
+{
+  "default_days": 30,
+  "hermes_sim_home": "/root/hermes-sim/",
+  "hermes_live_home": "/root/hermes-ccnow/",
+  "telegram_test_bot_token": "USE_TEST_BOT_NOT_LIVE",
+  "report_retention_days": 7,
+  "schedules": {
+    "daily": "fires every simulated day",
+    "weekly": "fires every 7th day",
+    "monthly": "fires when simulated date day-of-month equals 1",
+    "on-trigger": "never fires automatically"
+  },
+  "modules_dir": "simulation/modules/",
+  "reports_dir": "simulation/reports/",
+  "note": "All placeholder values only. Real credentials stay in .env — never here."
+}
