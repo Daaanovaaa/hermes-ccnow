@@ -6,304 +6,272 @@ Kingdom Investment Strategy: Mark 4:26-29
 Schedule:
   Friday  22:00 UTC (6 PM AST)  — research + shortlist generation
   Friday  23:00 UTC (7 PM AST)  — Telegram shortlist alert
-  Saturday 12:00 UTC (8 AM AST) — Telegram recommendation
+  Saturday 12:00 UTC (8 AM AST) — Telegram PW-ID + recommendation
   Sunday  14:00 UTC (10 AM AST) — journal entry + weekly summary
 
 Usage:
-  python3 prayer_finance_engine.py --research     # Fri 22:00
-  python3 prayer_finance_engine.py --shortlist    # Fri 23:00
-  python3 prayer_finance_engine.py --recommend    # Sat 12:00
-  python3 prayer_finance_engine.py --journal      # Sun 14:00
-  python3 prayer_finance_engine.py --confirm TICKER CONF_NUMBER  # on reply
+  python3 prayer_finance_engine.py --research      # Fri 22:00
+  python3 prayer_finance_engine.py --shortlist     # Fri 23:00
+  python3 prayer_finance_engine.py --recommend     # Sat 12:00
+  python3 prayer_finance_engine.py --journal       # Sun 14:00
+  python3 prayer_finance_engine.py --confirm TICKER CONF_NUMBER
 """
 
-import json
-import os
-import subprocess
-import sys
-from datetime import date, datetime, timezone, timedelta
+import csv, json, subprocess, sys
+from datetime import date
 from pathlib import Path
 
-FINANCE_DIR  = Path(__file__).parent
-LOG_FILE     = FINANCE_DIR / 'prayer_finance_log.json'
-CONFIG_FILE  = FINANCE_DIR / 'prayer_finance_config.json'
-JOURNALS_DIR = FINANCE_DIR / 'journals'
-GWS_SCRIPT   = Path('/root/.hermes/skills/productivity/google-workspace/scripts/google_api.py')
+FINANCE_DIR = Path(__file__).parent
+LOG_FILE    = FINANCE_DIR / 'prayer_finance_log.json'
+CSV_FILE    = FINANCE_DIR / 'prayer_finance_log.csv'
+CONFIG_FILE = FINANCE_DIR / 'prayer_finance_config.json'
+CACHE_FILE  = FINANCE_DIR / 'ipo_cache.json'
+JOURNALS    = FINANCE_DIR / 'journals'
 
-PRAYER_VERSE = "Mark 4:26-29 — \"So is the kingdom of GOD, as if a man should cast seed into the ground...\""
+PRAYER_VERSE = (
+    'Mark 4:26-29 — "So is the kingdom of GOD, as if a man should cast seed '
+    'into the ground; And should sleep, and rise night and day, and the seed '
+    'should spring and grow up, he knoweth not how."'
+)
 
-SECTOR_KEYWORDS = ['tech', 'health', 'media', 'faith', 'christian', 'biotech',
-                   'software', 'digital', 'communications', 'education']
-
-SCORE_LABELS = {
-    (8, 10): 'STRONG SEED',
-    (6, 7):  'GOOD SEED',
-    (4, 5):  'WATCH',
-    (0, 3):  'PASS',
-}
+SCORE_LABELS = [
+    (8.0, 'STRONG SEED'),
+    (6.0, 'GOOD SEED'),
+    (4.0, 'WATCH'),
+    (0.0, 'PASS'),
+]
 
 
-def load_log():
+# ── Persistence ────────────────────────────────────────────────────────────────
+
+def load_log() -> dict:
     if LOG_FILE.exists():
         with open(LOG_FILE) as f:
             return json.load(f)
     return {'total_seeds_planted': 0, 'total_invested': 0.00, 'entries': []}
 
 
-def save_log(data):
+def save_log(data: dict):
     with open(LOG_FILE, 'w') as f:
         json.dump(data, f, indent=2)
 
 
-def load_config():
+def load_config() -> dict:
     with open(CONFIG_FILE) as f:
         return json.load(f)
 
 
-def search_upcoming_ipos():
-    """
-    Use web search via Hermes tools to find upcoming IPOs.
-    Returns list of candidate dicts.
-    """
-    # Try DuckDuckGo search via terminal
-    try:
-        result = subprocess.run(
-            ['python3', str(GWS_SCRIPT)],
-            capture_output=True, text=True, timeout=5
+def load_cache() -> dict:
+    if CACHE_FILE.exists():
+        with open(CACHE_FILE) as f:
+            return json.load(f)
+    return {'candidates': [], 'research_date': '', 'window': ''}
+
+
+def append_csv(entry: dict):
+    write_header = not CSV_FILE.exists() or CSV_FILE.stat().st_size == 0
+    with open(CSV_FILE, 'a', newline='') as f:
+        writer = csv.DictWriter(
+            f,
+            fieldnames=['date', 'pw_id', 'ticker', 'amount',
+                        'confirmation_number', 'journal_entry']
         )
-    except Exception:
-        pass
-
-    # Build a curated shortlist from known upcoming IPO sources
-    # In production, this would query IPO calendars via web search
-    # For now, returns a structured template that Hermes agent can populate
-    today = date.today()
-    next_week = today + timedelta(days=14)
-
-    # Return template structure — Hermes agent with web search fills this
-    return {
-        'research_date': today.isoformat(),
-        'window': f'{today.isoformat()} to {next_week.isoformat()}',
-        'source_note': 'Run via Hermes agent with web search for live IPO data',
-        'candidates': []
-    }
+        if write_header:
+            writer.writeheader()
+        writer.writerow({
+            'date':                entry.get('date', ''),
+            'pw_id':               entry.get('pw_id', ''),
+            'ticker':              entry.get('ticker', ''),
+            'amount':              entry.get('amount', 1.00),
+            'confirmation_number': entry.get('confirmation_number', ''),
+            'journal_entry':       entry.get('journal_entry', ''),
+        })
 
 
-def score_ipo(candidate):
-    """Score an IPO candidate 1-10 on four criteria."""
-    stability   = candidate.get('stability_score', 5)
-    mission     = candidate.get('mission_score', 5)
-    fractional  = 10 if candidate.get('fractional_eligible') else 3
-    momentum    = candidate.get('momentum_score', 5)
-    total = (stability * 0.25 + mission * 0.25 + fractional * 0.20 + momentum * 0.30)
-    return round(total, 1)
+# ── Scoring ────────────────────────────────────────────────────────────────────
+
+def score_ipo(c: dict) -> float:
+    return (c.get('stability_score', 5)  * 0.25
+            + c.get('mission_score', 5)  * 0.25
+            + (10 if c.get('fractional_eligible') else 3) * 0.20
+            + c.get('momentum_score', 5) * 0.30)
 
 
-def get_score_label(score):
-    for (lo, hi), label in SCORE_LABELS.items():
-        if lo <= score <= hi:
+def get_score_label(score: float) -> str:
+    for threshold, label in SCORE_LABELS:
+        if score >= threshold:
             return label
-    return 'UNKNOWN'
+    return 'PASS'
 
 
-def format_shortlist(candidates, research_date):
+# ── Telegram ───────────────────────────────────────────────────────────────────
+
+def send_telegram(msg: str):
+    """Send via hermes send; fallback to telegram_handler direct API."""
+    result = subprocess.run(
+        ['hermes', 'send', '--to', 'telegram', msg],
+        capture_output=True, text=True
+    )
+    if result.returncode == 0:
+        return
+    # Fallback
+    try:
+        sys.path.insert(0, str(FINANCE_DIR))
+        from telegram_handler import send_message
+        send_message(msg)
+    except Exception as e:
+        print(f'Telegram fallback error: {e}', file=sys.stderr)
+
+
+# ── Message formatters ─────────────────────────────────────────────────────────
+
+def format_shortlist(candidates: list, research_date: str) -> str:
     if not candidates:
         return (
-            f"PRAYER FINANCE SHORTLIST — {research_date}\n"
-            f"No IPO candidates found this week matching our criteria.\n"
-            f"Criteria: price under $20, Fidelity accessible, tech/faith/media/health.\n"
-            f"Consider holding this week's $1 seed for next week.\n"
-            f"Praying for divine guidance on timing."
+            f'PRAYER FINANCE SHORTLIST — {research_date}\n\n'
+            f'No IPO candidates found this week under $20 on Fidelity.\n'
+            f'Consider holding this week\'s $1 seed for next Friday.\n'
+            f'Praying for divine guidance on timing.\n\n'
+            f'{PRAYER_VERSE}'
         )
     lines = [
-        f"PRAYER FINANCE SHORTLIST — {research_date}",
-        f"This week's IPO candidates for prayer review:",
-        "",
+        f'PRAYER FINANCE SHORTLIST — {research_date}',
+        f'This week\'s top IPO candidates:',
+        '',
     ]
-    for i, c in enumerate(candidates[:5], 1):
+    for i, c in enumerate(candidates[:3], 1):
         score = score_ipo(c)
         label = get_score_label(score)
         lines.append(
-            f"{i}. {c.get('ticker','?')} — {c.get('company','?')} "
-            f"— Score: {score}/10 [{label}]"
+            f'{i}. {c.get("ticker","?")} — {c.get("company","?")} '
+            f'| Score: {score:.0f}/10 [{label}]'
         )
-        if c.get('sector'):
-            lines.append(f"   Sector: {c['sector']} | Est. price: ${c.get('price','?')}")
+        lines.append(
+            f'   {c.get("ipo_date","?")} | {c.get("price_range","?")} '
+            f'| {c.get("sector","?")}'
+        )
     lines += [
-        "",
-        "Review and pray. Saturday 8am I send the final recommendation.",
+        '',
+        'Review and pray over these. Saturday 8 AM I send the final recommendation.',
+        '',
         PRAYER_VERSE,
     ]
     return '\n'.join(lines)
 
 
-def format_recommendation(top_candidate, research_date):
-    ticker  = top_candidate.get('ticker', 'TBD')
-    company = top_candidate.get('company', 'TBD')
-    reason  = top_candidate.get('rationale', 'Strong fundamentals and mission alignment with Kingdom priorities.')
-    pw_id   = f"{ticker}-{date.today().strftime('%Y%m%d')}"
+def format_recommendation(top: dict) -> str:
+    from pw_id_generator import generate_pw_id, format_saturday_message
+    ticker    = top.get('ticker', 'TBD')
+    company   = top.get('company', 'TBD')
+    price_rng = top.get('price_range', 'TBD')
+    ipo_date  = top.get('ipo_date', 'TBD')
+    reason    = top.get('rationale', 'Strong fundamentals and Kingdom mission alignment.')
+    pw_id     = generate_pw_id(ticker)
 
-    return (
-        f"PRAYER FINANCE RECOMMENDATION\n"
-        f"PW-ID: {pw_id}\n"
-        f"Company: {company}\n"
-        f"Ticker: {ticker}\n"
-        f"Recommended: $1 fractional share\n"
-        f"Reason: {reason}\n"
-        f"\n"
-        f"Go to Fidelity app now.\n"
-        f"Search {ticker}.\n"
-        f"Buy $1 fractional share.\n"
-        f"Reply with your confirmation number.\n"
-        f"\n"
-        f"{PRAYER_VERSE}"
-    )
+    return format_saturday_message(ticker, company, price_rng, ipo_date, reason, pw_id)
 
+
+# ── Commands ───────────────────────────────────────────────────────────────────
 
 def cmd_research():
-    """Friday 22:00 — Run IPO research, save shortlist to log."""
-    config   = load_config()
-    log_data = load_log()
-    research = search_upcoming_ipos()
-
-    # Save to log as a pending shortlist
-    log_data.setdefault('pending_shortlist', research)
-    log_data['last_research_date'] = date.today().isoformat()
-    save_log(log_data)
-
-    print(
-        f"Prayer Finance research complete.\n"
-        f"Window: {research['window']}\n"
-        f"Candidates: {len(research['candidates'])}\n"
-        f"Shortlist saved. Telegram alert fires at 23:00 UTC."
+    """Friday 22:00 — Run IPO researcher, save cache."""
+    print('Running IPO research...')
+    result = subprocess.run(
+        ['python3', str(FINANCE_DIR / 'ipo_researcher.py')],
+        capture_output=True, text=True
     )
+    print(result.stdout)
+    if result.returncode != 0:
+        print(f'Research error: {result.stderr}', file=sys.stderr)
+    else:
+        cache = load_cache()
+        count = cache.get('candidate_count', 0)
+        window = cache.get('window', '')
+        print(f'Research complete. {count} candidates in {window}')
+        print('Telegram shortlist alert fires at 23:00 UTC.')
 
 
 def cmd_shortlist():
     """Friday 23:00 — Send shortlist to Telegram."""
-    log_data   = load_log()
-    shortlist  = log_data.get('pending_shortlist', {})
-    candidates = shortlist.get('candidates', [])
-    today      = date.today().isoformat()
-    msg        = format_shortlist(candidates, today)
+    cache = load_cache()
+    candidates = cache.get('candidates', [])
+    today = date.today().isoformat()
+    msg = format_shortlist(candidates, today)
     print(msg)
+    send_telegram(msg)
 
 
 def cmd_recommend():
-    """Saturday 12:00 — Send recommendation to Telegram."""
-    log_data   = load_log()
-    shortlist  = log_data.get('pending_shortlist', {})
-    candidates = shortlist.get('candidates', [])
-    today      = date.today().isoformat()
+    """Saturday 12:00 — Send PW-ID + recommendation to Telegram."""
+    sys.path.insert(0, str(FINANCE_DIR))
+    cache = load_cache()
+    candidates = cache.get('candidates', [])
 
     if not candidates:
-        print(
-            f"PRAYER FINANCE — No recommendation this week.\n"
-            f"No qualifying IPOs found. Holding $1 seed.\n"
-            f"Check back next Friday.\n"
-            f"{PRAYER_VERSE}"
+        msg = (
+            f'PRAYER FINANCE — No recommendation this week.\n'
+            f'No qualifying IPOs under $20 found. Holding $1 seed.\n'
+            f'Check back next Friday.\n\n'
+            f'{PRAYER_VERSE}'
         )
+        print(msg)
+        send_telegram(msg)
         return
 
-    # Sort by score, take top
     top = max(candidates, key=score_ipo)
-    msg = format_recommendation(top, today)
+    msg = format_recommendation(top)
     print(msg)
+    send_telegram(msg)
 
 
 def cmd_journal():
-    """Sunday 14:00 — Generate journal entry and weekly summary."""
-    log_data = load_log()
-    today    = date.today()
-    fname    = JOURNALS_DIR / f"{today.isoformat()}_journal.md"
-    JOURNALS_DIR.mkdir(exist_ok=True)
-
-    shortlist  = log_data.get('pending_shortlist', {})
-    candidates = shortlist.get('candidates', [])
-    last_entry = log_data['entries'][-1] if log_data['entries'] else None
-    total_seeds = log_data['total_seeds_planted']
-    total_inv   = log_data['total_invested']
-
-    # Get top pick if any
-    if candidates:
-        top = max(candidates, key=score_ipo)
-        ticker  = top.get('ticker', 'N/A')
-        company = top.get('company', 'N/A')
-        rationale = top.get('rationale', 'Kingdom alignment and momentum.')
-    else:
-        ticker = company = rationale = 'None this week'
-
-    journal = f"""# Prayer Finance Journal — {today.isoformat()}
-
-## This Week's IPO
-**Ticker:** {ticker}
-**Company:** {company}
-**Rationale:** {rationale}
-
-## Scripture Connection
-{PRAYER_VERSE}
-
-The seed principle: you do not understand exactly how a seed grows after you plant it.
-But you plant it in faith, and GOD gives the increase in His timing.
-
-## Prayer Declaration
-Father, we present this financial seed as an act of worship and obedience.
-We declare that every dollar planted in Your name multiplies according to Your covenant.
-We bind every spirit of financial destruction and loose abundance and provision over
-this investment and all that follows it.
-In the name of JESUS. Amen.
-
-## Running Total
-Seeds planted: {total_seeds}
-Total invested: ${total_inv:.2f}
-{'Latest entry: ' + last_entry['ticker'] + ' on ' + last_entry['date'] if last_entry else 'First seed not yet planted.'}
-
-## Notes
-"""
-    fname.write_text(journal)
-
-    summary = (
-        f"PRAYER FINANCE WEEKLY SUMMARY — {today.isoformat()}\n"
-        f"This week's pick: {ticker} — {company}\n"
-        f"Total seeds planted: {total_seeds}\n"
-        f"Total invested: ${total_inv:.2f}\n"
-        f"Journal saved: {fname.name}\n"
-        f"\n"
-        f"{PRAYER_VERSE}"
+    """Sunday 14:00 — Generate journal and send via Telegram."""
+    result = subprocess.run(
+        ['python3', str(FINANCE_DIR / 'journal_generator.py')],
+        capture_output=True, text=True
     )
-    print(summary)
+    print(result.stdout)
+    if result.returncode != 0:
+        print(result.stderr, file=sys.stderr)
 
 
-def cmd_confirm(ticker, conf_number):
-    """Record confirmation when Carlos replies with confirmation number."""
-    log_data  = load_log()
-    today     = date.today().isoformat()
-    config    = load_config()
-    pw_id     = f"{ticker}-{date.today().strftime('%Y%m%d')}"
-    amount    = config['weekly_budget']
+def cmd_confirm(ticker: str, conf_number: str):
+    """Log Carlos's Fidelity confirmation."""
+    sys.path.insert(0, str(FINANCE_DIR))
+    from pw_id_generator import generate_pw_id
+
+    log_data = load_log()
+    config   = load_config()
+    today    = date.today().isoformat()
+    pw_id    = generate_pw_id(ticker)
+    amount   = config['weekly_budget']
 
     entry = {
         'date':                today,
         'ticker':              ticker.upper(),
         'pw_id':               pw_id,
-        'confirmation_number': conf_number,
+        'confirmation_number': conf_number.upper(),
         'amount':              amount,
         'status':              'EXECUTED',
         'platform':            config['platform'],
+        'journal_entry':       '',
     }
     log_data['entries'].append(entry)
     log_data['total_seeds_planted'] += 1
     log_data['total_invested'] = round(log_data['total_invested'] + amount, 2)
     save_log(log_data)
+    append_csv(entry)
 
     print(
-        f"Logged. PW-ID {pw_id} confirmed.\n"
-        f"Seeds planted: {log_data['total_seeds_planted']}\n"
-        f"Total invested: ${log_data['total_invested']:.2f}\n"
-        f"Praying over this seed.\n"
-        f"{PRAYER_VERSE}"
+        f'Logged. {pw_id}\n'
+        f'Seeds planted: {log_data["total_seeds_planted"]}\n'
+        f'Total invested: ${log_data["total_invested"]:.2f}\n'
+        f'Praying over this seed.\n'
+        f'{PRAYER_VERSE}'
     )
 
+
+# ── Main ───────────────────────────────────────────────────────────────────────
 
 def main():
     args = sys.argv[1:]

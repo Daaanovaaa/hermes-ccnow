@@ -1,0 +1,35 @@
+{
+  "cron": {
+    "research":   "0 22 * * 5",
+    "shortlist":  "0 23 * * 5",
+    "recommend":  "0 12 * * 6",
+    "journal":    "0 14 * * 0"
+  },
+  "cron_description": {
+    "research":  "Friday 22:00 UTC (6 PM AST) — IPO web research + cache",
+    "shortlist": "Friday 23:00 UTC (7 PM AST) — Telegram shortlist alert",
+    "recommend": "Saturday 12:00 UTC (8 AM AST) — Telegram PW-ID + recommendation",
+    "journal":   "Sunday 14:00 UTC (10 AM AST) — Journal entry + weekly summary"
+  },
+  "weekly_budget": 1.00,
+  "platform": "Fidelity",
+  "prayer_verse": "Mark 4:26-29",
+  "pw_id_format": "PW-YYYYMMDD-TICKER",
+  "telegram": {
+    "home_channel_env": "TELEGRAM_HOME_CHANNEL",
+    "bot_token_env": "TELEGRAM_BOT_TOKEN"
+  },
+  "filters": {
+    "max_price": 20.00,
+    "fractional_eligible": true,
+    "preferred_sectors": ["technology", "healthcare", "media", "faith"],
+    "platform_accessible": "Fidelity",
+    "window_days": 14
+  },
+  "scoring_weights": {
+    "stability": 0.25,
+    "mission_alignment": 0.25,
+    "fractional_availability": 0.20,
+    "momentum": 0.30
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "research_date": "2026-05-23",
+  "window": "2026-05-23 to 2026-06-06",
+  "candidate_count": 2,
+  "candidates": [
+    {
+      "ticker": "BWGC",
+      "company": "BW Industrial Holdings Inc.",
+      "ipo_date": "2026-05-27",
+      "price_range": "$6.00-$7.00",
+      "price_mid": 6.5,
+      "exchange": "NYSE MKT",
+      "sector": "Unknown",
+      "fractional_eligible": true,
+      "stability_score": 5,
+      "mission_score": 5,
+      "momentum_score": 7,
+      "rationale": "NYSE MKT IPO opening at $6.00-$7.00. Fidelity fractional eligible. Kingdom seed opportunity."
+    },
+    {
+      "ticker": "RIKU",
+      "company": "RIKU DINING GROUP Ltd",
+      "ipo_date": "2026-05-27",
+      "price_range": "$4.00-$6.00",
+      "price_mid": 5.0,
+      "exchange": "NASDAQ Capital",
+      "sector": "Unknown",
+      "fractional_eligible": true,
+      "stability_score": 5,
+      "mission_score": 5,
+      "momentum_score": 3,
+      "rationale": "NASDAQ Capital IPO opening at $4.00-$6.00. Fidelity fractional eligible. Kingdom seed opportunity."
+    }
+  ]
+}
