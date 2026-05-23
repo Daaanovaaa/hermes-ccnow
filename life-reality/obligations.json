@@ -1,6 +1,6 @@
 {
-  "_instructions": "Update due_date fields when you receive a renewal notice. Format: YYYY-MM-DD. Leave as YYYY-MM-DD if the date is not yet known \u2014 the tracker will skip unknown dates safely.",
-  "last_updated": "2026-05-22",
+  "_instructions": "Update due_date fields when you receive a renewal notice. Format: YYYY-MM-DD. Leave as YYYY-MM-DD if the date is not yet known — the tracker will skip unknown dates safely.",
+  "last_updated": "2026-05-23",
   "obligations": [
     {
       "id": "section8_recertification",
@@ -11,7 +11,7 @@
       "contact": "Housing Authority of Puerto Rico",
       "what_to_bring": "Income verification, lease agreement, government-issued ID, any changes in household composition",
       "notes": "Contact housing authority at least 60 days before due date. Missing this deadline can result in loss of housing assistance.",
-      "urgency": "CRITICAL \u2014 do not miss",
+      "urgency": "CRITICAL — do not miss",
       "alert_days": [
         30,
         14,
@@ -31,7 +31,7 @@
       "contact": "ASES / Departamento de la Familia Puerto Rico",
       "what_to_bring": "Income verification, ID, proof of address, household information",
       "notes": "Recertification periods vary. Check your SNAP notice or call your caseworker for exact date. Missing this means a gap in food assistance.",
-      "urgency": "HIGH \u2014 affects food security",
+      "urgency": "HIGH — affects food security",
       "alert_days": [
         30,
         14,
@@ -40,7 +40,7 @@
       ],
       "alert_sent": {},
       "last_completed": "2026-05-07",
-      "status": "COMPLETED \u2014 documents submitted, awaiting counselor"
+      "status": "COMPLETED — documents submitted, awaiting counselor"
     },
     {
       "id": "medicare_open_enrollment",
@@ -50,8 +50,8 @@
       "recurrence": "annual",
       "contact": "Medicare.gov or 1-800-MEDICARE",
       "what_to_bring": "Medicare card, list of current medications, current plan information",
-      "notes": "Open Enrollment runs Oct 15 \u2013 Dec 7 every year. Review your plan each October \u2014 drug formularies and premiums change annually. Changes take effect January 1.",
-      "urgency": "IMPORTANT \u2014 annual window only",
+      "notes": "Open Enrollment runs Oct 15 – Dec 7 every year. Review your plan each October — drug formularies and premiums change annually. Changes take effect January 1.",
+      "urgency": "IMPORTANT — annual window only",
       "alert_days": [
         30,
         14,
@@ -64,11 +64,11 @@
       "id": "vehicle_registration",
       "name": "Vehicle Registration Renewal (Marbete)",
       "category": "transport",
-      "due_date": "YYYY-MM-DD",
+      "due_date": "2027-01-31",
       "recurrence": "annual",
       "contact": "CESCO Puerto Rico",
-      "what_to_bring": "Inspection certificate (marbete de inspecci\u00f3n), insurance proof, ID, payment",
-      "notes": "Must have current vehicle inspection before renewing marbete. Cannot drive without valid registration in PR.",
+      "what_to_bring": "Inspection certificate (marbete de inspección), insurance proof, ID, payment",
+      "notes": "Marbete #011907216. Vigencia abr 2026 - ene 2027. Confirmed CESCO Digital 2026-05-23.",
       "urgency": "LEGAL REQUIREMENT",
       "alert_days": [
         30,
@@ -76,17 +76,18 @@
         7,
         1
       ],
-      "alert_sent": {}
+      "alert_sent": {},
+      "status": "ACTIVE"
     },
     {
       "id": "vehicle_insurance",
       "name": "Vehicle Insurance Renewal",
       "category": "transport",
-      "due_date": "YYYY-MM-DD",
+      "due_date": "2027-01-31",
       "recurrence": "annual",
       "contact": "Your insurance provider",
       "what_to_bring": "Current policy, payment method",
-      "notes": "Required for marbete renewal. Keep coverage continuous \u2014 lapse means unregisterable vehicle.",
+      "notes": "Seguro Obligatorio Form #24642001. Stamped APR 17 2026. Renews with marbete cycle.",
       "urgency": "LEGAL REQUIREMENT",
       "alert_days": [
         30,
@@ -94,7 +95,8 @@
         7,
         1
       ],
-      "alert_sent": {}
+      "alert_sent": {},
+      "status": "ACTIVE"
     },
     {
       "id": "driver_license_renewal",
@@ -102,7 +104,7 @@
       "category": "identity",
       "due_date": "2026-09-16",
       "recurrence": "annual",
-      "contact": "CESCO Puerto Rico \u2014 cescodigital.pr.gov | (787) 793-1000",
+      "contact": "CESCO Puerto Rico — cescodigital.pr.gov | (787) 793-1000",
       "what_to_bring": "Current license, proof of residence x2, Social Security card",
       "notes": "Renew license AND apply for PR ID card in same CESCO visit. VitalChek birth certificate arriving June 18-25 is needed for PR ID card.",
       "urgency": "LEGAL REQUIREMENT",
@@ -114,7 +116,7 @@
       ],
       "alert_sent": {},
       "last_completed": null,
-      "status": "OPEN \u2014 awaiting VitalChek birth certificate (arriving June 18-25)"
+      "status": "OPEN — awaiting VitalChek birth certificate (arriving June 18-25)"
     },
     {
       "id": "vitalchek_birth_certificate",
@@ -122,16 +124,16 @@
       "category": "identity",
       "due_date": "2026-06-25",
       "recurrence": "one-time",
-      "contact": "VitalChek \u2014 Order #221149859 | Illinois Dept. of Public Health",
-      "what_to_bring": "N/A \u2014 delivery to mailbox",
+      "contact": "VitalChek — Order #221149859 | Illinois Dept. of Public Health",
+      "what_to_bring": "N/A — delivery to mailbox",
       "notes": "Ordered 2026-05-21. Expected arrival June 18-25. When it arrives, go to CESCO immediately. Hermes reminder set for June 18.",
-      "urgency": "HIGH \u2014 blocks PR ID card application",
+      "urgency": "HIGH — blocks PR ID card application",
       "alert_days": [
         1
       ],
       "alert_sent": {},
       "last_completed": null,
-      "status": "ORDERED \u2014 awaiting delivery"
+      "status": "ORDERED — awaiting delivery"
     }
   ]
 }
