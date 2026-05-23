@@ -1,0 +1,25 @@
+HERMES SIMULATION RUN
+Run date:        2026-05-23
+Sim days:        14
+HERMES_HOME:     /root/hermes-sim/
+Modules loaded:  1
+Module filter:   prayer_finance
+============================================================
+
+  [2026-05-23] MODULE: prayer_finance  schedule=weekly
+    Scenario 'normal': PASS
+    Scenario 'no_ipos': PASS
+
+  [2026-05-30] MODULE: prayer_finance  schedule=weekly
+    Scenario 'normal': PASS
+    Scenario 'no_ipos': PASS
+
+============================================================
+SIMULATION SUMMARY
+============================================================
+Modules run:       1
+  prayer_finance
+Scenarios passed:  4
+Scenarios failed:  0
+Total scenarios:   4
+============================================================
