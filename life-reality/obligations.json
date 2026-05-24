@@ -1,6 +1,6 @@
 {
   "_instructions": "Update due_date fields when you receive a renewal notice. Format: YYYY-MM-DD. Leave as YYYY-MM-DD if the date is not yet known — the tracker will skip unknown dates safely.",
-  "last_updated": "2026-05-23",
+  "last_updated": "2026-05-24",
   "obligations": [
     {
       "id": "section8_recertification",
@@ -151,6 +151,23 @@
       ],
       "alert_sent": {},
       "status": "OPEN — overdue, also verify 2024 return was filed"
+    },
+    {
+      "id": "godaddy_faaaith_org",
+      "name": "GoDaddy Domain Renewal — faaaith.org",
+      "category": "government",
+      "due_date": "2027-05-10",
+      "recurrence": "annual",
+      "contact": "GoDaddy — godaddy.com",
+      "notes": "Auto-renews May 10, 2027. Verify payment method is current before renewal date.",
+      "urgency": "IMPORTANT",
+      "alert_days": [
+        30,
+        14,
+        7
+      ],
+      "alert_sent": {},
+      "status": "ACTIVE — auto-renew enabled"
     }
   ]
 }
