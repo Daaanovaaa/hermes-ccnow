@@ -1,14 +1,15 @@
 # Prayer Finance Status
-*Synced from prayer_finance_engine.py*
+*Synced: 2026-05-24*
 
-Weekly rhythm:
+Seeds planted: 0
+Total invested: $0.00
+Scripture: Mark 4:26-29
+
+## Recent Seeds
+*No seeds planted yet — first seed pending this Friday.*
+
+## Weekly Schedule
 - Friday 6 PM AST — IPO research
 - Friday 7 PM AST — Shortlist on Telegram
 - Saturday 8 AM AST — Final recommendation
 - Sunday 10 AM AST — Journal entry
-
-Scripture: Mark 4:26-29
-"So is the kingdom of GOD, as if a man should cast seed into the ground..."
-
-## Latest Recommendation
-*Pending first run (this Friday)*
