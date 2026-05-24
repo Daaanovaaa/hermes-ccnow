@@ -242,6 +242,10 @@ def push_to_actual_budget(transactions):
 
             actual.commit()
 
+            rules = get_ruleset(actual.session)
+            rules.run(actual.session)
+            actual.commit()
+
         print(f"Actual Budget: {imported} transactions reconciled.")
     except Exception as e:
         print(f"Actual Budget push failed: {e}")
