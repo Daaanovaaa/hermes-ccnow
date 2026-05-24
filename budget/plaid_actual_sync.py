@@ -34,6 +34,9 @@ BUDGET_SHEET_ID = '1A3Iilsr6DpE5JRtZFnBADpqlyOGXsz2KLvUsFiDOgwg'
 HERMES_PYTHON = '/usr/local/lib/hermes-agent/venv/bin/python3'
 
 load_dotenv(Path.home() / '.hermes' / '.env')
+# Expected env vars: PLAID_CLIENT_ID, PLAID_SECRET, PLAID_ENV,
+# FIFTH_THIRD_ACCESS_TOKEN, BANCO_POPULAR_ACCESS_TOKEN,
+# TELEGRAM_BOT_TOKEN, ACTUAL_PASSWORD
 
 # Auto-categorization rules: keyword → envelope category
 CATEGORY_RULES = [
@@ -136,6 +139,76 @@ def log_to_sheet(transactions):
     return len(rows)
 
 
+def push_to_actual_budget(transactions):
+    """Push confirmed transactions to Actual Budget via actualpy, skipping duplicates."""
+    try:
+        from actual import Actual
+        from actual.queries import get_accounts, get_transactions, create_transaction
+    except ImportError:
+        print("actualpy not installed — skipping Actual Budget push")
+        return
+
+    password = os.getenv('ACTUAL_PASSWORD', '')
+    if not password:
+        print("ACTUAL_PASSWORD not set — skipping Actual Budget push")
+        return
+
+    if not transactions:
+        print("Actual Budget: no transactions to push.")
+        return
+
+    account_name_map = {
+        'Fifth Third':   'Fifth Third Bank',
+        'Banco Popular': 'Banco Popular',
+    }
+
+    try:
+        with Actual(base_url='http://localhost:5006', password=password,
+                    file='CCN Personal Budget') as actual:
+            accounts_list = get_accounts(actual.session)
+
+            def find_account(target_name):
+                for acct in accounts_list:
+                    if target_name.lower() in (acct.name or '').lower():
+                        return acct
+                return None
+
+            existing  = get_transactions(actual.session)
+            seen_ids  = {t.notes for t in existing if t.notes}
+
+            imported = 0
+            for t in transactions:
+                if t['transaction_id'] in seen_ids:
+                    continue
+
+                target_name = account_name_map.get(t['bank'])
+                if not target_name:
+                    continue
+                account = find_account(target_name)
+                if account is None:
+                    continue
+
+                txn_date = datetime.strptime(t['date'], '%Y-%m-%d').date()
+                payee    = t.get('merchant') or t.get('description', '')[:50]
+                amount   = -abs(t['amount'])
+
+                create_transaction(
+                    actual.session,
+                    date=txn_date,
+                    account=account,
+                    payee=payee,
+                    notes=t['transaction_id'],
+                    amount=amount,
+                )
+                imported += 1
+
+            actual.commit()
+
+        print(f"Actual Budget: {imported} transactions imported.")
+    except Exception as e:
+        print(f"Actual Budget push failed: {e}")
+
+
 def main():
     args     = sys.argv[1:]
     days_back = 7
@@ -198,6 +271,8 @@ def main():
         f'Also logged to Budget Sheet expense tab.',
     ]
     print('\n'.join(lines))
+
+    push_to_actual_budget(confirmed)
 
 
 if __name__ == '__main__':
