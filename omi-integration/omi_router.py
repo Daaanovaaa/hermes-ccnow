@@ -165,6 +165,12 @@ def process_transcript(text, timestamp=None):
 
 
 class OmiWebhookHandler(BaseHTTPRequestHandler):
+    def do_GET(self):
+        self.send_response(200)
+        self.send_header('Content-Type', 'text/plain')
+        self.end_headers()
+        self.wfile.write(b'Hermes CC NOW webhook active')
+
     def do_POST(self):
         if self.path != '/omi':
             self.send_response(404)
