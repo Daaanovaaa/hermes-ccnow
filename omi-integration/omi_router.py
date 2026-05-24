@@ -11,11 +11,13 @@ Usage:
   python3 omi_router.py               # start webhook server
   python3 omi_router.py --process "transcript text"   # process manually
   python3 omi_router.py --port 5007   # override port
+  python3 omi_router.py --certfile /path/to/cert.pem --keyfile /path/to/key.pem  # HTTPS
 """
 
 import json
 import os
 import re
+import ssl
 import subprocess
 import sys
 import threading
@@ -198,10 +200,20 @@ class OmiWebhookHandler(BaseHTTPRequestHandler):
         pass  # Suppress default access logs
 
 
-def start_server(port=5007):
+def start_server(port=5007, certfile=None, keyfile=None):
     server = HTTPServer(('0.0.0.0', port), OmiWebhookHandler)
-    print(f"Omi webhook listening on port {port}")
-    print(f"Endpoint: POST http://[vps-ip]:{port}/omi")
+    if certfile and keyfile and Path(certfile).exists() and Path(keyfile).exists():
+        server.socket = ssl.wrap_socket(
+            server.socket,
+            certfile=certfile,
+            keyfile=keyfile,
+            server_side=True,
+        )
+        print(f"Omi webhook listening on port {port} (HTTPS)")
+        print(f"Endpoint: POST https://[vps-ip]:{port}/omi")
+    else:
+        print(f"Omi webhook listening on port {port}")
+        print(f"Endpoint: POST http://[vps-ip]:{port}/omi")
     server.serve_forever()
 
 
@@ -221,7 +233,19 @@ def main():
         if idx + 1 < len(args):
             port = int(args[idx+1])
 
-    start_server(port)
+    certfile = None
+    if '--certfile' in args:
+        idx = args.index('--certfile')
+        if idx + 1 < len(args):
+            certfile = args[idx + 1]
+
+    keyfile = None
+    if '--keyfile' in args:
+        idx = args.index('--keyfile')
+        if idx + 1 < len(args):
+            keyfile = args[idx + 1]
+
+    start_server(port, certfile=certfile, keyfile=keyfile)
 
 
 if __name__ == '__main__':
