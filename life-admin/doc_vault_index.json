@@ -1,11 +1,18 @@
 {
-  "_description": "Document Vault — known categories and expected documents. Scanned from leeegaaal@gmail.com Google Drive. Update documents_confirmed when you upload a file.",
-  "last_scanned": null,
+  "_description": "Document Vault \u2014 known categories and expected documents. Scanned from leeegaaal@gmail.com Google Drive. Update documents_confirmed when you upload a file.",
+  "last_scanned": "2026-05-24",
   "profile": "leeegaaal",
   "categories": {
     "section8": {
       "label": "Section 8 / Housing Assistance",
-      "drive_search_terms": ["section 8", "housing authority", "HUD", "HAP", "rental assistance", "recertification"],
+      "drive_search_terms": [
+        "section 8",
+        "housing authority",
+        "HUD",
+        "HAP",
+        "rental assistance",
+        "recertification"
+      ],
       "expected_documents": [
         "Current lease agreement",
         "HAP contract (Housing Assistance Payment)",
@@ -17,7 +24,14 @@
     },
     "snap_pan": {
       "label": "SNAP / PAN / Food Assistance",
-      "drive_search_terms": ["SNAP", "PAN", "food stamps", "Departamento de la Familia", "ASES", "recertification"],
+      "drive_search_terms": [
+        "SNAP",
+        "PAN",
+        "food stamps",
+        "Departamento de la Familia",
+        "ASES",
+        "recertification"
+      ],
       "expected_documents": [
         "Current SNAP award letter",
         "Recertification notice",
@@ -27,7 +41,12 @@
     },
     "medicare": {
       "label": "Medicare",
-      "drive_search_terms": ["Medicare", "CMS", "Medicare card", "plan summary"],
+      "drive_search_terms": [
+        "Medicare",
+        "CMS",
+        "Medicare card",
+        "plan summary"
+      ],
       "expected_documents": [
         "Medicare card (copy)",
         "Current plan information",
@@ -36,12 +55,20 @@
       "documents_confirmed": []
     },
     "bankruptcy": {
-      "label": "Bankruptcy — Chapter 7",
-      "drive_search_terms": ["bankruptcy", "Chapter 7", "Marggie", "Rodriguez", "discharge", "petition", "creditor"],
+      "label": "Bankruptcy \u2014 Chapter 7",
+      "drive_search_terms": [
+        "bankruptcy",
+        "Chapter 7",
+        "Marggie",
+        "Rodriguez",
+        "discharge",
+        "petition",
+        "creditor"
+      ],
       "expected_documents": [
-        "Credit report — Experian",
-        "Credit report — Equifax",
-        "Credit report — TransUnion",
+        "Credit report \u2014 Experian",
+        "Credit report \u2014 Equifax",
+        "Credit report \u2014 TransUnion",
         "Proof of income (last 6 months)",
         "Complete creditor list",
         "List of assets",
@@ -54,7 +81,15 @@
     },
     "credit_history": {
       "label": "Credit History",
-      "drive_search_terms": ["credit report", "Experian", "Equifax", "TransUnion", "Continental Finance", "Surge", "Celtic Bank"],
+      "drive_search_terms": [
+        "credit report",
+        "Experian",
+        "Equifax",
+        "TransUnion",
+        "Continental Finance",
+        "Surge",
+        "Celtic Bank"
+      ],
       "expected_documents": [
         "Experian credit report",
         "Equifax credit report",
@@ -63,8 +98,16 @@
       "documents_confirmed": []
     },
     "vehicle": {
-      "label": "Vehicle — Registration & Insurance",
-      "drive_search_terms": ["marbete", "CESCO", "vehiculo", "vehicle", "seguro", "insurance", "inspeccion"],
+      "label": "Vehicle \u2014 Registration & Insurance",
+      "drive_search_terms": [
+        "marbete",
+        "CESCO",
+        "vehiculo",
+        "vehicle",
+        "seguro",
+        "insurance",
+        "inspeccion"
+      ],
       "expected_documents": [
         "Current marbete (registration)",
         "Vehicle inspection certificate",
@@ -75,7 +118,16 @@
     },
     "legal_correspondence": {
       "label": "Legal Correspondence",
-      "drive_search_terms": ["legal services", "attorney", "court", "tribunal", "Mayaguez", "demanda", "notificacion", "resolucion"],
+      "drive_search_terms": [
+        "legal services",
+        "attorney",
+        "court",
+        "tribunal",
+        "Mayaguez",
+        "demanda",
+        "notificacion",
+        "resolucion"
+      ],
       "expected_documents": [
         "Any court notices received",
         "Attorney correspondence",
@@ -84,6 +136,2347 @@
       "documents_confirmed": []
     }
   },
-  "known_drive_files": {},
+  "known_drive_files": {
+    "1147Xb5ddkrd5h993uUg4VwPDjOsgxILj": {
+      "name": "Section 8 application documents",
+      "category": "section8",
+      "first_seen": "2026-05-24"
+    },
+    "1mKsdHDKORiPBRcU2e_7b06oNGu3_ANY7": {
+      "name": "CONTRATO DE ARRENDAMINTO_SECCION 8.pdf",
+      "category": "section8",
+      "first_seen": "2026-05-24"
+    },
+    "1ZRTUP_-rGBHMpN3GBHM8D3CX0XZZpneQ": {
+      "name": "DEPARTAMENTO DE LA VIVIENDA-PUBLIC NOTICE DE SECCI\u00d3N 8-MARCH 5th 2024.pdf",
+      "category": "section8",
+      "first_seen": "2026-05-24"
+    },
+    "1ZouoLjO4PAmNwt4OdoUHfM2pXSMKdy1r": {
+      "name": "2021 TAX RETURN.pdf",
+      "category": "section8",
+      "first_seen": "2026-05-24"
+    },
+    "1eyst8VFA-7gj55ZCBlCYtDNm4wtGwBvh": {
+      "name": "ACCESS_FLORIDA_APPLICATION_DETAILS_814905899.pdf",
+      "category": "section8",
+      "first_seen": "2026-05-24"
+    },
+    "1Q9xTtI-WailpjB9_7GOu1DCOdtTY_KFs": {
+      "name": "ADDITIONAL ANSWERS AND AFFIRMATIVE DEFENSES AGAINST COMPLAINT FOR UNLAWFUL DETAINER _ 40 Pages.pdf",
+      "category": "section8",
+      "first_seen": "2026-05-24"
+    },
+    "1f619m0xrCWSZvl2LMe85Vpp1MEVPN9ff": {
+      "name": "ACCESS_FLORIDA_APPLICATION_DETAILS_812603101.pdf",
+      "category": "section8",
+      "first_seen": "2026-05-24"
+    },
+    "1IfEQ-JX1l4J8zhULpQu6ilQxSL0ZRThz": {
+      "name": "UPDATED VILLANUEVA 2019.pdf",
+      "category": "section8",
+      "first_seen": "2026-05-24"
+    },
+    "1KE82Uy3O-6KoQKtwGMYpMfG61CaU05TL": {
+      "name": "PART 2 AND 3 CONT 1.pdf",
+      "category": "section8",
+      "first_seen": "2026-05-24"
+    },
+    "1-ZzKZmyR-pPvCi5C-Fg9bL8dMNidImUuZtMX48doq-I": {
+      "name": "Pocket Option",
+      "category": "section8",
+      "first_seen": "2026-05-24"
+    },
+    "133lhlnaXL9Nc9c5iO2CaOqcVXRoZKfm5": {
+      "name": "2021 TAX RETURN.pdf",
+      "category": "section8",
+      "first_seen": "2026-05-24"
+    },
+    "1Aoa1Z2aItP9ET1DVah5KmdRAeFzXkkqPWdC0W1cORFg": {
+      "name": "Supervisora Programa Secci\u00f3n 8 y Programa HOME-Pastora Noemi Cancel trabaja aqu\u00ed-Information",
+      "category": "section8",
+      "first_seen": "2026-05-24"
+    },
+    "1wddnPkTBMNCSxVhOcxWlkz4AgsoOB2PF": {
+      "name": "REQUISITOS Y DOCUMENTOS PARA UNA VIVIENDA SECCION 8.pdf",
+      "category": "section8",
+      "first_seen": "2026-05-24"
+    },
+    "1H2WRyxHnUxJ2Mrt9JrSR-jkwmTPE9sJ-": {
+      "name": "Part 3.pdf",
+      "category": "section8",
+      "first_seen": "2026-05-24"
+    },
+    "1PHLGRYU_A7gyYB3J7Zno_XhBZ-oKHpCM": {
+      "name": "Support Letter - Pastor Hector Boucet Ciudad Refugio.pdf",
+      "category": "section8",
+      "first_seen": "2026-05-24"
+    },
+    "1lxe8zAQvJhh_riuLGnn2mAg1IaUVGaw9": {
+      "name": "Support Letter for Administrative Review  / Carta de Apoyo para Revisi\u00f3n  Administrativa.pdf",
+      "category": "section8",
+      "first_seen": "2026-05-24"
+    },
+    "1anW3v-0L7VpriI5GEtyLEnvsOGzZGnyI": {
+      "name": "VILLANUEVA 2019.pdf",
+      "category": "section8",
+      "first_seen": "2026-05-24"
+    },
+    "1vEDex6TkAvAg3jXzv2-hTLT9zLNlvPi_": {
+      "name": "Gmail - 22-17090-epk chapter 13.pdf",
+      "category": "section8",
+      "first_seen": "2026-05-24"
+    },
+    "1DOXQfO656bm27GGwkRhXPwzx_R1IQpZ2": {
+      "name": "APPLICATION FOR DETERMINATION OF CIVIL INDIGENCE_MOTION TO REOPEN_NOTICE OF RELATED CASES_CONFIDENTIAL INFO_DOCKET OF CONTROLLING PLEADINGS_8 PAGES_1-19-2023.pdf",
+      "category": "section8",
+      "first_seen": "2026-05-24"
+    },
+    "19YY0RNoCIKo2mbxxf43bLCKYYehDVTln": {
+      "name": "COMPLETE NOTICE OF CHAPTER 13 FILING_22-17090-EPK_VILLANUEVA_CHAPTER 13_FILED 09132022.pdf",
+      "category": "section8",
+      "first_seen": "2026-05-24"
+    },
+    "1AO5QCLXZ9LPv8lej3r7_wigOcHHHzlsa": {
+      "name": "d6.pdf",
+      "category": "section8",
+      "first_seen": "2026-05-24"
+    },
+    "1EIjqTszNsLNA2kHtw-uENazyqav9EnQB": {
+      "name": "2019 Tax Tiger Individual Tax Organizer-Schedule C - CHERUBS PIZZERIA DEPARTMENT.pdf",
+      "category": "section8",
+      "first_seen": "2026-05-24"
+    },
+    "1q_ONVrzX7wRAyM32TomxMJVAV7yrW-pw": {
+      "name": "9886 Y 92006.pdf",
+      "category": "section8",
+      "first_seen": "2026-05-24"
+    },
+    "1w_3HYbPOxCtfztQvyAC5iqYjv15x48vy": {
+      "name": "RELEASE 9886.pdf",
+      "category": "section8",
+      "first_seen": "2026-05-24"
+    },
+    "1GFpi34gkXxzNFdKuIdVtFRN0kZeJ-sGI": {
+      "name": "HUD Request for Tenancy Approval.pdf",
+      "category": "section8",
+      "first_seen": "2026-05-24"
+    },
+    "1J8OPIMvtRCgEEoUHKglhKnaaUtnc0j18": {
+      "name": "\u00bfHa sido usted v\u00edctima de discriminaci\u00f3n en la vivienda?.pdf",
+      "category": "section8",
+      "first_seen": "2026-05-24"
+    },
+    "0B7s1LPR2M288NmozVUJCSXZJZWVTN2pLakdHaE5jU2x1MUM0": {
+      "name": "TBCDC-Spanish HB Application.pdf",
+      "category": "section8",
+      "first_seen": "2026-05-24"
+    },
+    "1PCoFaqH57fQigLHUyKFNoezZ1o0gfztY": {
+      "name": "1.pdf",
+      "category": "section8",
+      "first_seen": "2026-05-24"
+    },
+    "10evFHYVZLDgfW19gHIl-SuiKw097aj2O": {
+      "name": "Screenshot 2026-05-21 141531.png",
+      "category": "section8",
+      "first_seen": "2026-05-24"
+    },
+    "1NhtMuxH098qpoLGM_UrlIXlN_s_3nxEq": {
+      "name": "3.pdf",
+      "category": "section8",
+      "first_seen": "2026-05-24"
+    },
+    "1SlEqUXMSGr7n_bBWnvJTa3jg-OeXAUcZM1D4n_hojCM": {
+      "name": "TBCDC-Spanish HB Application",
+      "category": "section8",
+      "first_seen": "2026-05-24"
+    },
+    "1hDkwmVNXUxZgF6V6nFjvqkoyEF_v7Dgn": {
+      "name": "DOC-20220727-WA0009.",
+      "category": "section8",
+      "first_seen": "2026-05-24"
+    },
+    "1ypX_PVfbpeQSXQy-UKdXeaBI-z2T3sBQ": {
+      "name": "2022-23-fafsa.pdf",
+      "category": "section8",
+      "first_seen": "2026-05-24"
+    },
+    "13oFl8iokbpnCT5YsJgPORNQfmpcQ5wpH": {
+      "name": "HUD Voucher.pdf",
+      "category": "section8",
+      "first_seen": "2026-05-24"
+    },
+    "1nMJpA8y-cnDrP_xgEOe-LlYKtP2I1H7P": {
+      "name": "Submission complete.pdf",
+      "category": "section8",
+      "first_seen": "2026-05-24"
+    },
+    "1bVL6hd9Jms_HZFmRb8M68A60fqDYtTbE": {
+      "name": "v1.pdf",
+      "category": "section8",
+      "first_seen": "2026-05-24"
+    },
+    "1yO-ixK5H8nH67glo-OQDrBK4cddXCfHW": {
+      "name": "2.pdf",
+      "category": "section8",
+      "first_seen": "2026-05-24"
+    },
+    "1uNWoTUa2-rcrZgY6xo0a_2TX-q_PJ68X": {
+      "name": "FreeTaxUSA\u00ae -- View Return Status and Print Your Copy.pdf",
+      "category": "section8",
+      "first_seen": "2026-05-24"
+    },
+    "1dCfiGrVE33w3B1JvgIjQh8aUqhl2sCKE": {
+      "name": "Gmail - Thank you for submitting a report to the Civil Rights Division.pdf",
+      "category": "section8",
+      "first_seen": "2026-05-24"
+    },
+    "1f86En_g9L11hLB9GJ7F2UvHYgiKNLnbe": {
+      "name": "AVP Aviso de Derechos de Ocupacion bajo la ley sobre la Violencia contra la Mujer.pdf",
+      "category": "section8",
+      "first_seen": "2026-05-24"
+    },
+    "1qu1f5UK2DnUEcSarw1C8oEy0bHw6L4_7": {
+      "name": "v2.pdf",
+      "category": "section8",
+      "first_seen": "2026-05-24"
+    },
+    "1umkrDPWPWrOFoSHh3E7ai4U8HdHvx82q": {
+      "name": "DECLARACIO\u0301N PERSONAL 4 of 4.pdf",
+      "category": "section8",
+      "first_seen": "2026-05-24"
+    },
+    "1xGfjDc9Ez6nj_WbbqFYZWKrYkFVjEtVz": {
+      "name": "a1.pdf",
+      "category": "section8",
+      "first_seen": "2026-05-24"
+    },
+    "1PWiVQsrCNaIE3XwHtPzxw9g1O5g9fi8E": {
+      "name": "DECLARACIO\u0301N PERSONAL.pdf",
+      "category": "section8",
+      "first_seen": "2026-05-24"
+    },
+    "1sqJfyeqRH5vlg4xruMkA8tHWgen9mXA2": {
+      "name": "DECLARACIO\u0301N PERSONAL.pdf",
+      "category": "section8",
+      "first_seen": "2026-05-24"
+    },
+    "1FPsGPcTidJ8eUOttAA0FuuQbiZ812z7aZpxXOnEqhgM": {
+      "name": "Untitled document",
+      "category": "section8",
+      "first_seen": "2026-05-24"
+    },
+    "1VURLXTcRTDZJZH_Q-K98xRTQ5TLaLHQZ": {
+      "name": "a8.pdf",
+      "category": "section8",
+      "first_seen": "2026-05-24"
+    },
+    "16FmzL31QJ7p5aee6L5VdG35Z6KTDtsvqPQ5x01g7VEE": {
+      "name": "Test 1",
+      "category": "section8",
+      "first_seen": "2026-05-24"
+    },
+    "1WzDG4FVclFDQgv3S6wI2fE4XX7TabD7O": {
+      "name": "6.pdf",
+      "category": "section8",
+      "first_seen": "2026-05-24"
+    },
+    "1ko_8d6PvIB7Tdttbb7rHYifzgTr7nWNR": {
+      "name": "r3.pdf",
+      "category": "section8",
+      "first_seen": "2026-05-24"
+    },
+    "1Hvr1u8pgjqqzDVcv2oXu9roaG-kFcpVz": {
+      "name": "4.pdf",
+      "category": "section8",
+      "first_seen": "2026-05-24"
+    },
+    "1PG9OfZE28x6-qf7NtKrDD7jRRjAd7aWQ8_24zUroEAo": {
+      "name": "Relocation and Rental Assistance Cover Letter 3-4-23",
+      "category": "section8",
+      "first_seen": "2026-05-24"
+    },
+    "1dT7tkmBWFNtHAeuKD9rZ8wUmZtu48S6G": {
+      "name": "2. Copy of rental assistance approval - FIRST FEDERAL MONEY PAID RECENTLY TO THE LANDLORD.pdf",
+      "category": "section8",
+      "first_seen": "2026-05-24"
+    },
+    "1u0aniH3fssgAMyAjXau28JGGSsq_g355": {
+      "name": "5. Rental assistance case manager name, address, phone number, and email address.pdf",
+      "category": "section8",
+      "first_seen": "2026-05-24"
+    },
+    "1qfkEAf80DYPtQqvaFlk7oGqBFvl2d2g4": {
+      "name": "MOTION TO FILE RELOCATION ASSISTANCE UPDATE FOR ALL PARTIES INFORMATION_25 Pages.pdf",
+      "category": "section8",
+      "first_seen": "2026-05-24"
+    },
+    "1XVKJoqodXGH2dryNblPCuZssIX7STmz-7QbSmnSebJA": {
+      "name": "STATUS ON REQUEST FOR RENTAL ASSISTENCE",
+      "category": "section8",
+      "first_seen": "2026-05-24"
+    },
+    "1zBRDPWOEzpCl1PuD8WYeEVbc9HIJz77AvPtAmsutTiA": {
+      "name": "10-3-2022: EMERGENCY MOTION TO ADD CASE INFORMATION",
+      "category": "section8",
+      "first_seen": "2026-05-24"
+    },
+    "1Uhh1pkcoUpCxieb9ZgWXZ8Z-0dKUTVFK": {
+      "name": "EvictionPacket_201904.pdf",
+      "category": "section8",
+      "first_seen": "2026-05-24"
+    },
+    "14hoHeoBLHHiO9CfIRJsq7rRqsjOK1buE": {
+      "name": "OSCARSS_APPLICATION_REPORT (2).pdf",
+      "category": "section8",
+      "first_seen": "2026-05-24"
+    },
+    "18wL33f6A7Vxzg54K8_Gp4DwMO1fo_qgR": {
+      "name": "MOTION TO ADD CASE INFORMATION AND REQUEST A 30 DAY EXTENSION(1).pdf",
+      "category": "section8",
+      "first_seen": "2026-05-24"
+    },
+    "1L2Ss9Y-_2r41GQHctcYU25OysmxFcIoL": {
+      "name": "Additional MOTION to Enter my effort and status with moving out of said property _ 11 PAGES.pdf",
+      "category": "section8",
+      "first_seen": "2026-05-24"
+    },
+    "1vWChdhFGrc9ZsQxBuA0-KO54USiUQHhRX6alyrYFRtI": {
+      "name": "MOTION TO ADD CASE INFORMATION AND REQUEST A 30 DAY EXTENSION",
+      "category": "section8",
+      "first_seen": "2026-05-24"
+    },
+    "1J8t0ShPJbCg8MLmELMaIk4c12QIoxeEs": {
+      "name": "Consumer Pamphlet_ Rights and Duties of Tenants and Landlords \u2013 The Florida Bar.pdf",
+      "category": "section8",
+      "first_seen": "2026-05-24"
+    },
+    "1L-z6UH6Ez9OG016ikfeNBmlYtfG6xr46": {
+      "name": "Unit 48 Lease.pdf",
+      "category": "section8",
+      "first_seen": "2026-05-24"
+    },
+    "1WogFGQKfLnbHKwHOU9qylKssnl6Rfev02hv4iUmjWKM": {
+      "name": "4th Deputy Incident Report 8-9-2022",
+      "category": "section8",
+      "first_seen": "2026-05-24"
+    },
+    "16dZ3XrRm-mqlkKBZxa8I-vT6amuol8XYzdYsfy6uHac": {
+      "name": "Departamento de Familia ADSEF- Login & Acct Info",
+      "category": "section8",
+      "first_seen": "2026-05-24"
+    },
+    "1J3ObfIAO1p870gmqinzPf68MSYW9FMCD": {
+      "name": "RepaymentApplicationDocument.pdf",
+      "category": "section8",
+      "first_seen": "2026-05-24"
+    },
+    "1jykex-q7tl4XW_nxC2wIbTb1gdvMpGHT": {
+      "name": "AlternativeDocument.pdf",
+      "category": "section8",
+      "first_seen": "2026-05-24"
+    },
+    "14fYzgQ7jHKFJKmPl_0eYSAWHfGIPFaZ7": {
+      "name": "pdf24_merged (5).pdf",
+      "category": "section8",
+      "first_seen": "2026-05-24"
+    },
+    "1zRAbc5cz7L1FzVXdhbmky85kMuHT-cr8": {
+      "name": "Multistate_BEP_115.pdf",
+      "category": "section8",
+      "first_seen": "2026-05-24"
+    },
+    "1VcCtXbITao18mKHjshDOMRdQ0ieOecdL": {
+      "name": "Pastor C-TAL Carlos 'DaNoVa' Villanueva - ServSafe Food Manager Cert_1.jpg",
+      "category": "section8",
+      "first_seen": "2026-05-24"
+    },
+    "1COkBOt7yVOyny3z1TjA5TK6d9caH5nTxO4ddqwXgqU0": {
+      "name": "Contact information",
+      "category": "section8",
+      "first_seen": "2026-05-24"
+    },
+    "1OY9UspSyecVGBTGDbn50uL4ytWURTsvC": {
+      "name": "(4)ServSafe Certification Carlos Villanueva 20880302.pdf",
+      "category": "section8",
+      "first_seen": "2026-05-24"
+    },
+    "1QBhLg1bz02LmJy2jEJZ9wxOy49GxwIuk": {
+      "name": "53867 CLIENT PACKET_Approved Plan from the Florida Division of Hotels & Restaurants File # 53867(March 21st, 2022).PDF",
+      "category": "section8",
+      "first_seen": "2026-05-24"
+    },
+    "1p0t09zdn6hfVt4YmYuIOy9YCBMsXOAaZ": {
+      "name": "2020 TaxReturn_BW.pdf",
+      "category": "section8",
+      "first_seen": "2026-05-24"
+    },
+    "1k0cCqaFXZvadXTOBdymqTBwzaKWLi_Pa": {
+      "name": "VILLANUEVA 2020.pdf",
+      "category": "section8",
+      "first_seen": "2026-05-24"
+    },
+    "1JEZYsRSB0HHjOR_N3yJmxsT91Z9XJlz9": {
+      "name": "2018 JH Employee Handbook.pdf",
+      "category": "section8",
+      "first_seen": "2026-05-24"
+    },
+    "1V5PVbSuhWHRLa3X9D38BlA10wRHCwdtw": {
+      "name": "2018 Session 05_pm.pdf",
+      "category": "section8",
+      "first_seen": "2026-05-24"
+    },
+    "1OeCwERccEPxDXzFZ-J_UNLGjynpdlsKQMh1PxGzT7QU": {
+      "name": "Dept of Children and Family SVCS Policy",
+      "category": "snap_pan",
+      "first_seen": "2026-05-24"
+    },
+    "191swshd-58OQH4JXdhM1_7vx2FZqjoPt": {
+      "name": "ACCESS_FLORIDA_APPLICATION_DETAILS_686869976.pdf",
+      "category": "snap_pan",
+      "first_seen": "2026-05-24"
+    },
+    "14Gin-Z_G0dPgFlE7RjV4TuB4JaND8DkOedfO-A7t9cI": {
+      "name": "Statement of Understanding",
+      "category": "snap_pan",
+      "first_seen": "2026-05-24"
+    },
+    "1PRFHxuUpq4Xj-1KxOdIh1F9EdNWy3job": {
+      "name": "ACCESS_FLORIDA_APPLICATION_DETAILS_685016527 (1).pdf",
+      "category": "snap_pan",
+      "first_seen": "2026-05-24"
+    },
+    "1TZqkTqYG-HLQB94gwRZmu7ZKNvNTpJGN": {
+      "name": "92548000116.pdf",
+      "category": "snap_pan",
+      "first_seen": "2026-05-24"
+    },
+    "1evvfhakRgq-FuQWrV_9_wk2Wq6hAoAGm": {
+      "name": "92548000115.pdf",
+      "category": "snap_pan",
+      "first_seen": "2026-05-24"
+    },
+    "1PFlkXy4llSCS5sPEBjGUI_KGTuyLXo3R": {
+      "name": "92548000118.pdf",
+      "category": "snap_pan",
+      "first_seen": "2026-05-24"
+    },
+    "1lb6b1-UvZcbYI5MsChKmW-njpHuc8PtD": {
+      "name": "92548000117.pdf",
+      "category": "snap_pan",
+      "first_seen": "2026-05-24"
+    },
+    "17fMDxYw28BdlNS2cpPXz3K0a1LdKoPYx": {
+      "name": "Commonwealth of Puerto Rico GENERAL COURT OF JUSTICE Court of First Instance.pdf",
+      "category": "snap_pan",
+      "first_seen": "2026-05-24"
+    },
+    "1Xp0RSk41JqYx4LWbsKrzFVA69RNluqwl": {
+      "name": "IMG_4658.PNG",
+      "category": "snap_pan",
+      "first_seen": "2026-05-24"
+    },
+    "1AtKCaZDJaClKzzWrLVD9Iw0P8M53dlir": {
+      "name": "IMG_4657.PNG",
+      "category": "snap_pan",
+      "first_seen": "2026-05-24"
+    },
+    "1D_l2Drj1BqaVkFxAETT6KjE743WaDbiN": {
+      "name": "Scanned_20180430-1706.pdf",
+      "category": "snap_pan",
+      "first_seen": "2026-05-24"
+    },
+    "16knOU6E1YuUyNBdGDCPltuw_HVd4kITk": {
+      "name": "Fee_Waiver_Order_Approved_COMPLETED.pdf",
+      "category": "snap_pan",
+      "first_seen": "2026-05-24"
+    },
+    "1fBTfYAYSjv8C0Vz8oKLg5NLtd27ffhuo": {
+      "name": "Fee_Waiver_Application_Approved.pdf",
+      "category": "snap_pan",
+      "first_seen": "2026-05-24"
+    },
+    "103-0pYZ7NQa3dAU4adh1Gxb8s6OTnjQO": {
+      "name": "Fee_Waiver_Application_Approved_COMPLETED.pdf",
+      "category": "snap_pan",
+      "first_seen": "2026-05-24"
+    },
+    "1gpelQXxrycLsYRAYMa1P6qx0Z5vn0nKf": {
+      "name": "Fee Waiver.pdf",
+      "category": "snap_pan",
+      "first_seen": "2026-05-24"
+    },
+    "1mbHKEkHVyCxml5YtQJ50UVeWBRmWhnJm": {
+      "name": "PAN REVISION DOCS AUG 18 2025",
+      "category": "snap_pan",
+      "first_seen": "2026-05-24"
+    },
+    "1YNCrZAROQz3OF1vijfulv9Zamzr8U_qg": {
+      "name": "ADSEF 106 E SEPT 2024.pdf",
+      "category": "snap_pan",
+      "first_seen": "2026-05-24"
+    },
+    "1mS9tJ8sEoEZ9t_IvDImbix_xkcE3Sceo": {
+      "name": "128_153_106E.pdf",
+      "category": "snap_pan",
+      "first_seen": "2026-05-24"
+    },
+    "176mj6QQU7M7Bd-XZ39o7MyTb1BgoJZX8": {
+      "name": "Certificacio\u0301n_Participante_de_Beneficio.pdf",
+      "category": "snap_pan",
+      "first_seen": "2026-05-24"
+    },
+    "1HwEyli74iB7HAQR24BKNzR_DBA8w-YRM": {
+      "name": "Verificacio\u0301n de Beneficios del Departamento de la Familia.pdf",
+      "category": "snap_pan",
+      "first_seen": "2026-05-24"
+    },
+    "1Vngj9Y2P4JExhwr0hQSwZYFmGEfHKp9c": {
+      "name": "SALVACI\u00d3N ARMY-HOJA DE DOCUMENTOS REQUERIDOS PARA EVALUACI\u00d3N-FEB 29th 2024-MAYAGUEZ.pdf",
+      "category": "snap_pan",
+      "first_seen": "2026-05-24"
+    },
+    "1JpaRxQizERrdmqv2Jhs88UVIGL2yex_s": {
+      "name": "Accion de BENEFICIOS Sep 2025 - Mar 2025.pdf",
+      "category": "snap_pan",
+      "first_seen": "2026-05-24"
+    },
+    "1HhleFFev5BSNlwX9USkvTGJ5TT8TUHVQ": {
+      "name": "DOCS PARA TRAEL A CITA DE AUG 11 2025",
+      "category": "snap_pan",
+      "first_seen": "2026-05-24"
+    },
+    "1u_6KV9vLk0Rwz87lgSVzoGXFMIjWA75r": {
+      "name": "Verificacio\u0301n de Beneficios del Departamento de la Familia 2 of 2.pdf",
+      "category": "snap_pan",
+      "first_seen": "2026-05-24"
+    },
+    "1BND0aozXkOcJfLWPpRw8ZowB6D18aTQD": {
+      "name": "Verificacio\u0301n de Beneficios del Departamento de la Familia 1 of 2.pdf",
+      "category": "snap_pan",
+      "first_seen": "2026-05-24"
+    },
+    "1okQz5asnJb_Tv-XbguM8k9iaLEPItmrD": {
+      "name": "CONEXI\u00d3N LABORAL DEL NOROESTE-CITA PARA RECLUTA-AGUADILLA.pdf",
+      "category": "snap_pan",
+      "first_seen": "2026-05-24"
+    },
+    "1EjZKu8wQWxnd1yO_wN3pV0Bj_JssSbGS": {
+      "name": "ACFrOgC_Z-mFHGt5Vv1Tat_wNr6klCaWNkZFVIrJBQfRAgpfG4RqtrYYZeXU1OpCqV4ZXTS1___Fj7W7Eiyi4g9tXoiQtCmTpt_Xu6pdjLCXZ10qTUfJn_9C2nXSqFc=.pdf",
+      "category": "snap_pan",
+      "first_seen": "2026-05-24"
+    },
+    "1p6UOu8dPFamp9-_MixqBsYDzIdgvcsKu": {
+      "name": "ADSEF-GOVERNMENT WEBSITE LOGIN DETAILS-FEB 2024-MAYAGUEZ.pdf",
+      "category": "snap_pan",
+      "first_seen": "2026-05-24"
+    },
+    "1n0zpAOpMzWSi_7xI2HAigEUJOw9gIG4F": {
+      "name": "ADSEF-NOTIFICACI\u00d3N DE ACCION TOMADA EN CASOS ACTIVOS-DEC 11th 2023-AGUADILLA-CERTIFICACI\u00d3N PARTICIPANTE DE BENEFICIOS.pdf",
+      "category": "snap_pan",
+      "first_seen": "2026-05-24"
+    },
+    "15QxXRdNu-LWb8Vodh3_C9EfxI7xDdTSB": {
+      "name": "SOLICITUD DE VIVIENDA EN ESPA\u00d1OL (003).pdf",
+      "category": "snap_pan",
+      "first_seen": "2026-05-24"
+    },
+    "10A21QhA0P6rjbqv-dsTf25VcG8tjOa46": {
+      "name": "IMG_7068.HEIC",
+      "category": "snap_pan",
+      "first_seen": "2026-05-24"
+    },
+    "11MXti9C_RqLGmcw-BUfrJe7BQqeXZwcy": {
+      "name": "SOLICITUD DE VIVIENDA EN ESPAN\u0303OL (003).pdf",
+      "category": "snap_pan",
+      "first_seen": "2026-05-24"
+    },
+    "12OoaZJjnBFEFc9AQKSs76OtZHOCwFDJI": {
+      "name": "Screenshot 2023-01-22 at 3.08.08 PM.png",
+      "category": "snap_pan",
+      "first_seen": "2026-05-24"
+    },
+    "1-Epu6bkZkQ9_R0G9sAHnBwm1neiCiVHR": {
+      "name": "Food Assistance approval Nov 20, 2018 .pdf",
+      "category": "snap_pan",
+      "first_seen": "2026-05-24"
+    },
+    "1bGfIcQverIClmRC6M8xTygieMRp9FuJ3": {
+      "name": "Notice of Case Action.pdf",
+      "category": "snap_pan",
+      "first_seen": "2026-05-24"
+    },
+    "1kd5tDgJQ_fi3IoMxmXIJ6hyJ8w5RN64z": {
+      "name": "form_b103b.pdf",
+      "category": "snap_pan",
+      "first_seen": "2026-05-24"
+    },
+    "190L-ABZcY6EpR_pi1AbcIRG4wWkJ9P3p": {
+      "name": "Fee Waiver.pdf",
+      "category": "snap_pan",
+      "first_seen": "2026-05-24"
+    },
+    "1I06B77ns84egd7kcemnmnlzlurvLczqW": {
+      "name": "Government Assistence from Government.pdf.pdf",
+      "category": "snap_pan",
+      "first_seen": "2026-05-24"
+    },
+    "1m4mFxdvZOc_OcZmH2Ydz44kM0XojiY4U": {
+      "name": "Fee_Waiver_Order_Approved_COMPLETED.pdf",
+      "category": "snap_pan",
+      "first_seen": "2026-05-24"
+    },
+    "1Gp2tBXG17WCPAye8MlGBJG1XVFqgyLth": {
+      "name": "Fee_Waiver_Application_Approved.pdf",
+      "category": "snap_pan",
+      "first_seen": "2026-05-24"
+    },
+    "1ovGuzO55WMBpkPAAfHf8_L7nz61NNSnb": {
+      "name": "Fee_Waiver_Order_Approved.pdf",
+      "category": "snap_pan",
+      "first_seen": "2026-05-24"
+    },
+    "1XveY0Rmm3Sh3pyKqX1gp-Bj--Z1K-vpW": {
+      "name": "Fee_Waiver_Order_Approved.pdf",
+      "category": "snap_pan",
+      "first_seen": "2026-05-24"
+    },
+    "10sPzMKElTG30Gj4TN3-o3toh5lC5-zgL": {
+      "name": "Departamento de la Familia-ASUME",
+      "category": "snap_pan",
+      "first_seen": "2026-05-24"
+    },
+    "1FUelzyeNdSVb_weWhI-qd72Ud9OGqt0m": {
+      "name": "Departamento De La Familia",
+      "category": "snap_pan",
+      "first_seen": "2026-05-24"
+    },
+    "1tX81lhKtchEUpD_xjye59nSGKt-WMmo6": {
+      "name": "DEPARTAMENTO DE LA FAMILIA-ASUME-CERTIFICACI\u00d3N NEGATIVA DE CASO DE PENSI\u00d3N ALIMENTARIA-FEB 20th 2024-MAYAGUEZ.pdf",
+      "category": "snap_pan",
+      "first_seen": "2026-05-24"
+    },
+    "1ZD7mdyeX8zx_xrM_dy25Qirragu5NAF0": {
+      "name": "REEXAMEN REGULAR UNA VEZ AL AN\u0303O.pdf",
+      "category": "snap_pan",
+      "first_seen": "2026-05-24"
+    },
+    "1Qd_7FfocpgjsWFY-qroDYQFw0K0I9aDq": {
+      "name": "ADSEF-NOTIFICACI\u00d3N DE ACCION TOMADA EN CASOS ACTIVOS-FEB 22nd 2024-MAYAGUEZ.pdf",
+      "category": "snap_pan",
+      "first_seen": "2026-05-24"
+    },
+    "1MxOqL2hc7IO8-35e2lRWelWQiiLCsRsW": {
+      "name": "Certificacio\u0301n del Desempleo de todos los miembros de la familia mayores de 18 an\u0303os.pdf",
+      "category": "snap_pan",
+      "first_seen": "2026-05-24"
+    },
+    "1sY1mIPP9sZuzvhXM3xsjmIP6jB5ODLUW": {
+      "name": "certServicio.aspx.pdf",
+      "category": "snap_pan",
+      "first_seen": "2026-05-24"
+    },
+    "12u2XRLjhEbcJk7HhiHiLKGHkDOtP512o": {
+      "name": "ADSEF-NOTIFICACI\u00d3N DE ACCION TOMADA EN CASOS ACTIVOS-JAN 11th 2024-AGUADILLA-CAMBI\u00d2 DE DIRECCI\u00d3N.pdf",
+      "category": "snap_pan",
+      "first_seen": "2026-05-24"
+    },
+    "1xT0UcCJbHkLM5ISLJ8b3UgK6lc_-I1q9": {
+      "name": "IMG_2450.HEIC",
+      "category": "snap_pan",
+      "first_seen": "2026-05-24"
+    },
+    "1Fv_S2ynkXMVyAHZ6pwLUZQTBxXAdDWvs": {
+      "name": "Scan 16.pdf",
+      "category": "snap_pan",
+      "first_seen": "2026-05-24"
+    },
+    "1eEcUMjNtS0Kw9z1uytnawEmcEH7oAKLwOp50gnSMEDg": {
+      "name": "Medicare Appt May 8th, 2023 at 11am",
+      "category": "medicare",
+      "first_seen": "2026-05-24"
+    },
+    "1K9mnYEdzah74CHz9eiUD48nW5_NBG6fl": {
+      "name": "Millian Aire Enterprises W2.pdf",
+      "category": "medicare",
+      "first_seen": "2026-05-24"
+    },
+    "1flROJHOHN2O06IAwrV1KhMBCQTmL4p2E": {
+      "name": "2018 fw2.pdf",
+      "category": "medicare",
+      "first_seen": "2026-05-24"
+    },
+    "121dS2ovLJxyBPBDgIGmDGeNuCTNeGRyS": {
+      "name": "McDonalds - Employee_W-2_Report_20200418100831.pdf",
+      "category": "medicare",
+      "first_seen": "2026-05-24"
+    },
+    "1k1rFyhSTviwHaAnKqMxNIF9chqFOSiYY": {
+      "name": "2020 DCC LEE MCDONALDS W-2 VILLANUEVA.pdf",
+      "category": "medicare",
+      "first_seen": "2026-05-24"
+    },
+    "1iT1nJJxU08TQ-NEXHdkigTmTCrfItYhK": {
+      "name": "2018 Federal Tax Filing for Mailing.pdf",
+      "category": "medicare",
+      "first_seen": "2026-05-24"
+    },
+    "1d8f01-BFPoIcOfklgUB0YyMEbrk9oRpo": {
+      "name": "2018 Federal Tax Filing for Mailing.pdf",
+      "category": "medicare",
+      "first_seen": "2026-05-24"
+    },
+    "1-yWgyxHpEpQHf_deaQIe-keAAHu2gEvH": {
+      "name": "2018 Session 04_pm.pdf",
+      "category": "medicare",
+      "first_seen": "2026-05-24"
+    },
+    "1JCP84zzh2U9KUnu2Z5RcAsO5R8hFZhUk": {
+      "name": "2018 Session 03_pm.pdf",
+      "category": "medicare",
+      "first_seen": "2026-05-24"
+    },
+    "1li7VYUL0BoYTTCBEjk1qLTGwJihg2W2-": {
+      "name": "Claro 5/22-5/28.png",
+      "category": "medicare",
+      "first_seen": "2026-05-24"
+    },
+    "1XQhdWxjZXYIKpLHG2_HKXklx9xPUI2Zm": {
+      "name": "Claro 5/15-5/21.png",
+      "category": "medicare",
+      "first_seen": "2026-05-24"
+    },
+    "1B-HAwQUuyKpXLdw0ejXXtJe7GQK7Icr1": {
+      "name": "Carlos Villanueva 2017 (1).pdf",
+      "category": "medicare",
+      "first_seen": "2026-05-24"
+    },
+    "1FPemz27k4nsgCeh2nEwXxStq7d1dYL_s": {
+      "name": "Villanueava W2 2021.pdf",
+      "category": "medicare",
+      "first_seen": "2026-05-24"
+    },
+    "12EQCe_WF1f3Rrsg3lMn2mdy1GMkdLnAf": {
+      "name": "Carlos Villanueva 2017.pdf",
+      "category": "medicare",
+      "first_seen": "2026-05-24"
+    },
+    "1eDk27ioin7llh66C0AjPGj2LtzVv3yOJ": {
+      "name": "2016_1099MISC.pdf",
+      "category": "medicare",
+      "first_seen": "2026-05-24"
+    },
+    "1WuM-KugEYw_5K9BUFOQe9Z2PZtw4MhY-": {
+      "name": "2017_1099MISC.pdf",
+      "category": "medicare",
+      "first_seen": "2026-05-24"
+    },
+    "1SacZMn0hbX6zDvw2yWO8FEivNCq2WHje": {
+      "name": "LYFT Federal 2018 - 1099-Misc.pdf",
+      "category": "medicare",
+      "first_seen": "2026-05-24"
+    },
+    "1Yu5XJ-NgWbWoDfUUkiFVMtH3LKOFAAYa": {
+      "name": "REGISTRATION FOR CM:ECF.png",
+      "category": "medicare",
+      "first_seen": "2026-05-24"
+    },
+    "1eCFhNY5259HNgfWGNdDc81L8e5FcgyvP": {
+      "name": "CM:ECF Filing Assignment.png",
+      "category": "medicare",
+      "first_seen": "2026-05-24"
+    },
+    "10qq17yQaejZItC1ZH8ZVV8L2_SYEdDad": {
+      "name": "CM/ECM Registration Info",
+      "category": "medicare",
+      "first_seen": "2026-05-24"
+    },
+    "1T4kP1i9-wCs0aS--zxYL1dvFeQfWLX1Q": {
+      "name": "S2A+STANDARD+COMPARISON.pdf",
+      "category": "medicare",
+      "first_seen": "2026-05-24"
+    },
+    "1cnn9cYWHitTZ4ezKgsvUJCLvuh8FnXwEwMfUWFR8Oz0": {
+      "name": "ACFrOgC_Z-mFHGt5Vv1Tat_wNr6klCaWNkZFVIrJBQfRAgpfG4RqtrYYZeXU1OpCqV4ZXTS1___Fj7W7Eiyi4g9tXoiQtCmTpt_Xu6pdjLCXZ10qTUfJn_9C2nXSqFc=",
+      "category": "medicare",
+      "first_seen": "2026-05-24"
+    },
+    "1rAm1HuyYOxmTaEkH0vCaftWVwexbCFfd": {
+      "name": "CM:ECF ONLINE eTRAINING USER NAME & PASSWORD.png",
+      "category": "medicare",
+      "first_seen": "2026-05-24"
+    },
+    "1jOhmUC9lFBg7UGB85SgQPAN2TUQ6dAjk": {
+      "name": "FLMBFilingAgentGuideJuly2013.pdf",
+      "category": "medicare",
+      "first_seen": "2026-05-24"
+    },
+    "1W6uWJoizf7TIkgvyH-pnngN_Nv2Pk8rg": {
+      "name": "Reference to D 'Lokos Pinchos Unregistered Food Service about waste handling_EVIDENCE 15.pdf",
+      "category": "medicare",
+      "first_seen": "2026-05-24"
+    },
+    "16ccJ45XLKr2aU2dWzHPT9-bEtPmSifPr": {
+      "name": "BIRTH CERTIFICATE_CARLOS VILLANUEVA_Scan_20220716.pdf",
+      "category": "medicare",
+      "first_seen": "2026-05-24"
+    },
+    "1osNqMdUTRAEuhSuFNb4GdZi1rO8oXf-R": {
+      "name": "CERT DE PROPIETARIO PAGA AGUA Y LUZ.pdf",
+      "category": "medicare",
+      "first_seen": "2026-05-24"
+    },
+    "1jSn-Z-_pBmRLY2GyDgmE8dvWaElOq6pb": {
+      "name": "050154003899.pdf",
+      "category": "medicare",
+      "first_seen": "2026-05-24"
+    },
+    "1RaHHd_MyS8-vScEsYzVg1rZE-CHyLYts": {
+      "name": "050153861596.pdf",
+      "category": "medicare",
+      "first_seen": "2026-05-24"
+    },
+    "1u-P5QFvjY5p4nNvJNy8pc_XtW1c3fl0z": {
+      "name": "OBPP Make a Payment _ Jan 2023.pdf",
+      "category": "medicare",
+      "first_seen": "2026-05-24"
+    },
+    "1h6P9vAo5Z_MTCtxqkfOSav0gwVD0rjKn": {
+      "name": "OBPP Make a Payment.pdf",
+      "category": "medicare",
+      "first_seen": "2026-05-24"
+    },
+    "13iEB-VDDaU9lIf5x7bk8SSzJhSepyxUD": {
+      "name": "COURT HEARING NOV 28 2022.pdf",
+      "category": "medicare",
+      "first_seen": "2026-05-24"
+    },
+    "10oTWafbR-VrNF_rx3DDgLZHIYq-k-_yN": {
+      "name": "Notice of Bankruptcy Case Filing.pdf",
+      "category": "medicare",
+      "first_seen": "2026-05-24"
+    },
+    "1yUFActVTLUYZrVZZXTt6c9dYi1Nmb_1s": {
+      "name": "22-17090-EPK_VILLANUEVA_CHAPTER 13_FILED 09132022.jpeg",
+      "category": "medicare",
+      "first_seen": "2026-05-24"
+    },
+    "1Lel89volU6uPMUi9OzYh3LVhqiXbItbs": {
+      "name": "DOC-20220914-WA0001.",
+      "category": "medicare",
+      "first_seen": "2026-05-24"
+    },
+    "1IXjWgNke8UcuW4RSvvOYrdfQ1WnLFb5G": {
+      "name": "2017 Illinois Tax Filing for Mailing.pdf",
+      "category": "medicare",
+      "first_seen": "2026-05-24"
+    },
+    "1juwpYcsR8Wgij1XEAPxWSgMyVbKPZcSS": {
+      "name": "2017 Illinois Tax Filing for Mailing.pdf",
+      "category": "medicare",
+      "first_seen": "2026-05-24"
+    },
+    "1KVVXFkR1UUz21WE2L0XNP0c7-Z1fqlqC": {
+      "name": "Petition to Modify Child Support Efile Package 8 of 8.pdf",
+      "category": "medicare",
+      "first_seen": "2026-05-24"
+    },
+    "1Ws8aXUQ_TWk77NFz-FHXRKebgJNTkth9": {
+      "name": "2016 Illinois Tax Filing for Mailing.pdf",
+      "category": "medicare",
+      "first_seen": "2026-05-24"
+    },
+    "1cAHypfxleMro6oqjKVju560f_Xah6Y3w": {
+      "name": "2016 Illinois Tax Filing for Mailing.pdf",
+      "category": "medicare",
+      "first_seen": "2026-05-24"
+    },
+    "1ZqNNjHGQaCfmaLIwr_AQyWbDd2wXPpb7": {
+      "name": "Petition to Modify Child Support Efile Package 8 of 8.pdf",
+      "category": "medicare",
+      "first_seen": "2026-05-24"
+    },
+    "1Kfo4zCjKseEgundKo0BsnNHvNZ9QBQmU": {
+      "name": "2016 Federal Tax Filing for Mailing.pdf",
+      "category": "medicare",
+      "first_seen": "2026-05-24"
+    },
+    "1iAgPzwX0yLMcssst2hIKY-UJVNePOGUt": {
+      "name": "2016 Federal Tax Filing for Mailing.pdf",
+      "category": "medicare",
+      "first_seen": "2026-05-24"
+    },
+    "1pFD_EHxP6uuLaPDMjp2Wq1aZMyIv5dN1": {
+      "name": "2017 Federal Tax Filing for Mailing.pdf",
+      "category": "medicare",
+      "first_seen": "2026-05-24"
+    },
+    "17HtNLScZVyZP6WK4sjsro-pxmIsvnAQJ": {
+      "name": "2017 Federal Tax Filing for Mailing.pdf",
+      "category": "medicare",
+      "first_seen": "2026-05-24"
+    },
+    "1p0p6hGHQ_FA00SOpTGiFnk6QmHhBEfU-": {
+      "name": "2018 Session01_pm.pdf",
+      "category": "medicare",
+      "first_seen": "2026-05-24"
+    },
+    "1Ex9vIcbDW-xESqSbmxg2BNE1qo8JrUCV": {
+      "name": "4.form_b_106c.pdf",
+      "category": "medicare",
+      "first_seen": "2026-05-24"
+    },
+    "1vooCd0csz6mR7oJnulAoFtouh6OCtyJpD2ULGlnUhok": {
+      "name": "2020 TEMPORARY INCOME SUMMARY VILLANUEVA ",
+      "category": "medicare",
+      "first_seen": "2026-05-24"
+    },
+    "1fTYuWA95exYLeWy7vAZE137f0pbAdMlQ": {
+      "name": "11:18:2018 - 11:24:2018 UNEMPLOYMENT BENEFIT FILING HISTORY.pdf",
+      "category": "medicare",
+      "first_seen": "2026-05-24"
+    },
+    "1SbehqTL2vaeDXOd4x7_Xwq1aLyI-DDoR": {
+      "name": "11:25:2018 - 12:01:2018 UNEMPLOYMENT BENEFIT FILING.pdf",
+      "category": "medicare",
+      "first_seen": "2026-05-24"
+    },
+    "1BDqvHQxJuN37fuZtXlWnpdQxYWWCutgx": {
+      "name": "2.form_b106sum.pdf",
+      "category": "medicare",
+      "first_seen": "2026-05-24"
+    },
+    "14qNe4ddG9-s7aeODsgM4jBKgqi_9sNEH": {
+      "name": "Official Form 106Sum.pdf",
+      "category": "medicare",
+      "first_seen": "2026-05-24"
+    },
+    "127MGnmpp0WApoojhWHtuonnUFe23Eh9c": {
+      "name": "Consumer Pamphlet_ Divorce In Florida \u2013 The Florida Bar.pdf",
+      "category": "medicare",
+      "first_seen": "2026-05-24"
+    },
+    "1CbynODcTvza-wv3OOMSqQFRmLa7RF3OfrS9JmFoWJdE": {
+      "name": "SCORE BUSINESS PLAN SEMINAR",
+      "category": "medicare",
+      "first_seen": "2026-05-24"
+    },
+    "1RpeM-p2KF_loyrrBce8SwmiXdQ6c6gag": {
+      "name": "DEPARTAMENTO DE LA VIVIENDA-SECCI\u00d3N 8-APPLICACION SUMMARY-MAR 5th 2024.pdf",
+      "category": "medicare",
+      "first_seen": "2026-05-24"
+    },
+    "1w5gvOZK9C1CziSBfnlvlC325fpbqQitE": {
+      "name": "Millian_Aire_3_29_18_SB_Final (1).pdf",
+      "category": "medicare",
+      "first_seen": "2026-05-24"
+    },
+    "1tBTxPrUAL5xDNMwpC_WbGa7iXIf2nae4": {
+      "name": "Millian_Aire_Enterprises_9-29-17_SB_Draft.pdf",
+      "category": "medicare",
+      "first_seen": "2026-05-24"
+    },
+    "1Tlbq09LTxyTEadkDu6T03IRqSZ3eIFVf": {
+      "name": "instructions_individuals.pdf",
+      "category": "medicare",
+      "first_seen": "2026-05-24"
+    },
+    "1zd9GqqnuWJj5ZWp59J6v1Fi4IHJ1blOk": {
+      "name": "BANKRUPTCY ",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "1Ax-KJURQRiH8pw8LDQwudAgltV8cxh0W": {
+      "name": "7. [22-CC-4806]_NOTICE_OF_FILING_NOTICE_OF_BANKRUPTCY_CASE_FILING,__PLAINTIFF.pdf",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "1JD-A-xdxSR5qpOLtdXm6qZf5jxOszPrl": {
+      "name": "14. [22-SC-6945]_NOTICE_OF_FILING_-BANKRUPTCY_-_PLAINTIFF.pdf",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "1Hc6VHnHB6Xb5cLQGyT0gwWlBvotxJAhJ": {
+      "name": "ORDER REGARDING BANKRUPTCY MATTER_CCDRN719.pdf",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "17D6g1qONWqc_Lylh1w6GuJNNugco9wWh": {
+      "name": "ORDER REGARDING BANKRUPTCY MATTER_CCDRN719.pdf",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "1ykp05yfEcOtk-G0CDjdMF-UZ1g0sqVU4": {
+      "name": "(1) _ NOTICE OF FILING SUGGESTION OF BANKRUPTCY _ SUGGESTION OF BANKRUPTCY FILED NOVEMBER 23RD, 2022 BY BRIAN MCMAHON _ ORDER DETERMINING DEBTOR'S COMPLIANCE WITH FILING REQUIREMENTS OF \u00a7521(a)(1) _ PROOF OF EMAIL DELIVERY TO PETITIONER _ 6 PAGES.pdf",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "1CYOtFPYW7ug4i4lLFmnHv6eL79MVfAoz": {
+      "name": "(1) _ NOTICE OF FILING SUGGESTION OF BANKRUPTCY _ SUGGESTION OF BANKRUPTCY FILED NOVEMBER 23RD, 2022 BY BRIAN MCMAHON _ ORDER DETERMINING DEBTOR'S COMPLIANCE WITH FILING REQUIREMENTS OF \u00a7521(a)(1) _ PROOF OF EMAIL DELIVERY TO PETITIONER _ 6 PAGES.pdf",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "1frC9y3YPAN9vSVBJcZe2wClnJ0iNkBL1": {
+      "name": "https://www.nolo.com/legal-encyclopedia/florida-bankruptcy-exemptions-property-assets-bankruptcy.html.png",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "1g2joll7ZukE-Iu1xSPAgr6d9_mvvH07D": {
+      "name": "Suggestion of Bankruptcy.pdf",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "1XR-d-ck27hxwIdMQ3ZEavViCAjzcFlLV": {
+      "name": "Progressive Leasing - Notice of Bankruptcy Case Filing.pdf",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "1SC-rS9i3DZtdCUfcRjGi-pHwMUtDzy5N": {
+      "name": "Acima - Notice of Bankruptcy Case Filing.pdf",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "1YQGQRq8WT5AtpP0XQqOaSRd_jAgGS4mC": {
+      "name": "SUGGESTION OF BANKRUPTCY - 502022CC012413XXXXSB_14.pdf",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "1NLk0B_DWdFCjORWvVtheQSwXeOL5cnhh": {
+      "name": "Avant - Notice of Bankruptcy Case Filing.pdf",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "1W2VPdLnPBzL1UEDcFWMj8vxdg7aHY7He": {
+      "name": "Florida Dept of Revenue - Notice of Bankruptcy Case Filing.pdf",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "1XsmnBvPDpTq6SKOg5LbLd-3SXSZeb_sC": {
+      "name": "Shift4 - Notice of Bankruptcy Case Filing.pdf",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "1uIMNjGz-t2sEQYSAttlAfSNMS_M_J3w3": {
+      "name": "Landopia - Notice of Bankruptcy Case Filing.pdf",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "1aalGPKtt_Qss5JdXhj2LwHZBfPUmV3u3": {
+      "name": "Instaloan - Notice of Bankruptcy Case Filing.pdf",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "1iYERfvgspuddRLTHbknyGpOA3a6KhAFA": {
+      "name": "Koalafi - Notice of Bankruptcy Case Filing.pdf",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "1xWpV4YQW2ARB-932QhCqjxgN9IhSONdI": {
+      "name": "Statement of Financial Affairs for Individuals Filing for Bankruptcy",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "1NtVf8JGsA7fA5_azzDaRXdcUrbd9K9Pu": {
+      "name": "6:18-bk-00364-KSJ - CHAPTER 7 - CLOSED",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "13ya3sM18-rcllZEvPAS5ZZpLsGclB4-w": {
+      "name": "Valuing Vehicles in Chapter 7 and Chapter 13.pdf",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "17C7Bo-1fhBH6qQcSxP50zgPbHdDUgOeX": {
+      "name": "(1) _ APPLICATION FOR DETERMINATION OF CIVIL INDIGENCE _ with EXPLANATION DOCUMENTS _ 7 PAGES.pdf",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "1_N33l1c7phz8oC72vAKVBSxV4pDvNbSx": {
+      "name": "(1) _ APPLICATION FOR DETERMINATION OF CIVIL INDIGENCE _ with EXPLANATION DOCUMENTS _ 7 PAGES.pdf",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "10iTyxXVueQKyXAyUuhsJGj9m7QltfoEK": {
+      "name": "(1) _ APPLICATION FOR DETERMINATION OF CIVIL INDIGENCE _ with EXPLANATION DOCUMENTS _ 7 PAGES .pdf",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "1heS36L6rrCGAQ1yRxM-uMWCSyrsKorAH": {
+      "name": "b_101_1217.pdf",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "1zqVhq56MipIZB5g_-bIet82GG_jQrat2": {
+      "name": "7_20_22 TransUnion.pdf",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "1vFz9k2_VzlaAEaJqMzImKrw9eyK2zlNM": {
+      "name": "7_20_22 TransUnion.pdf",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "1ZAFR7D6hTDqBdcaAP-uqnymwU8-6sK7E": {
+      "name": "7_20_22 Equifax.pdf",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "1KS53HQ2lSQTt3xrFBbpIShUIhmYlTsAD": {
+      "name": "7_20_22 Equifax.pdf",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "1c6kla-gFgI5hGofuEak5KwrIt3pVt4OB": {
+      "name": "DOCUMENTS FOR DaVatrice Lindsey, Esq - JAN 18TH 2023 - 7 PAGES.pdf",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "1_CXBtzkVKZfjpqfl-lz8Eu0t6EcBKVzR": {
+      "name": "ViewOpinion.pdf",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "1IsxiUxWgT3Tkd6l_lMDwZ28pW7XrZmaK": {
+      "name": "7_20_22 Experian.pdf",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "1gt8l4daobPyly-v-TruKrlDlRjni5XSW": {
+      "name": "Section 722 - Redemption _ United States Bankruptcy Code.pdf",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "1zrEC4X290g7YSARxJ4LKQJiQ8khG7OXN": {
+      "name": "form_b122a-1.pdf",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "1apzDspJdJyB8FjhDT0HaGEkHqNM8CnqR": {
+      "name": "TRANSUNION CREDIT REPORT DATE101721-3.pdf",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "17VUxrrUe_WnN2yM2WBO9knPQRz8TsEw-Sfdc3Q2Ubpk": {
+      "name": "PR Legal Advisors (Lcda. Marggie Rodr\u00edguez) Contact",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "1qCMP0MRMBoUZOnFcii-BapsrXKpHoJMqv_Bj5lBBYCI": {
+      "name": "NOTES: PR Bankrupcty_Began Jan 2026",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "1aUll_KFDkF6yaSLFFrsDVM0d5AEP4EZU": {
+      "name": "Villanueva, Carlos,Mon, May 12 at 4:32PM.pdf",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "1MmxAXEKeTO0WLSH7VF_npg1OJR-biNmo": {
+      "name": "Villanueva, Carlos, Thu, May 15 at 4:10PM.pdf",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "1BZNW1ZUKevxVltMhrWxmrslqtS_ay9GTuGYhUXUghaM": {
+      "name": "Info sheet",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "16wSO--DpSp2ntLyL-y4WgxA6X57sw03k": {
+      "name": "Info sheet.docx",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "1TdtRk1bQezx-5AI_TrlGU1ch0dsora5gesRhMMUNyO8": {
+      "name": "Info sheet - 042024",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "1PQKd5Ri83JKLK-zFulID5ClUsIq4AhAa": {
+      "name": "New Project (24).pdf",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "1dzGnoDIupTZytPJX8M4eL-gFFZeItTb6": {
+      "name": "b82b9590-7fa7-4dca-ac12-50b98f5e0636.jpeg",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "11Kf6VgZYUPXSaYPJkxhfpE5nNVBiIzGM": {
+      "name": "OFFICIAL STANCE OF CARLOS ON ROSA Divorce REQUEST.pdf",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "162LQKdzEA-gD60GzfqQ9JVzFifbga3QBusDmPAAMA6o": {
+      "name": "Untitled document",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "1Y38qCigebNHjFgfmlxILnznFXYkgaH7beLPQBUHIebE": {
+      "name": "History - PrePaid Legal - The Christian Handy Man LLC formerlly Faith Music Movies",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "1ZiTNRXO84IDLeo--urx8F0tvZ9NQ-s1i": {
+      "name": "Carlos to Rosa on Divorce request package (1) (1).pdf",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "1buBosaANjfjmLwfr0M6K8HTIRJqPeTEOvExTxNgfwNw": {
+      "name": "OFFICIAL STANCE OF CARLOS ON ROSA Divorce REQUEST",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "1kjVwGb6kNu8RU5JZf0_byFvbq440DQN2": {
+      "name": "Carlos to Rosa on Divorce request package (1) (1).pdf",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "1fupcAuG4PiQUwJRRToljnmvfoKj_n8gf": {
+      "name": "Carlos to Rosa on Divorce request package (1) (1).pdf",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "1-Qk7MZUbWufKvWQfnZPHwIsKDhbZDjMY": {
+      "name": "Screenshot_20210916-073952.png",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "18jT6IQks2V8_2pmpVaRNct0_3itVbEbO7cRuCH9-fOs": {
+      "name": "NOTIFICATION-D CU2016-0344 4003-ENGLISH TRANSLATION",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "1u9VspvJqhGQH4tyd3DAIfUsvHt8K8Wo3lTl71edAtQc": {
+      "name": "New Project (24)",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "1O2tvRyEoTLAhkQU6nFic31DtCRwppPSY": {
+      "name": "New Project (24).jpg",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "1rHd06Yz1lfRoaXdpLp2GWJbozvE65PwO": {
+      "name": "Discharge, Schedules, Creditor Matrix List - 6-18-bk-00364-KSJ.pdf",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "1gSglLTSMnX70XFAWeewkJ-uiSfvO_x44": {
+      "name": "Discharge, Schedules, Creditor Matrix List - 6-18-bk-00364-KSJ.pdf",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "1xYxst_NQylkIwydiMGM9G9BS5JLf3cmA": {
+      "name": "6:18-BK-00364-KSJ.pdf",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "1HLR0k1q8AtvHiRmWOnr2B-A_uaTz4TBL": {
+      "name": "REAFFIRMATION DOCUMENTS.pdf",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "1esed89X__r6-C-2nAxvTlADEkF1lG3mE": {
+      "name": "View Credit Report _ TransUnion Online Service Center.pdf",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "1bt80_Rk6FS6zxIm7Zz_j96XzQWayN-44": {
+      "name": "Moxie Software(TM) Customer Spaces Channels Customer Client.pdf",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "1cq1yaK8G20qY5SzNF1aFs54Qg0IvX1yw": {
+      "name": "Dispute Center _ myEquifax.pdf",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "1JZ9O9L0S55OFhCB8coaUq3heT-sCL6SO": {
+      "name": "Dispute Center _ myEquifax.pdf",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "1YQkLyrVXMGl1gvRyIqlI90FYz14XxJnE": {
+      "name": "TRANSUNION CREDIT REPORT DATE101721-2.pdf",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "1Z-VJiJUx13r2QpbxDHhLF8YfNJT3mHqx": {
+      "name": "INSTRUCTIONS FOR FLORIDA SUPREME COURT APPROVED FAMILY LAW FORM 12.903(c)(3) ANSWER TO PETITION AND COUNTERPETITION FOR DISSOLUTION OF MARRIAGE WITH NO DEPENDENT OR MINOR CHILD(REN) OR PROPERTY (02/18).pdf",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "1TjfgvgBpP_i5wp7f_9mwzV0SP5oSREEj": {
+      "name": "ANSWER TO PETITION AND COUNTER PETITION FOR DISSOLUTION OF MARRIAGE WITH NO DEPENDENT OR MINOR CHILDREN OR PROPERTY COMPLETE PACKAGE _ 50-2022-DR-006517-XXXX-SB_23 PAGES.pdf",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "10ztPGD-ruSAd3tWdDGdxo8mon1DZeA_c": {
+      "name": "RESPONDENT_DEFENDANT CARLOS VILLANUEVAS ANSWER AND COUNTER PETITION WITH FEE TO PETITIONER_PLAINTIFF ROSA NIEVE ALEGRIA COMPLAINT FILED WITH NOTICE FOR TRIAL AND RECEIVED ON MAY 9TH 2023 VIA EMAIL_6Pages (1).pdf",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "1v7mFDwjjC13KrYxEvhV92llOzT-yI0md": {
+      "name": "(2) _ ANSWER TO PETITION AND COUNTER PETITION FOR DISSOLUTION OF MARRIAGE WITH NO DEPENDENT OR MINOR CHILDREN _ NOTICE OF CONFIDENTIAL INFORMATION _ PROOF OF EMAIL NOTICE SENT TO PETITIONER_ docket numbers pleading.pdf",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "1PygdERyNoZ0fzHp59gXNgOmIdsK9-Oi4": {
+      "name": "(2) _ ANSWER TO PETITION AND COUNTER PETITION FOR DISSOLUTION OF MARRIAGE WITH NO DEPENDENT OR MINOR CHILDREN _ NOTICE OF CONFIDENTIAL INFORMATION _ PROOF OF EMAIL NOTICE SENT TO PETITIONER_ docket numbers of the controlling plead.pdf",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "1YarUiDUHj3F0ebEm3cYItaTjqb38uMrO": {
+      "name": "5-13-2023 ANSWER W PETITION & INTERROGATORIES",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "1d61SpeTvFX6z5jKiyTVMEga_VSzMVVh9ztbWwIm2yr8": {
+      "name": "RESPONDENT/DEFENDANT, CARLOS VILLANUEVA\u2019S ANSWER AND COUNTER PETITION WITH FEE TO PETITIONER/PLAINTIFF, ROSA NIEVE ALEGRIA COMPLAINT FILED WITH NOTICE FOR TRIAL AND RECEIVED ON MAY 9TH, 2023 VIA EMAIL",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "1tY5epNAkBLkuOeiBqkQhAdJq2lcLzUCh": {
+      "name": "ANSWER TO PETITION AND COUNTER PETITION FOR DISSOLUTION OF MARRIAGE WITH NO DEPENDENT OR MINOR CHILDREN OR PROPERTY COMPLETE PACKAGE _ 50-2022-DR-006517-XXXX-SB_24 PAGES_CONFIDENTIAL INFORMATION.pdf",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "1brtYzZWUTIqpxryf0LAAKu6Say1xr5N-": {
+      "name": "1_Petition to Modify Child Support.pdf",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "1mle-q2IeKGFC5P-WExBO5a4qh6m8GCuN": {
+      "name": "8_Court Order Granting Petition to Modify Support.pdf",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "1SyXzWyRpckdmfPVshoOJYfuqq_ATpmbX": {
+      "name": "1_Petition to Modify Child Support.pdf",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "14tf3a7wae4KVItJNM32D97qS8kOnrGVb": {
+      "name": "MOTION TO PETITION TO VACATE JUDGEMENT MARCH 19TH 2019 (1).pdf",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "1ezVGWl-emK_BiWyWpxsn7MoMp2imlRx4": {
+      "name": "MOTION TO PETITION TO VACATE JUDGEMENT MARCH 19TH 2019.pdf",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "1YynozJnU4APk18iXMedcRVlriRjidsNR": {
+      "name": "PETITION FILED_VERIFICATION OF EMAIL SENT TO RESPONDENT ON FEB 23RD, 2018. Efile 1 of 1pdf",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "14kBCX2_fQLL2pfT3F093vnw7AycBvET5": {
+      "name": "Schedule E/F: Creditors Who Have Unsecured Claims",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "191K4KmNvFZqYVnrNkaGEW-U4V_oLpt-8": {
+      "name": "Schedule D: Creditors Who Have Claims Secured by Property",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "1kXZQ2f_z9L40lQ40IRHtG7nUfEcQAt1r": {
+      "name": "form_b106ef.pdf",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "1bJRXGbHVq7ac5Ff-FIbMdGHUVO-C3rNZ": {
+      "name": "DOCUMENTS FILED AND EMAILED POST MEETING OF CREDITORS FEB 27TH 2018",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "1FMk26nSX0iI7Wks7Na132x7Hy_yThpoc": {
+      "name": "EF BLANK.pdf",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "1biGov85zgiObWlDSgg-zNFyytmhPp5Qb": {
+      "name": "6.form_b106ef.pdf",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "1_QxzyG_vBp3tqtCb3pyV4Fwfzs8f3bKOYQkjZxoEbKU": {
+      "name": "COMPILED BK NECESSARY DATA INCLUDING CREDITORS",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "1OE-Y2Jlgz2XSOR7DVH7C-8-jHL_h1LetSyCDrxxGoOU": {
+      "name": "ALPHABETICAL LIST OF CREDITORS HOLDING CLAIMS",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "1nYulO5icYURC8gw2IBAYeNl81Al-7h-F": {
+      "name": "PART 2 AND 3 (D).pdf",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "1updbEkqndtXWkYUDzO93Gp5HVY6HHFov": {
+      "name": "op-20070227-re-dane-clark-and-laura-schambers-maw_0.pdf",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "1ln1FbT-z7-zJh61B948Ag-HdomcK6ixr": {
+      "name": "PART 2 AND 3 (B).pdf",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "1T6Rd5AMimGXgp390h7Kb4ZI3DV8VH9Jt": {
+      "name": "PART 2 AND 3 (C).pdf",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "1H4gKdKpESampKlgsPPV4zHQrg7_xEQ-x": {
+      "name": "Part 3 form_b106ef.pdf",
+      "category": "bankruptcy",
+      "first_seen": "2026-05-24"
+    },
+    "1IHtCO3486er5MO5Qdl4IU1lHjb1136LE": {
+      "name": "CREDIT REPORTS",
+      "category": "credit_history",
+      "first_seen": "2026-05-24"
+    },
+    "1JhII3fXtdRfB9OMSMftNQvVE0Lg5lahRU1vysm_f3rU": {
+      "name": "April 30th, 2025 for HTML CLEANER",
+      "category": "credit_history",
+      "first_seen": "2026-05-24"
+    },
+    "1d4MX2BYNm065amp_OdYWMN8owFuIubIq": {
+      "name": "Experian CREDIT REPORT 092021.pdf",
+      "category": "credit_history",
+      "first_seen": "2026-05-24"
+    },
+    "1yRd_9JlDwdoPYun6JTWcudgFyyKaXslJ": {
+      "name": "Credit Reports",
+      "category": "credit_history",
+      "first_seen": "2026-05-24"
+    },
+    "18eDcpn5jF2TwZA-WDolA_KU2RLq-cXHU": {
+      "name": "CREDIT REPORTS",
+      "category": "credit_history",
+      "first_seen": "2026-05-24"
+    },
+    "1d2-oXwQ5BwNNhePcBmxSOxuyEgWzKs9j": {
+      "name": "Risk-Based Pricing Disclosure - V.2.2 04.03.2019.pdf",
+      "category": "credit_history",
+      "first_seen": "2026-05-24"
+    },
+    "19OnIqc9bcXYZpCJKUIpf5wgEEk_8SGqTSSXeILWU9T8": {
+      "name": "Credit One Bank Wander CC - x2506 - History",
+      "category": "credit_history",
+      "first_seen": "2026-05-24"
+    },
+    "1azn9-8T07s3hwLkb9p1nNd_q7DOEW5Py": {
+      "name": "EQUIFAX FIRST Dispute Results.pdf",
+      "category": "credit_history",
+      "first_seen": "2026-05-24"
+    },
+    "1soNNW7_HKnx_gbXtYWximnx8e27FOfTz": {
+      "name": "Experian DISPUTES SUBMITTED.pdf",
+      "category": "credit_history",
+      "first_seen": "2026-05-24"
+    },
+    "12lAJwaStpukSZSJ9azUR8q9nC7sGnpH_": {
+      "name": "Screen Shot 2021-09-20 at 11.06.02 AM.png",
+      "category": "credit_history",
+      "first_seen": "2026-05-24"
+    },
+    "1y2kF-SLDJ1d4_tnsovv8nrLgfM_BRWiF": {
+      "name": "Personal-Financial-Management-Course.pdf",
+      "category": "credit_history",
+      "first_seen": "2026-05-24"
+    },
+    "1gOtkJt2cquNbkaFtYt2lqYp-_uVZuK9ZQdweM1Fmfsw": {
+      "name": "History",
+      "category": "credit_history",
+      "first_seen": "2026-05-24"
+    },
+    "1iw0BK516GUJHE4fazxKTx8nBsV4JZYBq": {
+      "name": "EXPERIAN",
+      "category": "credit_history",
+      "first_seen": "2026-05-24"
+    },
+    "1gtPW_Br4ks6X9mHti6-NztTtNUzS5hs6": {
+      "name": "Experian",
+      "category": "credit_history",
+      "first_seen": "2026-05-24"
+    },
+    "1j0M8EkcH1fv6DHW2Z4EbNYMSCRUUs0uT": {
+      "name": "Dispute Center _ myEquifax.pdf 092021.pdf",
+      "category": "credit_history",
+      "first_seen": "2026-05-24"
+    },
+    "1Uv3sAN6GKOKF99IxtGwifz6hOzQo47SQb_euLvqdQ38": {
+      "name": "Login",
+      "category": "credit_history",
+      "first_seen": "2026-05-24"
+    },
+    "1-WWAS2zaxFYX6lSaOmXbBQOOa69wjXCp1FGdMmPtAaQ": {
+      "name": "Puerto_Rico_60K_Grant_Multifamily_Loopholes.m4a_transcript",
+      "category": "credit_history",
+      "first_seen": "2026-05-24"
+    },
+    "1Emx9WguxniUWokNSAG3fL0uxgWGKnP27": {
+      "name": "Property List & Overall Scope of Loss - Google Sheets.pdf",
+      "category": "credit_history",
+      "first_seen": "2026-05-24"
+    },
+    "1YNaDxAat86tmE0QBMUcMRukJWkZpHyINHY3aFNqOTOQ": {
+      "name": "COVER LETTER",
+      "category": "credit_history",
+      "first_seen": "2026-05-24"
+    },
+    "1h7A_5wAtYv9gscUyY2g3Zfrmpy5Gg4zhCe-_SlAWo4c": {
+      "name": "HELP FOR STUDENT LOANS",
+      "category": "credit_history",
+      "first_seen": "2026-05-24"
+    },
+    "1CCCJtVBXOfZk7l5qM3jqDO0Hy57sHhxX": {
+      "name": "21 Mortgage Loan Application 9_18_18.pdf",
+      "category": "credit_history",
+      "first_seen": "2026-05-24"
+    },
+    "18-Lf5Rb41eWI8eYxYn34-ZGjMBXIRVMH": {
+      "name": "Personal-Financial-Management-Course.pdf",
+      "category": "credit_history",
+      "first_seen": "2026-05-24"
+    },
+    "1Avt47PNZXtMPvbzh21DWVpLElH0gHNA9KEJiv5XN0ys": {
+      "name": "Property List & Overall Scope of Loss",
+      "category": "credit_history",
+      "first_seen": "2026-05-24"
+    },
+    "1de_oxd-MYWaq9tcnILvspSTixlP_pDnG": {
+      "name": "EQUIFAX",
+      "category": "credit_history",
+      "first_seen": "2026-05-24"
+    },
+    "1WffJqz3Oo9DPdM2Ros_yHeyyy3sxq5ZB": {
+      "name": "Equifax",
+      "category": "credit_history",
+      "first_seen": "2026-05-24"
+    },
+    "1qHHocw68yA4eI8NrjrNJGwSzEp7n6qcX": {
+      "name": "EQUIFAX Dispute Results",
+      "category": "credit_history",
+      "first_seen": "2026-05-24"
+    },
+    "1XRdrlunaulYCoRr2p7hQZwvxU7MKZi2ocwDBGhu--IQ": {
+      "name": "Login",
+      "category": "credit_history",
+      "first_seen": "2026-05-24"
+    },
+    "14Xy_T5yhQHK3JqsRKbLxo-InWWo1Q7A_": {
+      "name": "TRANSUNION",
+      "category": "credit_history",
+      "first_seen": "2026-05-24"
+    },
+    "1csUEtIYDJb8YoUTml_1HnnZShVFvj4Gw": {
+      "name": "TransUnion",
+      "category": "credit_history",
+      "first_seen": "2026-05-24"
+    },
+    "1N3dezcKA1LxjfuTz8OQyIBJ2v4M2rjiR": {
+      "name": "Screen Shot 2021-09-20 at 11.16.46 AM.png",
+      "category": "credit_history",
+      "first_seen": "2026-05-24"
+    },
+    "1yMPwaR99UeILtXEsJ41Y08UxmBs5C7SuDCTWWYJgdh0": {
+      "name": "4-21-2023 Day Notes",
+      "category": "credit_history",
+      "first_seen": "2026-05-24"
+    },
+    "1S4xHd0n-uj0Ng4IbgB5eK2hF9DXGqqtA": {
+      "name": "Screen Shot 2021-09-20 at 11.16.55 AM.png",
+      "category": "credit_history",
+      "first_seen": "2026-05-24"
+    },
+    "1Q7MOFcTZ9x8ZKRs9gQgmHmukLYDqCDiI": {
+      "name": "5-Screen Shot 2021-09-20.jpg",
+      "category": "credit_history",
+      "first_seen": "2026-05-24"
+    },
+    "1BDkdJFOwOLcM3OPGOVnaML23EzgoeTKr": {
+      "name": "Screen Shot 2021-09-20 at 11.19.08 AM.png",
+      "category": "credit_history",
+      "first_seen": "2026-05-24"
+    },
+    "1BPHHfB3B9KMPsC4NQvTeyTGHxwbxBf8F": {
+      "name": "Screen Shot 2021-09-20 at 11.17.05 AM.png",
+      "category": "credit_history",
+      "first_seen": "2026-05-24"
+    },
+    "1rweKFdGhx0k_XcJYUf5UWfWJX4xUa6sa": {
+      "name": "Screen Shot 2021-09-20 at 11.16.35 AM.png",
+      "category": "credit_history",
+      "first_seen": "2026-05-24"
+    },
+    "1OV0TAdPdVwIzZyV0TKuf5lujbxrZLKn3fbkfH1CdH00": {
+      "name": "History",
+      "category": "credit_history",
+      "first_seen": "2026-05-24"
+    },
+    "1yowok1ycrSYwyCbnjyiz2y6A7FCzhaIt": {
+      "name": "4-Screen Shot 2021-09-20.jpg",
+      "category": "credit_history",
+      "first_seen": "2026-05-24"
+    },
+    "11MX3p9e-ytPsJDIzvtxqILJhwFGKI0oh": {
+      "name": "3-Screen Shot 2021-09-20.jpg",
+      "category": "credit_history",
+      "first_seen": "2026-05-24"
+    },
+    "1c1HRNAkLISfzpxZcW4SmWL1IN8o3gPpT": {
+      "name": "2-Screen Shot 2021-09-20.jpg",
+      "category": "credit_history",
+      "first_seen": "2026-05-24"
+    },
+    "1MS0bzUisAnaBqebUgMIVBXEu7Vm10Y7BdMEYe0EUpAE": {
+      "name": "Reporte Resumen para Asesor\u00eda Legal(Pro Bono Inc PR): Resumen del Informe de Cr\u00e9dito",
+      "category": "credit_history",
+      "first_seen": "2026-05-24"
+    },
+    "1FYhogWqoRTY9f6a1dJpJ9qkTzBIa1pmr": {
+      "name": "Reporte Resumen para Asesor\u00eda Legal(Pro Bono Inc PR) Resumen del Informe de Cr\u00e9dito.pdf",
+      "category": "credit_history",
+      "first_seen": "2026-05-24"
+    },
+    "1uX048hFCeDUyuyTJxlNhqTlIRfmLykMw_EqmCAvhgLs": {
+      "name": "Untitled spreadsheet",
+      "category": "credit_history",
+      "first_seen": "2026-05-24"
+    },
+    "118EnTxQmw4Gru2dkam1jGwwAeGUqkRXq7GIIJ0iNu1g": {
+      "name": "09-27-2022 Service Matrix",
+      "category": "credit_history",
+      "first_seen": "2026-05-24"
+    },
+    "1J2cKqrrCX-zLKxrpk5UFQq9je7CXYPPl1dAP4j4PBzY": {
+      "name": "Copy of Service Matrix",
+      "category": "credit_history",
+      "first_seen": "2026-05-24"
+    },
+    "1njlHRl6zzswZw5ftNtEQnTroNjANpuXwf9oODuoiq00": {
+      "name": "Service Matrix",
+      "category": "credit_history",
+      "first_seen": "2026-05-24"
+    },
+    "1gelkuticXyKhcdmPaC8-feeIMnWCMpFU": {
+      "name": "Surge - Collector - Gmail - PLEASE REVIEW_ Information in regards to your Surge_.pdf",
+      "category": "credit_history",
+      "first_seen": "2026-05-24"
+    },
+    "1mcMkC65mB4D1cN2CWawIl-CTJ3epktWE": {
+      "name": "SURGE - COLLECTOR - Gmail - Carlos_ Pay your Surge Credit Card balance online.pdf",
+      "category": "credit_history",
+      "first_seen": "2026-05-24"
+    },
+    "1Cyu_-_8H01odsKs7hTFknIouhfjbsHMMVjmww9XtjNI": {
+      "name": "Surge MC - x8662 - Login",
+      "category": "credit_history",
+      "first_seen": "2026-05-24"
+    },
+    "1KFGDUCUZMXhI5SdySKDG__oKbR_2sEGZn4ezwlwrfdc": {
+      "name": "Surge MC - x8662 - History",
+      "category": "credit_history",
+      "first_seen": "2026-05-24"
+    },
+    "1hmkwi_YzOkwNq_DLb8tHURI9VdxqgRje": {
+      "name": "\"X\"Surge MC - x8662",
+      "category": "credit_history",
+      "first_seen": "2026-05-24"
+    },
+    "1cFWevL9Z1UbnpJ2LTg9BYFM02vJ9C3OGqUaz-ouT53E": {
+      "name": "Scratchsheet",
+      "category": "credit_history",
+      "first_seen": "2026-05-24"
+    },
+    "1A4F1qY_PHaOem0Ni28yzn5RikQrSfWsbO-qK5QopMzE": {
+      "name": "Schedule E/F Scratch Sheet",
+      "category": "credit_history",
+      "first_seen": "2026-05-24"
+    },
+    "1HDA9Y2SAJHOlTBYMcik1f6cMfBqBAdRSkwUBZT7RtUQ": {
+      "name": "August Budget 2022",
+      "category": "credit_history",
+      "first_seen": "2026-05-24"
+    },
+    "11YBcOFDmcqlxP186OEfR31YqvHQkWeBSX7FTEqBCm1o": {
+      "name": "Budget Began Dec 2021",
+      "category": "credit_history",
+      "first_seen": "2026-05-24"
+    },
+    "1Tm3mf4pezRxXbpPqgYTMtFZ4oe0_CQ2a": {
+      "name": "MOTION TO ESTABLISH PROPERTY VALUE 62 pgs.pdf",
+      "category": "credit_history",
+      "first_seen": "2026-05-24"
+    },
+    "1OLQ8k5HRHXDwswAFv6-sx6gX06dGpSpzu4XYI_-F2XU": {
+      "name": "MOTION TO ESTABLISH PROPERTY VALUE",
+      "category": "credit_history",
+      "first_seen": "2026-05-24"
+    },
+    "1V_zuCxTc5IKM78VynmdS_ChhTQZprGc9oRzh0XxXF1E": {
+      "name": "CPD FINANCIAL LAUNCH NOTES",
+      "category": "credit_history",
+      "first_seen": "2026-05-24"
+    },
+    "1-iok6AySXrt-PUV5VenpyJ6hFMWanlyaXpixb81pKec": {
+      "name": "Pricing",
+      "category": "credit_history",
+      "first_seen": "2026-05-24"
+    },
+    "1Bee9fRcCl1BVUg2szTXbMxOAP34x6lGh": {
+      "name": "5. [22-SC-6945]_STATEMENT_OF_CLAIM.pdf",
+      "category": "credit_history",
+      "first_seen": "2026-05-24"
+    },
+    "1D9Fi74vuGZpACnnpHt7b2vqqlovIjiTVkLRsll9Cnto": {
+      "name": "Sale Notes:",
+      "category": "vehicle",
+      "first_seen": "2026-05-24"
+    },
+    "13V5Glb3yH-9Z69pOGKjbhbq7Qv-DDKr9": {
+      "name": "MalbeteAndInsuranceApril2026.pdf",
+      "category": "vehicle",
+      "first_seen": "2026-05-24"
+    },
+    "1Qx7WmzknYo2zw_XbFutbCcrC7tk3bmjj": {
+      "name": "Van paperwork.pdf",
+      "category": "vehicle",
+      "first_seen": "2026-05-24"
+    },
+    "1BecZiuhvFSk2pLnu4UAnO7Ft2hbrRIVj": {
+      "name": "Puerto Rico van paperwork.pdf",
+      "category": "vehicle",
+      "first_seen": "2026-05-24"
+    },
+    "1H4h19NtRP0mzcsIWBKm3Zt0AhiVy_Dul-JrJ3z8exGY": {
+      "name": "Facebook marketplace listing",
+      "category": "vehicle",
+      "first_seen": "2026-05-24"
+    },
+    "1ghVwkfk8CDGpTHH6lwJvmkaw4-u1PkIi": {
+      "name": "CERTIFICACION VEHICULO.pdf",
+      "category": "vehicle",
+      "first_seen": "2026-05-24"
+    },
+    "1-xC1Xikv_v4uvNWuay0QPtMXSE40RF7kpXlEWV8uxSA": {
+      "name": "Calculation",
+      "category": "vehicle",
+      "first_seen": "2026-05-24"
+    },
+    "1YEZulhIsBQjYtLyWUZzweWI-348t4Ovy": {
+      "name": "Plan de Salud del Gobierno 1443456 (1).pdf",
+      "category": "vehicle",
+      "first_seen": "2026-05-24"
+    },
+    "1cIqCRI1qtC6q3YbUm7sfzSXIR0JAGXtD": {
+      "name": "CHRYSLER TOWN & COUNTRY 2007 VIN.pdf",
+      "category": "vehicle",
+      "first_seen": "2026-05-24"
+    },
+    "1G20OZFTKRjXRFujRzMBtEe77dx_iU7DU": {
+      "name": "CERTIFICACION DE MULTAS.pdf",
+      "category": "vehicle",
+      "first_seen": "2026-05-24"
+    },
+    "1cI5wUjK7ltEPAzDSu87xzKShVLskLK6A": {
+      "name": "Part of Puerto Rico van paperwork2.pdf",
+      "category": "vehicle",
+      "first_seen": "2026-05-24"
+    },
+    "1Eqcq1oe5OFJPBK7eCGC_wrGjRdKN4O94": {
+      "name": "Dept of Trans Puerto Rico.pdf",
+      "category": "vehicle",
+      "first_seen": "2026-05-24"
+    },
+    "1rkH6mVbr5NFrl6C5qgBEgVwYffGlqObD": {
+      "name": "VEHICLES",
+      "category": "vehicle",
+      "first_seen": "2026-05-24"
+    },
+    "13EwCBNyjmqVeLJqOdrkulWyHBEMYaLhZ": {
+      "name": "Vehicle",
+      "category": "vehicle",
+      "first_seen": "2026-05-24"
+    },
+    "1nE5ZfRgz1ubktii453ienSU2vkL_Dj5d": {
+      "name": "REGISTRATION OR TITLE TO VEHICLE.pdf",
+      "category": "vehicle",
+      "first_seen": "2026-05-24"
+    },
+    "1dxGVLxAq8cBO3TBMuBedzXq65PQvxDWa": {
+      "name": "REGISTRATION OR TITLE TO VEHICLE_TRANSFER OF OWNERSHIP.pdf",
+      "category": "vehicle",
+      "first_seen": "2026-05-24"
+    },
+    "17qX8-n9fDv1MYeYxL1G2j4C6BrIwQUKk": {
+      "name": "Chey Astro Work Van 2003 - Vehicle Information Check.pdf",
+      "category": "vehicle",
+      "first_seen": "2026-05-24"
+    },
+    "1y4O1xk7PJfIB67f0TsLuBPWHgn5LzbgUYXBqcP6KzR8": {
+      "name": "Motor Vehicle Bill of Sale",
+      "category": "vehicle",
+      "first_seen": "2026-05-24"
+    },
+    "1Xv7SMUhATNqZW9h8dLzPJ6paXeOVrZDs": {
+      "name": "STATE OF FLORIDA - NOTICE OF SALE.pdf",
+      "category": "vehicle",
+      "first_seen": "2026-05-24"
+    },
+    "1gP-Wm2rHI6iixoWIp3qnGM9ZkBGSVHSI": {
+      "name": "Motor Vehicle Bill of Sale.dotx",
+      "category": "vehicle",
+      "first_seen": "2026-05-24"
+    },
+    "1cGvmQ2GAi8f-uGxzZ8ASfdV4HKnBLjyu": {
+      "name": "Florida INL - Single Payment 1st Lien Secured Loan Agreement - v.1.2 06.24.2021.pdf",
+      "category": "vehicle",
+      "first_seen": "2026-05-24"
+    },
+    "19qoN5czjhEyzZu8aHDWg9n_9CudaPcuz": {
+      "name": "PR-DEPARTAMENTO DEL TRABAJO Y RECURSOS HUMANOS-INFORMACION AL TRABAJADOR SOBRE RECLAMACI\u00d3N DE SEGURO POR DESEMPLEO-FEB 20th 2024-MAYAGUEZ.pdf",
+      "category": "vehicle",
+      "first_seen": "2026-05-24"
+    },
+    "127n2_KcCMHe40fD7XCXhTznhWQzzwku7": {
+      "name": "CERT DE DESEMPLEO NEGATIVA.pdf",
+      "category": "vehicle",
+      "first_seen": "2026-05-24"
+    },
+    "1k31Pt2qAKqGJasz5DtLFzcruLGy00Sjq": {
+      "name": "CERT DE DESEMPLEO-NEG SEPT 2024.pdf.pdf",
+      "category": "vehicle",
+      "first_seen": "2026-05-24"
+    },
+    "11QR2YmEj_yojfhWz9iIEBqeuBmq2jLyE": {
+      "name": "DEPARTAMENTO DE TRABAJOS Y RECURSOS HUMANOS.pdf",
+      "category": "vehicle",
+      "first_seen": "2026-05-24"
+    },
+    "1p65ENNTJvzOOA11IkfPS6ZRJUSPAZnU4": {
+      "name": "CERTIFICACI\u00d3N TARIFA FIJA SUBSIDIADA RESID\u00c9NCIALES P\u00daBLICOS-CANDELARIA-SEPT 22nd 2023.pdf",
+      "category": "vehicle",
+      "first_seen": "2026-05-24"
+    },
+    "1-8yU8m2UtjQUWAPPIUTzb1PCy-hg5H6h": {
+      "name": "DECLARACIO\u0301N PERSONAL 2 of 4.pdf",
+      "category": "vehicle",
+      "first_seen": "2026-05-24"
+    },
+    "1DR5lzAyePSmVd6Zn7zmjmGo4yTtTsSzj": {
+      "name": "r4.pdf",
+      "category": "vehicle",
+      "first_seen": "2026-05-24"
+    },
+    "1NHhRzChji_1VS2a6qOS1rblbAooNTNnO": {
+      "name": "d2.pdf",
+      "category": "vehicle",
+      "first_seen": "2026-05-24"
+    },
+    "1GmHBbjIAzppH_o5KikrAjyZRhJFGfbHf": {
+      "name": "DIVISI\u00d3N DE REGISTRO DE EMPLEO-REGISTRO DE VISITAS-AGUADILLA-JULY 14th 2023.pdf",
+      "category": "vehicle",
+      "first_seen": "2026-05-24"
+    },
+    "1o2KG4xhuczM5KxkmshoHIh53fr6o9XUi": {
+      "name": "INSURANCE",
+      "category": "vehicle",
+      "first_seen": "2026-05-24"
+    },
+    "1AAAJbf0WpfmcqDHULxbbI0j0jgL60v6BwVbjkn5vcPM": {
+      "name": "Foremost Insurance Log",
+      "category": "vehicle",
+      "first_seen": "2026-05-24"
+    },
+    "1evkQskWXLCOgB-8iP-eGZ5p12Kk0G7IM": {
+      "name": "Cypress General Liability Insurance ",
+      "category": "vehicle",
+      "first_seen": "2026-05-24"
+    },
+    "1iq07BCMwAYgSnS9BUAInCPZSHiV61o6g": {
+      "name": "Lyndon Southern Insurance CPP-1820 - v.04.06.pdf",
+      "category": "vehicle",
+      "first_seen": "2026-05-24"
+    },
+    "1-Uwz1bIhF5NKnMYdY-X3BUgy9heZ0TeD6uFfODERero": {
+      "name": "LIFE INSURANCE",
+      "category": "vehicle",
+      "first_seen": "2026-05-24"
+    },
+    "1MBLfOK7YlNhab2lMvL58x9HLGypOzlDR": {
+      "name": "CERTIFICATE OF AUTO INSURANCE.pdf.pdf",
+      "category": "vehicle",
+      "first_seen": "2026-05-24"
+    },
+    "1jpKSglDf7Jjg9bM-AAArtNnUZPSg3KOp": {
+      "name": "2020 DCC LEE MCDONALDS FORM 1095 C HEALTH INSURANCE OFFER AND COVERAGE VILLANUEVA.pdf",
+      "category": "vehicle",
+      "first_seen": "2026-05-24"
+    },
+    "1OCSJlCpKyCWE4VNV1c5eI92nnM7gytpJ": {
+      "name": "Foremost Insurance G00-8789730-00 CANCELED",
+      "category": "vehicle",
+      "first_seen": "2026-05-24"
+    },
+    "1BKkDqpvIh8yDK8bubaI0GTPpavW3dEUy": {
+      "name": "AAIC-Policy-VILLANUEVA_CARLOS-PFL1729777.pdf",
+      "category": "vehicle",
+      "first_seen": "2026-05-24"
+    },
+    "17ZcRD-DZ12W0e2qhzVzgkcPo6uH8x-8J": {
+      "name": "Illinois Bankruptcy Exemptions.pdf",
+      "category": "vehicle",
+      "first_seen": "2026-05-24"
+    },
+    "13RqwG0kBjLZhWxlgSzb9yBlOjSQqTMDf": {
+      "name": "100 perfect test thx JC- Course _ DebtorEdu.com.pdf",
+      "category": "vehicle",
+      "first_seen": "2026-05-24"
+    },
+    "1eYqJDGNbT16241NKbsRkU6Rw-fbI6aqV": {
+      "name": "Dissolution Judgment 06 (1).pdf",
+      "category": "vehicle",
+      "first_seen": "2026-05-24"
+    },
+    "1XkUYOM9K7RrK6CYwveRHtg-W7xjeAnkH": {
+      "name": "7_Uniform Order for Support - Not Agreed.pdf",
+      "category": "vehicle",
+      "first_seen": "2026-05-24"
+    },
+    "1GKHg0L80sr-GNvjikLHH5rhRGn54rngi": {
+      "name": "4_Financial Affidavit - Petitioner.pdf",
+      "category": "vehicle",
+      "first_seen": "2026-05-24"
+    },
+    "1ZD9hm3nVfWfX9ujOYu3aiM5sp7UH2eab": {
+      "name": "2019 Tax Tiger Individual Tax Organizer-Schedule C.pdf",
+      "category": "vehicle",
+      "first_seen": "2026-05-24"
+    },
+    "1SiBGgwHFFR6CmwdUJ9PRO9VS7bZeqqxD": {
+      "name": "MANUEL HERN\u00c1NDEZ ROSA CANDELARIA-NOTIFICACI\u00d3N DE INSPECCI\u00d3N DE VIVIENDA-OCT 31st 2023.pdf",
+      "category": "vehicle",
+      "first_seen": "2026-05-24"
+    },
+    "1ix5Thm6AjXRygNDhV1HJcz9BhBpW-4Ih": {
+      "name": "ADMINISTRATION DE VIVIENDA P\u00daBLICA-AVIS\u00d3 DE VISITAS PARA INSPECCIONES NSPIRE 2024-CANDELARIA-FEB 7th 2024.pdf",
+      "category": "vehicle",
+      "first_seen": "2026-05-24"
+    },
+    "1Vy-XoS9YQclH1xy14ReNuqnibn2DYKb3": {
+      "name": "Multiple Occasions when Defendants locked out Plaintiff from His Belongings_EVIDENCE 18 (1).pdf",
+      "category": "vehicle",
+      "first_seen": "2026-05-24"
+    },
+    "19t2GbhblfWKOmaSPO7l7p1J8JiOE0nq0": {
+      "name": "Multiple Occasions when Defendants locked out Plaintiff from His Belongings_EVIDENCE 18.pdf",
+      "category": "vehicle",
+      "first_seen": "2026-05-24"
+    },
+    "123kmuuYI3cvHBr-0vwG4QmCaPvEk98jc": {
+      "name": "(15)15. [22-SC-6945]_MOTION_TO_PROVIDE_ADDITIONAL_EVIDENCE_-_PLAINTIFF_ PAGES 168 - 179.pdf",
+      "category": "vehicle",
+      "first_seen": "2026-05-24"
+    },
+    "14aDYPGzQAjQ-YMjm13Awcl7_xf-gmhZR": {
+      "name": "Multiple Occasions when Defendants locked out Plaintiff from His Belongings_EVIDENCE 18.pdf",
+      "category": "vehicle",
+      "first_seen": "2026-05-24"
+    },
+    "1uiEm2ch8QKWGcbkwfKyAjciM132aM852Wv7YQofxqKg": {
+      "name": "Mar 20th 2022 7pm from Hernan",
+      "category": "vehicle",
+      "first_seen": "2026-05-24"
+    },
+    "1x2x2fKKgx1GReMSHbZ69egUsuCYlPSyz": {
+      "name": "r2.pdf",
+      "category": "vehicle",
+      "first_seen": "2026-05-24"
+    },
+    "1sRbLFN1thyYgX_gTLTvow5JthA1vVNTO": {
+      "name": "PR-TRIBUNAL DE PRIMER INSTANCIA-QUERELLA-SEPT 15th 2024.pdf",
+      "category": "vehicle",
+      "first_seen": "2026-05-24"
+    },
+    "1GdbSIoXTr2Y3qdrlEWcDGHZvsNEq2H4g": {
+      "name": "File_000.png",
+      "category": "vehicle",
+      "first_seen": "2026-05-24"
+    },
+    "1y69G0lwBJfvhjwLdGCdO4BDvTgYnP-8r": {
+      "name": "File_000.png",
+      "category": "vehicle",
+      "first_seen": "2026-05-24"
+    },
+    "1IfwMD4iTx0sAe2WyszvHIq1QCaBFap8F": {
+      "name": "(8)15. [22-SC-6945]_MOTION_TO_PROVIDE_ADDITIONAL_EVIDENCE_-_PLAINTIFF_PAGES 83 - 102.pdf",
+      "category": "vehicle",
+      "first_seen": "2026-05-24"
+    },
+    "1e3C6PjjZJrKg5XtIUcmFt-BTOXOWc1wU": {
+      "name": "(13)15. [22-SC-6945]_MOTION_TO_PROVIDE_ADDITIONAL_EVIDENCE_-_PLAINTIFF_PAGES 145 - 157.pdf",
+      "category": "vehicle",
+      "first_seen": "2026-05-24"
+    },
+    "1VYVKMoyZuvVJgTxmzBrX0Vyhgl1Lv-m_": {
+      "name": "15. [22-SC-6945]_MOTION_TO_PROVIDE_ADDITIONAL_EVIDENCE_-_PLAINTIFF.pdf",
+      "category": "vehicle",
+      "first_seen": "2026-05-24"
+    },
+    "1zZPwzwsui4r38CuDXSMHS-2UOhldvPhI": {
+      "name": "Florida Rural Legal Services, Inc",
+      "category": "legal_correspondence",
+      "first_seen": "2026-05-24"
+    },
+    "1M_3Y2KOSf_MdZYZej6n6xUp0pVdWixHC": {
+      "name": "Gmail - SERVICE OF COURT DOCUMENT CASE NUMBER 162022CC004806XXXXMA VILLANUEVA, CARLOS - STORAGE ZONE IN CARE OF ISRAEL LOPEZ.pdf",
+      "category": "legal_correspondence",
+      "first_seen": "2026-05-24"
+    },
+    "1QoUnuzp0Ny7FFKPDDxWwIBEif_ByQLCT": {
+      "name": "Gmail - SERVICE OF COURT DOCUMENT CASE NUMBER 162023SC002047XXXXMA VILLANUEVA, CARLOS - KNIGHT, ALEXANDRIA SHENTAE.pdf",
+      "category": "legal_correspondence",
+      "first_seen": "2026-05-24"
+    },
+    "1GNrEI3cGc8oaJyJt7xux8BhOxalAYwFo": {
+      "name": "Joseph Abruzzo Clerk of The Circuit Court & (Clerk of the Circuit Court & Comptroller, Palm Beach County).pdf",
+      "category": "legal_correspondence",
+      "first_seen": "2026-05-24"
+    },
+    "1DaWTuj70rd0WIH5XKFu_xYS-yoQpHszX": {
+      "name": "10. [22-SC-6945]_SUMMONS_RETURNED_INDICATING_SERVICE_(OTHER)_ON_04-19-2022_AT_03_30_PM_FOR_STORAGE_ZONE_AND_BUSINESS_.pdf",
+      "category": "legal_correspondence",
+      "first_seen": "2026-05-24"
+    },
+    "15ID8Nv-pZGE2Mwa7pdJ41Vn38WAOy73h": {
+      "name": "LSFL942.320.pdf",
+      "category": "legal_correspondence",
+      "first_seen": "2026-05-24"
+    },
+    "1gWocxjcDwWID2BNGTbsE-GSXvze0AOn_": {
+      "name": "10. [22-CC-4806]_SUMMONS_RETURNED_INDICATING_SERVICE_UPON_STORAGE_ZONE_AND_BUSSINESS_CENTER__C-O_ISRAEL_LOPEZ_ON_05-0.pdf",
+      "category": "legal_correspondence",
+      "first_seen": "2026-05-24"
+    },
+    "1j5P-Vjk4l7nnVjMurNSEGQFftt2o3WAX": {
+      "name": "10-steps-for-presenting-evidence-in-court.pdf",
+      "category": "legal_correspondence",
+      "first_seen": "2026-05-24"
+    },
+    "1KG-WQVDp_mU4kwDrz4qaF-y4g00Kr2B7": {
+      "name": "IN THE CIRCUIT COURT OF THE FIFTEENTH JUDICIAL CIRCUIT IN AND FOR PALM BEACH COUNTY FLORIDA.pdf",
+      "category": "legal_correspondence",
+      "first_seen": "2026-05-24"
+    },
+    "1xX3airIkZ2ybOgTAzXYXO4AYbUK6IKcm": {
+      "name": "RE _ CONFIDENTIALITY OF COURT RECORDS _ Rule_2.420.pdf",
+      "category": "legal_correspondence",
+      "first_seen": "2026-05-24"
+    },
+    "1VEhYP0Ii_TzjcENYzWGOXUaVg9YzLglI": {
+      "name": "RESPONSE TO ANSWER AFFIRMATIVE DEFENSES AND REQUEST FOR ATTORNEY FEES_12-20-22.pdf",
+      "category": "legal_correspondence",
+      "first_seen": "2026-05-24"
+    },
+    "1V5HXdMdZpCPxJuIuivGWwXQDmd7Sby7rAP86OkT35Ag": {
+      "name": "IN ADDITION TO THE AMENDED COMPLAINT PROFESSIONALLY COMPILED BY EX-ATTORNEY FOR PLAINTIFF NEYZA GUZMAN, THE PLAINTIFF AND PRO SE ADDS A COMPLAINT OF COLLUSION BETWEEN ISRAEL LOPEZ OF STORAGE ZONE AND BUSINESS CENTERS AND HERNAN MONTANA IN THEIR EFFORT TO HARM CARLOS VILLANUEVA",
+      "category": "legal_correspondence",
+      "first_seen": "2026-05-24"
+    },
+    "1E6FWfXjebH0rTpxHKwwLbDjum0wVAA2b": {
+      "name": "IN ADDITION TO THE AMENDED COMPLAINT PROFESSIONALLY COMPILED BY EX-ATTORNEY FOR PLAINTIFF NEYZA GUZMAN, THE PLAINTIFF AND PRO SE ADDS A COMPLAINT OF COLLUSION BETWEEN ISRAEL LOPEZ OF STORAGE ZONE AND BUSINESS CENTERS AND HERNAN MONTANA.pdf",
+      "category": "legal_correspondence",
+      "first_seen": "2026-05-24"
+    },
+    "1Gls3bFtNkgyW5nt7jpt9bgMw6zGJy2hSaO0XT7RsmtY": {
+      "name": "RESPONSE TO ANSWER, AFFIRMATIVE DEFENSES AND REQUEST FOR ATTORNEY FEES_12-20-22",
+      "category": "legal_correspondence",
+      "first_seen": "2026-05-24"
+    },
+    "1W76IgJq49xdJUHNyroC--K8Nc6vAEIwD3NapEj0kVVg": {
+      "name": "(1)RESPONSE TO ANSWER, AFFIRMATIVE DEFENSES AND REQUEST FOR ATTORNEY FEES_12-20-22",
+      "category": "legal_correspondence",
+      "first_seen": "2026-05-24"
+    },
+    "1OVqe6HCOAL3Pefl7YRHOEavgFOVa3F95i2AbaELZhGQ": {
+      "name": "MOTION FOR REQUEST TO LET CARLOS VILLANUEVA RETURN FROM INTERNATIONAL TRAVEL AND CONTINUE PROCESS OF BK 13 WITH THE HELP OF A ATTORNEY",
+      "category": "legal_correspondence",
+      "first_seen": "2026-05-24"
+    },
+    "12w7wqCIQ1WD9dHNi9Iu-qywqE8Ypo1Gp": {
+      "name": "M. KOREY MILO - ASSISTANT STATE ATTORNEY",
+      "category": "legal_correspondence",
+      "first_seen": "2026-05-24"
+    },
+    "1y08HjJ55hP1wvCgFwNQIp2Xv62kIWnzv": {
+      "name": "DaVatrice Lindsey, Esq | Attorney at Law",
+      "category": "legal_correspondence",
+      "first_seen": "2026-05-24"
+    },
+    "1IzDIL_BQPNylnTk8-TTeqJAWUVqzt5pieGFAFu5bRtM": {
+      "name": "Attorney for Hopelda Hotel",
+      "category": "legal_correspondence",
+      "first_seen": "2026-05-24"
+    },
+    "18RFbqhA8IOkxVZ5rW6V7EGKrGx29jo7h": {
+      "name": "https___courtlink.lexisnexis.com_cookcounty_FindDock.pdf",
+      "category": "legal_correspondence",
+      "first_seen": "2026-05-24"
+    },
+    "12y6vWiG5Yp4e1zz8n-bumXuRctmDhfdM": {
+      "name": "IMG_20211025_160702.jpg",
+      "category": "legal_correspondence",
+      "first_seen": "2026-05-24"
+    },
+    "1g-t9Tv-NT4f-GqwLLshw9fcl3KdFcaa-": {
+      "name": "Summons 1902a_4-22-2023.pdf",
+      "category": "legal_correspondence",
+      "first_seen": "2026-05-24"
+    },
+    "1DMYHYEJU8p_4TVkjyKFjfFwHWwclNkqC": {
+      "name": "Summons 1902a (1) (1).pdf",
+      "category": "legal_correspondence",
+      "first_seen": "2026-05-24"
+    },
+    "1w-eQfuJFMSkeGy1ZKo9i9JN_Q4uTKAAl": {
+      "name": "Court Information.pdf",
+      "category": "legal_correspondence",
+      "first_seen": "2026-05-24"
+    },
+    "1TjSd5nf2pbWcKFdNRei9kv5lDgi8Hkep": {
+      "name": "SUMMONS - 502022CC012421XXXXSB_18.pdf",
+      "category": "legal_correspondence",
+      "first_seen": "2026-05-24"
+    },
+    "1yJBI-Njm7kGT5nxF5XqGSqxJQxwT3QiZ": {
+      "name": "Florida Courts E-Filing Portal(7-31-23).pdf",
+      "category": "legal_correspondence",
+      "first_seen": "2026-05-24"
+    },
+    "1X_mdO0C8_NWSvjHRgArdL0MzmwWCSvSn": {
+      "name": "Florida Courts E-Filing Portal.pdf",
+      "category": "legal_correspondence",
+      "first_seen": "2026-05-24"
+    },
+    "1ZVJJCon6L0m8V5zsbJu0y6-TE1xMJ0y6": {
+      "name": "Florida Courts E-Filing Portal.pdf",
+      "category": "legal_correspondence",
+      "first_seen": "2026-05-24"
+    },
+    "1Cg20rtKFEEnXjDPtwpY1kpbzKKiYMFXU": {
+      "name": "Florida Courts E-Filing Portal Notice of Electronic Filing - Submission # 171578215.pdf",
+      "category": "legal_correspondence",
+      "first_seen": "2026-05-24"
+    },
+    "1Couu8EmK2geEQh-wOwvJ1z7BBMqUOaUo": {
+      "name": "Florida Courts E-Filing Portal(1).pdf",
+      "category": "legal_correspondence",
+      "first_seen": "2026-05-24"
+    },
+    "12Tf86R_JxCZZbH0X1563pLSyFmvEDaBf": {
+      "name": "Florida Courts E-Filing Portal(5).pdf",
+      "category": "legal_correspondence",
+      "first_seen": "2026-05-24"
+    },
+    "14cXBnspOXGzOxM7p_EpVZujbbSMOpKyl": {
+      "name": "Florida Courts E-Filing Portal(6).pdf",
+      "category": "legal_correspondence",
+      "first_seen": "2026-05-24"
+    },
+    "1Kijn33ZQDLXC3g6I3p9OR0gZ2bOLu8tg": {
+      "name": "Florida Courts E-Filing Portal(6).pdf",
+      "category": "legal_correspondence",
+      "first_seen": "2026-05-24"
+    },
+    "1apGyJkNfd5hvWDQXZLu9LrFTG6rbzXfL": {
+      "name": "ESTADO LIBRE ASOCIADO DE PUERTO RICO TRIBUNAL GENERAL DE JUSTICIA TRIBUNAL DE PRIMERA INSTANCIA SALA MUNICIPAL DE MAYAG\u00dcEZ.pdf",
+      "category": "legal_correspondence",
+      "first_seen": "2026-05-24"
+    },
+    "18iNzmDfoWQyaqbOqSZmz92FEhOh881Ye": {
+      "name": "Certificacio\u0301n de Pension Alimentaria por Tribunal y o ASUME Evidencia de gestion de cobro si aplica.pdf",
+      "category": "legal_correspondence",
+      "first_seen": "2026-05-24"
+    },
+    "1qQCJnzflQ_U3IdlL-m7KaZu1yW7NZ7bk": {
+      "name": "RESOLUTION ON APPEAL FOR REVIEW OF ADMINISTRATIVE TRAFFIC FINE.pdf",
+      "category": "legal_correspondence",
+      "first_seen": "2026-05-24"
+    },
+    "19kzh__N3Q4G4SgI-mkULeOLlN9s_qn73": {
+      "name": "ESTADO LIBRE ASOCIADO DE PUERTO RICO.pdf",
+      "category": "legal_correspondence",
+      "first_seen": "2026-05-24"
+    },
+    "1dCxzmOunIORHQtTdyYQ5a-8o9F0kAu4ar7JOjDPxAMk": {
+      "name": "ESTADO LIBRE ASOCIADO DE PUERTO RICO",
+      "category": "legal_correspondence",
+      "first_seen": "2026-05-24"
+    },
+    "1HoJZx1Z75WZCfGw_xBaXCPQaJxHnQ3Dq": {
+      "name": "38. [22-CC-4806]_SUMMONS_ISSUED_HERNAN_MONTANA.pdf",
+      "category": "legal_correspondence",
+      "first_seen": "2026-05-24"
+    },
+    "1xQiNVhq_bn01o0wqb0VUJlAGhC_jwszv": {
+      "name": "7-22-2023 Corrected Summons.pdf",
+      "category": "legal_correspondence",
+      "first_seen": "2026-05-24"
+    },
+    "1uCw0eBY6f3qYhZfiqI_FOtoYTAN2s0Y7": {
+      "name": "4. [22-CC-4806]_SUMMONS_ISSUED_STORAGE_ZONE_IN_CARE_OF_ISRAEL_LOPEZ.pdf",
+      "category": "legal_correspondence",
+      "first_seen": "2026-05-24"
+    },
+    "1a5Y4KYds_bnUDXV_U_bFjDyaVuCzuOntnwkhnn-x8Pk": {
+      "name": "7-22-2023 Corrected Summons",
+      "category": "legal_correspondence",
+      "first_seen": "2026-05-24"
+    },
+    "16tWQziHVfWgPewPfivX7XlqmRzTOCF-B": {
+      "name": "Summons  20Day Personal Se_ 5 Pages.pdf",
+      "category": "legal_correspondence",
+      "first_seen": "2026-05-24"
+    },
+    "1_U1fiv60hrLs7w2JV6ARkCepyiCOKtiG": {
+      "name": "ESTADO LIBRE ASOCIADO DE PUERTO RICO 1 of 4.docx",
+      "category": "legal_correspondence",
+      "first_seen": "2026-05-24"
+    },
+    "12sCBnEIyJEE9yastQCaZac8WL7xb4QUD": {
+      "name": "INSEC Mayaguez",
+      "category": "legal_correspondence",
+      "first_seen": "2026-05-24"
+    },
+    "1-JjqoudoqAe_x9RtJrILgeTCzyLoDwXi": {
+      "name": "Mayaguez Development",
+      "category": "legal_correspondence",
+      "first_seen": "2026-05-24"
+    },
+    "10X5wpsl3A-smdEisOFISaq0iv41cawgk": {
+      "name": "Mayaguez Office",
+      "category": "legal_correspondence",
+      "first_seen": "2026-05-24"
+    },
+    "18Fi53q2A48FhBaaG0HdlsnAvUtcbBfG3W00Telrw2F0": {
+      "name": "Iglesia de Avivamiento de Mayag\u00fcez",
+      "category": "legal_correspondence",
+      "first_seen": "2026-05-24"
+    },
+    "19C2Z_LlwTcNB13KJqbLBfrJ_BKlP4QqdWK0AHSwvJpc": {
+      "name": "Asuntos Civil Municipio Mayaguez Alcaldia-Information",
+      "category": "legal_correspondence",
+      "first_seen": "2026-05-24"
+    },
+    "1TxJXIPYWLWLS5XKvUYOsgcZ-UmLiqdPH": {
+      "name": "CERTIFICADO NEGATIVO DE ANTECEDENTES PENALES-MAYAGUEZ-SEPT 22nd 2023-PARA CANDELARIA.pdf",
+      "category": "legal_correspondence",
+      "first_seen": "2026-05-24"
+    },
+    "1BQh5AXabnMccyq_aAW9-2h1JO4V2KII4rxJZm0GaA-0": {
+      "name": "Escuela de Bellas Artes de Mayag\u00fcez-Information",
+      "category": "legal_correspondence",
+      "first_seen": "2026-05-24"
+    },
+    "12dno_w3nrcnKE67kcoZAE1S4owh99zXK": {
+      "name": "Iglesia Avivamiento de Mayaguez",
+      "category": "legal_correspondence",
+      "first_seen": "2026-05-24"
+    },
+    "1JMmwHZRvdJwCcevwawTAX4sjm5ORhchu": {
+      "name": "Alcaldia de Mayaguez",
+      "category": "legal_correspondence",
+      "first_seen": "2026-05-24"
+    },
+    "12I91EL5Gi_Hlk_vp7h5Cjexrg8BTAW7F": {
+      "name": "Escuela de Bellas Artes de Mayag\u00fcez",
+      "category": "legal_correspondence",
+      "first_seen": "2026-05-24"
+    },
+    "1KM9X4dRjsQvrT_Zj2vn86655kgeBkbEP": {
+      "name": "REGISTRACIIN PARA PORTAL AGROPERFIL-MAYAG\u00dcEZ-MARCH 6th 2024.pdf",
+      "category": "legal_correspondence",
+      "first_seen": "2026-05-24"
+    },
+    "1ehYQLNz1KHRxBCcvcxPVEud0z4FCvfnO": {
+      "name": "SUMMONS ISSUED.pdf",
+      "category": "legal_correspondence",
+      "first_seen": "2026-05-24"
+    },
+    "1Okf3dxAhp8DgUwkupuExekbFYAH-Fahr": {
+      "name": "LUMA MAYO 2025.pdf",
+      "category": "legal_correspondence",
+      "first_seen": "2026-05-24"
+    },
+    "1vykhZ3NrnUIBfJstf_P2iEBDnb3jlD71": {
+      "name": "NOTICE TO CEASE AND DESIST - FABIOLA RAMIREZ ESPINO - Jan 18th, 2023 - 2 pages - Eng and Spa.pdf",
+      "category": "legal_correspondence",
+      "first_seen": "2026-05-24"
+    },
+    "1KaL_QvXItMTUgcukHt9wLwEtxkvIkwJkq9VO-eLA-1Y": {
+      "name": "NOTICE TO CEASE AND DESIST - FABIOLA RAMIREZ ESPINO - blank copy",
+      "category": "legal_correspondence",
+      "first_seen": "2026-05-24"
+    },
+    "17QCujQT-4eAEg24l4H8_Wqu0D0gJs0l9": {
+      "name": "DECEMBER 2024.pdf",
+      "category": "legal_correspondence",
+      "first_seen": "2026-05-24"
+    },
+    "1blbubqTyG2B2GHqPYAGXHgWk-vHWlLHH": {
+      "name": "OCTOBER 2024.pdf",
+      "category": "legal_correspondence",
+      "first_seen": "2026-05-24"
+    },
+    "1azTfH9qR1MXWkHE_QBgZNnkaEJtHrwoY": {
+      "name": "NOVEMBER 2024.pdf",
+      "category": "legal_correspondence",
+      "first_seen": "2026-05-24"
+    },
+    "1AsfQFyhVbyaLhveeLVS0-wOKUQQmqLXx": {
+      "name": "LUMA Sept 2024.pdf",
+      "category": "legal_correspondence",
+      "first_seen": "2026-05-24"
+    },
+    "11nBjdhp9JkgN8iunOJBZsfTSCw0FORE2": {
+      "name": "(3) - STATEMENT OF CLAIM _ CEASE AND DESIST LETTERS _ PROOF OF DELIVERY _ 6 PAGES.pdf",
+      "category": "legal_correspondence",
+      "first_seen": "2026-05-24"
+    },
+    "1WlxkZtAlBSPC_siNF7rNWWaEKlv6_VMJ": {
+      "name": "(3) - STATEMENT OF CLAIM _ CEASE AND DESIST LETTERS _ PROOF OF DELIVERY _ 6 PAGES.pdf",
+      "category": "legal_correspondence",
+      "first_seen": "2026-05-24"
+    },
+    "1BaFWTokxCcoM2pFXSt7B6bAgBfOaRLcs": {
+      "name": "LUMA-Su Factura de electricidad-JAN 2nd 2024 THROUGH FEB 1st 2024.pdf",
+      "category": "legal_correspondence",
+      "first_seen": "2026-05-24"
+    },
+    "1m1Bs7N8UjsFcyFfV9CtWRCKZjOUa7U--": {
+      "name": "Luma July 12 2023.pdf",
+      "category": "legal_correspondence",
+      "first_seen": "2026-05-24"
+    },
+    "1BMMutVMjk3JOe37in8xpyfjo6Z1jEm3G": {
+      "name": "MZ2026MU01480 NOTIFICACI\u00d3N DE RESOLUCI\u00d3N.pdf",
+      "category": "legal_correspondence",
+      "first_seen": "2026-05-24"
+    },
+    "18gd4aQrDRqdus23ki8klqebnIUIkqeno": {
+      "name": "MZ2026MU01480 NOTIFICACI\u00d3N DE RESOLUCI\u00d3N.pdf",
+      "category": "legal_correspondence",
+      "first_seen": "2026-05-24"
+    }
+  },
   "last_alert_sent": null
 }
