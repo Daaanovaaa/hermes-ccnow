@@ -203,12 +203,9 @@ class OmiWebhookHandler(BaseHTTPRequestHandler):
 def start_server(port=5007, certfile=None, keyfile=None):
     server = HTTPServer(('0.0.0.0', port), OmiWebhookHandler)
     if certfile and keyfile and Path(certfile).exists() and Path(keyfile).exists():
-        server.socket = ssl.wrap_socket(
-            server.socket,
-            certfile=certfile,
-            keyfile=keyfile,
-            server_side=True,
-        )
+        ctx = ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER)
+        ctx.load_cert_chain(certfile=certfile, keyfile=keyfile)
+        server.socket = ctx.wrap_socket(server.socket, server_side=True)
         print(f"Omi webhook listening on port {port} (HTTPS)")
         print(f"Endpoint: POST https://[vps-ip]:{port}/omi")
     else:
