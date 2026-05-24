@@ -38,7 +38,23 @@ load_dotenv(Path.home() / '.hermes' / '.env')
 # FIFTH_THIRD_ACCESS_TOKEN, BANCO_POPULAR_ACCESS_TOKEN,
 # TELEGRAM_BOT_TOKEN, ACTUAL_PASSWORD
 
-# Auto-categorization rules: keyword → envelope category
+# Actual Budget payee rules: keyword → envelope category (used by setup_actual_rules)
+PAYEE_RULES = [
+    (['walmart','costco','supermax','selectos','econo','grocery','sams','aldi'],      'Groceries'),
+    (['restaurant','food','pizza','burger','subway','mcdonalds'],                      'Restaurants'),
+    (['gas','shell','exxon','bp','texaco','chevron','fuel','ultra top'],               'Transportation/Gas'),
+    (['doctor','hospital','clinic','walgreens','cvs','pharmacy','medicare'],           'Medicare/Medical'),
+    (['planet fitness'],                                                               'Planet Fitness'),
+    (['church','ministry','offering','tithe','donation'],                              'Tithes & Offerings'),
+    (['at&t','verizon','claro','liberty','internet','phone'],                          'Phone/Internet'),
+    (['insurance','seguro'],                                                           'Vehicle Insurance'),
+    (['attorney','court','legal','notary','cesco','dtop','vitalchek'],                 'Legal/Admin Fees'),
+    (['amazon','paypal','claude','suno','spotify','apple','google'],                   'Subscriptions (Claude.ai, Suno, etc.)'),
+    (['fidelity'],                                                                     'CC NOW! Business'),
+    (['rent','housing','hud'],                                                         'Rent (my portion)'),
+]
+
+# Python-side categorization for Google Sheet / Telegram summary
 CATEGORY_RULES = [
     (['walmart','costco','supermax','selectos','econo','grocery','food','aldi','kroger','publix'],  'Groceries'),
     (['gas','shell','exxon','bp','texaco','chevron','fuel','gasolinera'],                           'Transportation/Gas'),
@@ -58,6 +74,27 @@ def categorize(description, merchant=''):
         if any(k in text for k in keywords):
             return category
     return 'Personal/Misc'
+
+
+def setup_actual_rules(session):
+    """Create Actual Budget payee rules mapping merchants to envelope categories (once, on first run)."""
+    from actual.queries import get_ruleset, get_rules, create_rule, get_or_create_category
+    from actual.rules import Rule, Condition, Action, ConditionType, ActionType
+
+    if get_ruleset(session).rules:
+        return
+
+    for keywords, category_name in PAYEE_RULES:
+        category = get_or_create_category(session, category_name)
+        conditions = [
+            Condition(field='imported_description', op=ConditionType.CONTAINS, value=kw)
+            for kw in keywords
+        ]
+        action = Action(field='category', op=ActionType.SET, value=category)
+        rule = Rule(conditions=conditions, operation='or', actions=[action])
+        create_rule(session, rule)
+
+    print(f"Actual Budget: {len(PAYEE_RULES)} payee rules created.")
 
 
 def pull_plaid_transactions(days_back=7):
@@ -143,7 +180,7 @@ def push_to_actual_budget(transactions):
     """Push confirmed transactions to Actual Budget via actualpy, skipping duplicates."""
     try:
         from actual import Actual
-        from actual.queries import get_accounts, get_transactions, create_transaction
+        from actual.queries import get_accounts, get_ruleset, reconcile_transaction
     except ImportError:
         print("actualpy not installed — skipping Actual Budget push")
         return
@@ -165,6 +202,8 @@ def push_to_actual_budget(transactions):
     try:
         with Actual(base_url='http://localhost:5006', password=password,
                     file='CCN Personal Budget') as actual:
+            setup_actual_rules(actual.session)
+
             accounts_list = get_accounts(actual.session)
 
             def find_account(target_name):
@@ -173,14 +212,9 @@ def push_to_actual_budget(transactions):
                         return acct
                 return None
 
-            existing  = get_transactions(actual.session)
-            seen_ids  = {t.notes for t in existing if t.notes}
-
             imported = 0
+            already_matched = []
             for t in transactions:
-                if t['transaction_id'] in seen_ids:
-                    continue
-
                 target_name = account_name_map.get(t['bank'])
                 if not target_name:
                     continue
@@ -188,23 +222,27 @@ def push_to_actual_budget(transactions):
                 if account is None:
                     continue
 
-                txn_date = datetime.strptime(t['date'], '%Y-%m-%d').date()
-                payee    = t.get('merchant') or t.get('description', '')[:50]
-                amount   = -abs(t['amount'])
+                txn_date      = datetime.strptime(t['date'], '%Y-%m-%d').date()
+                payee         = t.get('merchant') or t.get('description', '')[:50]
+                amount        = -abs(t['amount'])
+                imported_payee = t.get('description', '')[:50]
 
-                create_transaction(
+                txn = reconcile_transaction(
                     actual.session,
                     date=txn_date,
                     account=account,
                     payee=payee,
-                    notes=t['transaction_id'],
                     amount=amount,
+                    imported_id=t['transaction_id'],
+                    imported_payee=imported_payee,
+                    already_matched=already_matched,
                 )
+                already_matched.append(txn)
                 imported += 1
 
             actual.commit()
 
-        print(f"Actual Budget: {imported} transactions imported.")
+        print(f"Actual Budget: {imported} transactions reconciled.")
     except Exception as e:
         print(f"Actual Budget push failed: {e}")
 
