@@ -225,7 +225,7 @@ def push_to_actual_budget(transactions):
                 txn_date      = datetime.strptime(t['date'], '%Y-%m-%d').date()
                 payee         = t.get('merchant') or t.get('description', '')[:50]
                 amount        = -abs(t['amount'])
-                imported_payee = t.get('description', '')[:50]
+                imported_payee = (t.get('merchant') or t.get('description', ''))[:50]
 
                 txn = reconcile_transaction(
                     actual.session,
