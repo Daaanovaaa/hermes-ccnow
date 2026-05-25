@@ -87,10 +87,18 @@ async function postArticle(token, { message, postUrl, title, subtitle, imageUrn 
       },
     };
   }
+  const bodyStr = JSON.stringify(body);
+  process.stderr.write(JSON.stringify({
+    debug: 'postArticle body',
+    commentary: body.commentary,
+    commentaryLength: body.commentary.length,
+    bodyLength: bodyStr.length,
+  }) + '\n');
+
   const res = await fetch(`${LI_API}/rest/posts`, {
     method: 'POST',
     headers: liHeaders(token),
-    body: JSON.stringify(body),
+    body: bodyStr,
   });
   if (!res.ok) throw new Error(`Post failed: ${res.status} ${await res.text()}`);
   return res.headers.get('x-restli-id') || '';
