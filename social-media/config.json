@@ -1,0 +1,33 @@
+{
+  "app_name": "CCN Social Hub",
+  "meta_app_id": "1473644693897258",
+  "threads_app_id": "1569171284925345",
+  "business": "Conscious Culture NOW",
+  "substack_url": "https://danova.substack.com",
+  "substack_api": "https://danova.substack.com/api/v1/posts?limit=10",
+  "n8n_url": "http://localhost:5678",
+  "n8n_user": "hermes",
+  "platforms_phase1": [
+    "facebook_page",
+    "instagram",
+    "threads"
+  ],
+  "platforms_phase2": [
+    "twitter_x",
+    "linkedin",
+    "tiktok",
+    "whatsapp"
+  ],
+  "platforms_phase3_manual": [
+    "rumble",
+    "gab",
+    "truth_social"
+  ],
+  "posting_schedule": {
+    "monday": "09:00",
+    "wednesday": "09:00",
+    "friday": "09:00",
+    "sunday": "10:00"
+  },
+  "timezone": "America/Puerto_Rico"
+}
