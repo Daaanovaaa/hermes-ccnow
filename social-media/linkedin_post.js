@@ -97,13 +97,26 @@ async function postArticle(token, { message, postUrl, title, subtitle, imageUrn 
 }
 
 async function main() {
-  const env      = loadEnv();
-  const token    = env['LINKEDIN_ACCESS_TOKEN'];
-  const title    = process.env['LI_TITLE']     || 'New from CCN';
-  const subtitle = process.env['LI_SUBTITLE']  || '';
-  const postUrl  = process.env['LI_URL']       || 'https://danova.substack.com';
-  const imageUrl = process.env['LI_IMAGE_URL'] || '';
-  const message  = process.env['LI_MESSAGE']   || title;
+  const env   = loadEnv();
+  const token = env['LINKEDIN_ACCESS_TOKEN'];
+
+  let title, subtitle, postUrl, imageUrl, message;
+
+  if (process.env['CCN_PAYLOAD']) {
+    // JSON payload passed by n8n Execute Command — handles newlines and special chars
+    const p = JSON.parse(process.env['CCN_PAYLOAD']);
+    title    = p.title    || 'New from CCN';
+    subtitle = p.subtitle || '';
+    postUrl  = p.url      || 'https://danova.substack.com';
+    imageUrl = p.imageUrl || '';
+    message  = p.message  || title;
+  } else {
+    title    = process.env['LI_TITLE']     || 'New from CCN';
+    subtitle = process.env['LI_SUBTITLE']  || '';
+    postUrl  = process.env['LI_URL']       || 'https://danova.substack.com';
+    imageUrl = process.env['LI_IMAGE_URL'] || '';
+    message  = process.env['LI_MESSAGE']   || title;
+  }
 
   let imageUrn = null;
 
