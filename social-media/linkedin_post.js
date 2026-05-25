@@ -103,13 +103,15 @@ async function main() {
   let title, subtitle, postUrl, imageUrl, message;
 
   if (process.env['CCN_PAYLOAD']) {
-    // JSON payload passed by n8n Execute Command — handles newlines and special chars
+    // JSON payload from n8n Execute Command — handles newlines + special chars safely
     const p = JSON.parse(process.env['CCN_PAYLOAD']);
     title    = p.title    || 'New from CCN';
     subtitle = p.subtitle || '';
     postUrl  = p.url      || 'https://danova.substack.com';
     imageUrl = p.imageUrl || '';
-    message  = p.message  || title;
+    // Use explicit message field; never fall back silently (would drop hashtags)
+    if (!p.message) throw new Error('CCN_PAYLOAD missing message field');
+    message  = p.message;
   } else {
     title    = process.env['LI_TITLE']     || 'New from CCN';
     subtitle = process.env['LI_SUBTITLE']  || '';
@@ -117,6 +119,15 @@ async function main() {
     imageUrl = process.env['LI_IMAGE_URL'] || '';
     message  = process.env['LI_MESSAGE']   || title;
   }
+
+  process.stderr.write(JSON.stringify({
+    debug: 'linkedin_post.js received',
+    title,
+    messagePreview: message.slice(0, 80) + (message.length > 80 ? '…' : ''),
+    messageLength: message.length,
+    hasHashtags: message.includes('#'),
+    imageUrl: imageUrl ? 'yes' : 'no',
+  }) + '\n');
 
   let imageUrn = null;
 
