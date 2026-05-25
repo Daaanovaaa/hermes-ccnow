@@ -205,6 +205,40 @@ Two Google accounts:
 
 ---
 
+## Session Updates — May 25, 2026
+
+**COMPLETED THIS SESSION:**
+- Actual Budget UI live at localhost:5006 (SSH tunnel confirmed working)
+- Windows Dell desktop shortcut created: ActualBudget.bat + .lnk
+  - Opens tunnel to 5.78.214.131 + launches localhost:5006 automatically
+- CCN Personal Budget Google Sheet updated with real amounts
+- Vehicle marbete confirmed paid April 17, 2026 — $205 total
+  - Annual registration $180 + inspection $20 + marbete sticker $5
+  - Next due: April 2027. Budget $15/month in Vehicle Maintenance envelope
+- Actual Budget envelope amounts set for May 2026 — $490.92/month total
+  - GIVING: $40 | TRANSPORTATION: $65 | FOOD: $20
+  - HEALTH: $67.87 | PERSONAL: $70 | BUSINESS/MINISTRY: $153.05
+  - SAVINGS: $75 (Emergency $50 + El Pabellón $20 + Prayer Finance $5)
+  - Section 8 covers rent + utilities | SNAP covers groceries
+- Social media inventory complete — 11 platforms identified:
+  Facebook, Instagram, YouTube, TikTok, Twitter/X, LinkedIn,
+  Gab, Truth Social, Rumble, WhatsApp, Threads
+  Phase 1 build order: YouTube (Google auth ready) → Meta (FB+IG+Threads+WA)
+  Phase 2: Twitter/X, LinkedIn, TikTok
+  Phase 3: Rumble, Gab, Truth Social (manual — no public API)
+
+**STILL PENDING:**
+- Actual Budget envelope amounts — paste Claude Code prompt to set via API
+- Obsidian install on Dell + clone repo
+- Omi webhook configuration in Omi app
+- Fill actual dates in life-reality/obligations.json
+- Verify DTOP lien removal by June 13
+- FAFSA balance check at studentaid.gov
+- Social media Phase 1 build (n8n install + YouTube + Meta APIs)
+- Hetzner cleanup report review/approve
+
+---
+
 ## Simulation Framework — How To Add A New Module
 
 When you build a new Hermes module, create `simulation/modules/[module_name].sim.py`
