@@ -239,6 +239,23 @@ Two Google accounts:
 
 ---
 
+## CCN Social Hub — LIVE (May 25, 2026)
+
+- n8n v2.21.7 running on port 5678
+- Workflow: CCN Substack to Meta Phase 1 — ID: TDTkhQrQMncRcprD
+- Facebook posting: LIVE ✅
+  - Post confirmed: La Fortaleza PR Issue 14 on CCN page (401214333070906)
+  - contentType: form-urlencoded fix applied
+  - Token: PAGE type, expires Oct 2026
+- Threads: two-step container→publish wired ✅ (fix applied May 25)
+- Instagram: Phase 2
+- Schedule: Mon/Wed/Fri/Sun 9AM AST (cron: 0 13 * * 1,3,5,0 UTC)
+- n8n auth: hermes/ccnow2026 — Settings → Variables requires paid plan
+  - Workaround: tokens embedded directly in workflow nodes (local VPS SQLite)
+- ACTIVATE: open n8n → workflow → toggle Active ON
+
+---
+
 ## Simulation Framework — How To Add A New Module
 
 When you build a new Hermes module, create `simulation/modules/[module_name].sim.py`
