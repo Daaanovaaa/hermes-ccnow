@@ -241,18 +241,48 @@ Two Google accounts:
 
 ## CCN Social Hub — LIVE (May 25, 2026)
 
-- n8n v2.21.7 running on port 5678
-- Workflow: CCN Substack to Meta Phase 1 — ID: TDTkhQrQMncRcprD
-- Facebook posting: LIVE ✅
-  - Post confirmed: La Fortaleza PR Issue 14 on CCN page (401214333070906)
-  - contentType: form-urlencoded fix applied
-  - Token: PAGE type, expires Oct 2026
-- Threads: two-step container→publish wired ✅ (fix applied May 25)
-- Instagram: Phase 2
-- Schedule: Mon/Wed/Fri/Sun 9AM AST (cron: 0 13 * * 1,3,5,0 UTC)
-- n8n auth: hermes/ccnow2026 — Settings → Variables requires paid plan
-  - Workaround: tokens embedded directly in workflow nodes (local VPS SQLite)
-- ACTIVATE: open n8n → workflow → toggle Active ON
+### System
+- n8n v2.21.7 running on port 5678 (Docker, volume: n8n_data)
+- Workflow: "CCN Substack to Meta — Phase 1" — ID: TDTkhQrQMncRcprD
+- Schedule: Mon/Wed/Fri/Sun 9AM AST (cron: `0 13 * * 1,3,5,0` UTC)
+- Source: danova.substack.com — fetches latest post (title, subtitle, slug, cover_image)
+- n8n auth: hermes/ccnow2026 — Variables = paid plan only; tokens embedded directly in nodes
+
+### Workflow — 7 Nodes (Final State)
+1. **Schedule** — Mon/Wed/Fri/Sun 9AM AST
+2. **Fetch Latest Substack Post** — GET danova.substack.com/api/v1/posts?limit=1
+3. **Format CCN Post** — Code node; extracts title, subtitle, url, imageUrl (cover_image), message
+4. **Post to Facebook Page (CCN)** — graph.facebook.com/v19.0/401214333070906/photos ✅
+   - Confirmed live: `post_id=401214333070906_122228954492457468`
+5. **Post to Tu Tienda Page** — graph.facebook.com/v19.0/520730761128283/photos ✅
+   - Confirmed live: `post_id=520730761128283_122162304974731681`
+6. **Post to Threads** — graph.threads.net/v1.0/26824946287114533/threads (IMAGE type) ✅
+   - Confirmed live: container `18105185252511772` published
+7. **Publish to Threads** — graph.threads.net/v1.0/26824946287114533/threads_publish (two-step)
+
+Fan-out: Format CCN Post → [CCN FB, Tu Tienda FB, Threads] → Threads Publish
+
+### Connections & Auth
+- CCN Facebook Page ID: 401214333070906 — Token: META_CCN_PAGE_ACCESS_TOKEN (expires ~Oct 2026)
+- Tu Tienda Page ID: 520730761128283 — Token: CCN_TUTIENDA_PAGE_ACCESS_TOKEN (expires ~Oct 2026)
+- Threads User ID: 26824946287114533 — Token: CCN_THREADS_ACCESS_TOKEN (expires ~Jul 24, 2026)
+- All tokens embedded in workflow nodes (local VPS SQLite — not in .env variables)
+- All secrets also backed up in /root/.hermes/.env (chattr +i protected)
+
+### Token Refresh Reminder
+- **July 20, 2026** — Refresh Meta long-lived tokens (page tokens expire ~July 24)
+- **July 20, 2026** — Refresh Threads token (expires ~July 24)
+- Process: exchange new short-lived user token via fb_exchange_token, re-fetch page tokens,
+  update workflow nodes via n8n REST API PATCH /rest/workflows/TDTkhQrQMncRcprD
+
+### ACTIVATE
+Open n8n → SSH tunnel: `ssh -L 5678:localhost:5678 root@5.78.214.131`
+Then: localhost:5678 → Workflows → "CCN Substack to Meta — Phase 1" → toggle **Active ON**
+
+### Phase 2 (Not Yet Built)
+- Instagram (needs separate content publishing setup + image URL per post)
+- Twitter/X, LinkedIn, TikTok
+- Rumble, Gab, Truth Social (manual — no public API)
 
 ---
 
