@@ -248,7 +248,7 @@ Two Google accounts:
 - Source: danova.substack.com — fetches latest post (title, subtitle, slug, cover_image)
 - n8n auth: hermes/ccnow2026 — Variables = paid plan only; tokens embedded directly in nodes
 
-### Workflow — 7 Nodes (Final State)
+### Workflow — 8 Nodes (Current State)
 1. **Schedule** — Mon/Wed/Fri/Sun 9AM AST
 2. **Fetch Latest Substack Post** — GET danova.substack.com/api/v1/posts?limit=1
 3. **Format CCN Post** — Code node; extracts title, subtitle, url, imageUrl (cover_image), message
@@ -259,29 +259,36 @@ Two Google accounts:
 6. **Post to Threads** — graph.threads.net/v1.0/26824946287114533/threads (IMAGE type) ✅
    - Confirmed live: container `18105185252511772` published
 7. **Publish to Threads** — graph.threads.net/v1.0/26824946287114533/threads_publish (two-step)
+8. **Post to LinkedIn** — api.linkedin.com/v2/ugcPosts (ARTICLE share) ✅
+   - Confirmed live: `urn:li:share:7464758506907246592`
+   - Author: urn:li:person:41q6-gkeGG (Carlos DaNova personal profile)
 
-Fan-out: Format CCN Post → [CCN FB, Tu Tienda FB, Threads] → Threads Publish
+Fan-out: Format CCN Post → [CCN FB, Tu Tienda FB, Threads, LinkedIn] → Threads Publish
 
 ### Connections & Auth
 - CCN Facebook Page ID: 401214333070906 — Token: META_CCN_PAGE_ACCESS_TOKEN (expires ~Oct 2026)
 - Tu Tienda Page ID: 520730761128283 — Token: CCN_TUTIENDA_PAGE_ACCESS_TOKEN (expires ~Oct 2026)
 - Threads User ID: 26824946287114533 — Token: CCN_THREADS_ACCESS_TOKEN (expires ~Jul 24, 2026)
+- LinkedIn Member ID: 41q6-gkeGG — Token: LINKEDIN_ACCESS_TOKEN (expires ~Jul 24, 2026)
 - All tokens embedded in workflow nodes (local VPS SQLite — not in .env variables)
 - All secrets also backed up in /root/.hermes/.env (chattr +i protected)
+- oauth.faaaith.org — HTTPS domain live, SSL cert expires Aug 23, 2026 (auto-renew)
 
 ### Token Refresh Reminder
 - **July 20, 2026** — Refresh Meta long-lived tokens (page tokens expire ~July 24)
 - **July 20, 2026** — Refresh Threads token (expires ~July 24)
-- Process: exchange new short-lived user token via fb_exchange_token, re-fetch page tokens,
+- **July 20, 2026** — Refresh LinkedIn token (expires ~July 24)
+- Meta process: exchange new short-lived user token via fb_exchange_token, re-fetch page tokens,
   update workflow nodes via n8n REST API PATCH /rest/workflows/TDTkhQrQMncRcprD
+- LinkedIn process: new OAuth flow at oauth.faaaith.org (redirect URI already saved in app)
 
 ### ACTIVATE
-Open n8n → SSH tunnel: `ssh -L 5678:localhost:5678 root@5.78.214.131`
-Then: localhost:5678 → Workflows → "CCN Substack to Meta — Phase 1" → toggle **Active ON**
+Workflow is **Active**. Posts go out automatically Mon/Wed/Fri/Sun 9AM AST.
+To manage: SSH tunnel `ssh -L 5678:localhost:5678 root@5.78.214.131` → localhost:5678
 
 ### Phase 2 (Not Yet Built)
 - Instagram (needs separate content publishing setup + image URL per post)
-- Twitter/X, LinkedIn, TikTok
+- Twitter/X, TikTok
 - Rumble, Gab, Truth Social (manual — no public API)
 
 ---
