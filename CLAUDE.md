@@ -256,11 +256,15 @@ Two Google accounts:
    - Confirmed live: `post_id=401214333070906_122228954492457468`
 5. **Post to Tu Tienda Page** — graph.facebook.com/v19.0/520730761128283/photos ✅
    - Confirmed live: `post_id=520730761128283_122162304974731681`
-6. **Post to Threads** — graph.threads.net/v1.0/26824946287114533/threads (IMAGE type) ✅
+6. **Post to Threads** — graph.threads.net/v1.0/26824946287114533/threads (TEXT type) ✅
    - Confirmed live: container `18105185252511772` published
 7. **Publish to Threads** — graph.threads.net/v1.0/26824946287114533/threads_publish (two-step)
-8. **Post to LinkedIn** — api.linkedin.com/v2/ugcPosts (ARTICLE share) ✅
-   - Confirmed live: `urn:li:share:7464758506907246592`
+8. **Post to LinkedIn** — Execute Command → `node /opt/ccn/social-media/linkedin_post.js` ✅
+   - Script: `/root/hermes-ccnow/social-media/linkedin_post.js` (volume-mounted :ro)
+   - Uses LinkedIn Images API + Posts API (`/rest/posts`) with `LinkedIn-Version: 202507`
+   - Confirmed live: `urn:li:share:7464781313322082306` with cover image thumbnail
+   - Command expression: `={{ "CCN_PAYLOAD='" + JSON.stringify($json).replace(/'/g, "'\\''" ) + "' node /opt/ccn/social-media/linkedin_post.js" }}`
+   - Pass all post data as single JSON env var — handles newlines in message safely
    - Author: urn:li:person:41q6-gkeGG (Carlos DaNova personal profile)
 
 Fan-out: Format CCN Post → [CCN FB, Tu Tienda FB, Threads, LinkedIn] → Threads Publish
@@ -326,6 +330,4 @@ Use `HERMES_HOME=/root/hermes-sim/` for all simulation runs.
 ---
 
 *Hermes CC NOW! — Kingdom OS | Conscious Culture NOW! | Puerto Rico*
-*"The blessing of the LORD, it maketh rich, and he addeth no sorrow with it." — Proverbs 10:22*git add CLAUDE.md
-git commit -m "add: CLAUDE.md agent briefing with full system map"
-git push
+*"The blessing of the LORD, it maketh rich, and he addeth no sorrow with it." — Proverbs 10:22*
