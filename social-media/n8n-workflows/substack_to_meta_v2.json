@@ -1,0 +1,264 @@
+{
+  "name": "CCN Social Hub v2 \u2014 CLEAN TEST",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "cronExpression",
+              "expression": "0 13 * * 1,3,5,0"
+            }
+          ]
+        }
+      },
+      "name": "Schedule \u2014 Mon/Wed/Fri/Sun 9AM AST",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1,
+      "position": [
+        240,
+        304
+      ],
+      "id": "d0f0080e-c580-49f6-9930-c78d76b5f18b"
+    },
+    {
+      "parameters": {
+        "url": "https://danova.substack.com/api/v1/posts?limit=1",
+        "options": {}
+      },
+      "name": "Fetch Latest Substack Post",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        464,
+        304
+      ],
+      "id": "ec476e02-1d3a-4ada-96d9-c2d936577150"
+    },
+    {
+      "parameters": {
+        "jsCode": "const posts = $input.first().json;\nconst post = Array.isArray(posts) ? posts[0] : posts;\nconst title    = post.title || 'New from CCN';\nconst subtitle = post.subtitle || '';\nconst slug     = post.slug || '';\nconst url      = `https://danova.substack.com/p/${slug}`;\nconst imageUrl = post.cover_image || '';\nconst message  = `\u271d\ufe0f ${title}\\n\\n${subtitle}\\n\\nRead the full post: ${url}\\n\\n#ConsciousCultureNOW #CCNow #Kingdom #Faith #HipHop #ElPabellon`;\nreturn [{ json: { title, subtitle, url, imageUrl, message, slug } }];"
+      },
+      "name": "Format CCN Post",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        688,
+        304
+      ],
+      "id": "8584f932-37ab-44f5-b23f-1b76cc4b2645"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://graph.facebook.com/v19.0/401214333070906/photos",
+        "sendBody": true,
+        "contentType": "form-urlencoded",
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "url",
+              "value": "={{$json.imageUrl}}"
+            },
+            {
+              "name": "message",
+              "value": "={{$json.message}}"
+            },
+            {
+              "name": "access_token",
+              "value": "EAAU8RaSBQCoBRnlyxjZBrTTziHGMDbCJXSe97hT2TVgPUh8e9kGXtctxQZCxKVaWUymTb71KQZBDBhBvSZARLacAhZBfwkzGOfIlXrmYgw9sMFAk24cXM47ZCukN8aFYxl2ZAbRxZABFjawWEY5nJPSnWqnMRTerHchveAi2ZCBB7KSZAPCRrT4xKBH1bNcZBuTtJPCTTkESuZC2sblAtbAZBmvV2"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Post to Facebook Page",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        912,
+        208
+      ],
+      "id": "52a7d39f-f488-437b-ad5f-9c3fe71b68fb"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://graph.threads.net/v1.0/26824946287114533/threads",
+        "sendBody": true,
+        "contentType": "form-urlencoded",
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "media_type",
+              "value": "TEXT"
+            },
+            {
+              "name": "text",
+              "value": "={{$json.message}}"
+            },
+            {
+              "name": "access_token",
+              "value": "THAAWTJykHm6FBYmJkdmJOeGlzcXVRMkc4UjFPQXI1Tk14R1E5c1BiYklCdVVmUUdFSVNUMjdwTFdCVEttOWdtN2FIalR6TS1KNDEzUVhvd2V5WHFDQ0ZADNVBaczZArSE04V3lJb0NfNU9OOEZArc09uMC0yUmlMQlo2ZAjBSOW5MSnAzQQZDZD"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Post to Threads",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        912,
+        400
+      ],
+      "id": "6d2549fd-b4d9-444d-9c29-9e182e8fd468"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://graph.threads.net/v1.0/26824946287114533/threads_publish",
+        "sendBody": true,
+        "contentType": "form-urlencoded",
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "creation_id",
+              "value": "={{$json.id}}"
+            },
+            {
+              "name": "access_token",
+              "value": "THAAWTJykHm6FBYmJkdmJOeGlzcXVRMkc4UjFPQXI1Tk14R1E5c1BiYklCdVVmUUdFSVNUMjdwTFdCVEttOWdtN2FIalR6TS1KNDEzUVhvd2V5WHFDQ0ZADNVBaczZArSE04V3lJb0NfNU9OOEZArc09uMC0yUmlMQlo2ZAjBSOW5MSnAzQQZDZD"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "303615b3-d188-4079-91d1-f5dcfa3285b0",
+      "name": "Publish to Threads",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        1136,
+        400
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://graph.facebook.com/v19.0/520730761128283/photos",
+        "sendBody": true,
+        "contentType": "form-urlencoded",
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "url",
+              "value": "={{$json.imageUrl}}"
+            },
+            {
+              "name": "message",
+              "value": "={{$json.message}}"
+            },
+            {
+              "name": "access_token",
+              "value": "EAAU8RaSBQCoBRji4nC4R630TkXOhfmFdjDiTHmt6shMUPqxOOCkWkLLD5ee3euVWmF2lP01XgfUgvZBiYNiNsG6O20mxwPjsylrZCOIudlSlR6lVnYyCxHOysZAq8UlMhhb6etzoIC8RkwCQX1L4XEQi5vzV6SoSAzYoa5Vz7h9Q27YaJlxp3pQVitLK6YFOhFnOWF8CTPtsPSI8JA2"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "a72bba24-44df-45e5-bf06-f3efb78cea19",
+      "name": "Post to Tu Tienda Page",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        912,
+        608
+      ]
+    },
+    {
+      "parameters": {
+        "command": "={{ \"CCN_PAYLOAD='\" + JSON.stringify($json).replace(/'/g, \"'\\\\''\" ) + \"' node /opt/ccn/social-media/linkedin_post.js\" }}"
+      },
+      "name": "Post to LinkedIn",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [
+        928,
+        32
+      ],
+      "id": "9c3f21df-180d-44df-ba1a-a59d83f0f558"
+    }
+  ],
+  "connections": {
+    "Schedule \u2014 Mon/Wed/Fri/Sun 9AM AST": {
+      "main": [
+        [
+          {
+            "node": "Fetch Latest Substack Post",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Fetch Latest Substack Post": {
+      "main": [
+        [
+          {
+            "node": "Format CCN Post",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Format CCN Post": {
+      "main": [
+        [
+          {
+            "node": "Post to Facebook Page",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Post to Tu Tienda Page",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Post to Threads",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Post to LinkedIn",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Post to Threads": {
+      "main": [
+        [
+          {
+            "node": "Publish to Threads",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "timezone": "America/Puerto_Rico",
+    "executionOrder": "v1"
+  },
+  "staticData": {
+    "node:Schedule \u2014 Mon/Wed/Fri/Sun 9AM AST": {
+      "recurrenceRules": []
+    }
+  },
+  "pinData": {}
+}

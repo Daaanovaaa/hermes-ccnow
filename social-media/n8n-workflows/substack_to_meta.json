@@ -1,5 +1,5 @@
 {
-  "name": "CCN Substack to Meta — Phase 1",
+  "name": "CCN Substack to Meta \u2014 Phase 1",
   "nodes": [
     {
       "parameters": {
@@ -12,10 +12,13 @@
           ]
         }
       },
-      "name": "Schedule — Mon/Wed/Fri/Sun 9AM AST",
+      "name": "Schedule \u2014 Mon/Wed/Fri/Sun 9AM AST",
       "type": "n8n-nodes-base.scheduleTrigger",
       "typeVersion": 1,
-      "position": [240, 300]
+      "position": [
+        240,
+        300
+      ]
     },
     {
       "parameters": {
@@ -25,16 +28,22 @@
       "name": "Fetch Latest Substack Post",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 3,
-      "position": [460, 300]
+      "position": [
+        460,
+        300
+      ]
     },
     {
       "parameters": {
-        "jsCode": "const posts = $input.first().json;\nconst post = Array.isArray(posts) ? posts[0] : posts;\nconst title = post.title || 'New from CCN';\nconst subtitle = post.subtitle || '';\nconst slug = post.slug || '';\nconst url = `https://danova.substack.com/p/${slug}`;\nconst coverImage = post.cover_image || '';\nconst message = `✝️ ${title}\\n\\n${subtitle}\\n\\nRead the full post: ${url}\\n\\n#ConsciousCultureNOW #CCNow #Kingdom #Faith #HipHop #ElPabellon`;\nreturn [{ json: { title, subtitle, url, coverImage, message, slug } }];"
+        "jsCode": "const posts = $input.first().json;\nconst post = Array.isArray(posts) ? posts[0] : posts;\nconst title    = post.title || 'New from CCN';\nconst subtitle = post.subtitle || '';\nconst slug     = post.slug || '';\nconst url      = `https://danova.substack.com/p/${slug}`;\nconst imageUrl = post.cover_image || '';\nconst message  = `\u271d\ufe0f ${title}\\n\\n#ConsciousCultureNOW #CCNow #Kingdom #Faith #HipHop #ElPabellon\\n\\n${subtitle}\\n\\nRead the full post: ${url}`;\nreturn [{ json: { title, subtitle, url, imageUrl, message, slug } }];"
       },
       "name": "Format CCN Post",
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
-      "position": [680, 300]
+      "position": [
+        680,
+        300
+      ]
     },
     {
       "parameters": {
@@ -57,7 +66,10 @@
       "name": "Post to Facebook Page",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 3,
-      "position": [900, 200]
+      "position": [
+        900,
+        200
+      ]
     },
     {
       "parameters": {
@@ -84,20 +96,51 @@
       "name": "Post to Threads",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 3,
-      "position": [900, 400]
+      "position": [
+        900,
+        400
+      ]
     }
   ],
   "connections": {
-    "Schedule — Mon/Wed/Fri/Sun 9AM AST": {
-      "main": [[{"node": "Fetch Latest Substack Post", "type": "main", "index": 0}]]
+    "Schedule \u2014 Mon/Wed/Fri/Sun 9AM AST": {
+      "main": [
+        [
+          {
+            "node": "Fetch Latest Substack Post",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     },
     "Fetch Latest Substack Post": {
-      "main": [[{"node": "Format CCN Post", "type": "main", "index": 0}]]
+      "main": [
+        [
+          {
+            "node": "Format CCN Post",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     },
     "Format CCN Post": {
       "main": [
-        [{"node": "Post to Facebook Page", "type": "main", "index": 0}],
-        [{"node": "Post to Threads", "type": "main", "index": 0}]
+        [
+          {
+            "node": "Post to Facebook Page",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Post to Threads",
+            "type": "main",
+            "index": 0
+          }
+        ]
       ]
     }
   },
@@ -105,5 +148,9 @@
   "settings": {
     "timezone": "America/Puerto_Rico"
   },
-  "tags": ["CCN", "Social Media", "Phase 1"]
+  "tags": [
+    "CCN",
+    "Social Media",
+    "Phase 1"
+  ]
 }
