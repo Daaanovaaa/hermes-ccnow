@@ -24,6 +24,7 @@ hermes_backup_paypal_*.yaml
 
 # --- Hermes internal state & sessions ---
 .hermes/
+.hermes_history
 hermes_backup_*.yaml
 hermes_backup_*.env
 gateway_state.json
@@ -85,3 +86,4 @@ Thumbs.db
 # --- Sensitive draft content ---
 prayer_ministries*.txt
 prayer_ministries*.json
+.claude/

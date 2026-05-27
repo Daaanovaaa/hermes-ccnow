@@ -68,55 +68,63 @@ async function uploadImage(token, uploadUrl, imageBuffer) {
   if (!res.ok) throw new Error(`Upload failed: ${res.status} ${await res.text()}`);
 }
 
-async function postArticle(token, { message, postUrl, title, subtitle, imageUrn }) {
+async function postArticle(token, { message, postUrl, title, subtitle }) {
+  const mediaItem = {
+    status: 'READY',
+    originalUrl: postUrl,
+    title: { text: title },
+    description: { text: subtitle || '' },
+  };
+
   const body = {
     author: `urn:li:person:${MEMBER_ID}`,
-    commentary: message,
-    visibility: 'PUBLIC',
-    distribution: { feedDistribution: 'MAIN_FEED' },
     lifecycleState: 'PUBLISHED',
-    isReshareDisabledByAuthor: false,
-  };
-  if (imageUrn) {
-    body.content = {
-      article: {
-        source: postUrl,
-        thumbnail: imageUrn,
-        title,
-        description: subtitle || '',
+    specificContent: {
+      'com.linkedin.ugc.ShareContent': {
+        shareCommentary: { text: message },
+        shareMediaCategory: 'ARTICLE',
+        media: [mediaItem],
       },
-    };
-  }
+    },
+    visibility: {
+      'com.linkedin.ugc.MemberNetworkVisibility': 'PUBLIC',
+    },
+  };
+
   const bodyStr = JSON.stringify(body);
   process.stderr.write(JSON.stringify({
     debug: 'postArticle body',
-    commentary: body.commentary,
-    commentaryLength: body.commentary.length,
+    commentary: message,
+    commentaryLength: message.length,
     bodyLength: bodyStr.length,
   }) + '\n');
 
-  const res = await fetch(`${LI_API}/rest/posts`, {
+  const res = await fetch(`${LI_API}/v2/ugcPosts`, {
     method: 'POST',
-    headers: liHeaders(token),
+    headers: {
+      'Authorization': `Bearer ${token}`,
+      'X-Restli-Protocol-Version': '2.0.0',
+      'Content-Type': 'application/json',
+    },
     body: bodyStr,
   });
   if (!res.ok) throw new Error(`Post failed: ${res.status} ${await res.text()}`);
-  return res.headers.get('x-restli-id') || '';
+  const data = await res.json();
+  return data.id || '';
 }
 
 async function main() {
   const env   = loadEnv();
   const token = env['LINKEDIN_ACCESS_TOKEN'];
 
-  let title, subtitle, postUrl, imageUrl, message;
+  let title, subtitle, postUrl, message;
 
   if (process.env['CCN_PAYLOAD']) {
     // JSON payload from n8n Execute Command — handles newlines + special chars safely
-    const p = JSON.parse(process.env['CCN_PAYLOAD']);
+    const p = JSON.parse(Buffer.from(process.env['CCN_PAYLOAD'], 'base64').toString('utf8'));
     title    = p.title    || 'New from CCN';
     subtitle = p.subtitle || '';
     postUrl  = p.url      || 'https://danova.substack.com';
-    imageUrl = p.imageUrl || '';
     // Use explicit message field; never fall back silently (would drop hashtags)
     if (!p.message) throw new Error('CCN_PAYLOAD missing message field');
     message  = p.message;
@@ -124,7 +132,6 @@ async function main() {
     title    = process.env['LI_TITLE']     || 'New from CCN';
     subtitle = process.env['LI_SUBTITLE']  || '';
     postUrl  = process.env['LI_URL']       || 'https://danova.substack.com';
-    imageUrl = process.env['LI_IMAGE_URL'] || '';
     message  = process.env['LI_MESSAGE']   || title;
   }
 
@@ -134,24 +141,10 @@ async function main() {
     messagePreview: message.slice(0, 80) + (message.length > 80 ? '…' : ''),
     messageLength: message.length,
     hasHashtags: message.includes('#'),
-    imageUrl: imageUrl ? 'yes' : 'no',
   }) + '\n');
 
-  let imageUrn = null;
-
-  if (imageUrl) {
-    try {
-      const { uploadUrl, imageUrn: urn } = await registerImage(token);
-      const imageBuffer = await downloadImage(imageUrl);
-      await uploadImage(token, uploadUrl, imageBuffer);
-      imageUrn = urn;
-    } catch (err) {
-      process.stderr.write(JSON.stringify({ warning: `Image upload failed: ${err.message}, posting without image` }) + '\n');
-    }
-  }
-
-  const postId = await postArticle(token, { message, postUrl, title, subtitle, imageUrn });
-  process.stdout.write(JSON.stringify({ linkedInPostId: postId, imageUrn, success: true }) + '\n');
+  const postId = await postArticle(token, { message, postUrl, title, subtitle });
+  process.stdout.write(JSON.stringify({ linkedInPostId: postId, success: true }) + '\n');
 }
 
 main().catch(err => {

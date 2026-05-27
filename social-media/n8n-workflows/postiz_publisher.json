@@ -1,0 +1,420 @@
+{
+  "updatedAt": "2026-05-27T18:29:02.897Z",
+  "createdAt": "2026-05-27T18:29:02.897Z",
+  "id": "V88IWFi7cCNZxzwU",
+  "name": "CCN \u2192 Postiz Autonomous Publisher",
+  "description": null,
+  "active": false,
+  "isArchived": false,
+  "nodes": [
+    {
+      "id": "n01",
+      "name": "Schedule \u2014 Mon/Wed/Fri/Sun 9AM AST",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        200,
+        300
+      ],
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "cronExpression",
+              "expression": "0 13 * * 1,3,5,0"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "n02",
+      "name": "Fetch Latest Substack Post",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        440,
+        300
+      ],
+      "parameters": {
+        "method": "GET",
+        "url": "https://danova.substack.com/api/v1/posts?limit=1",
+        "options": {}
+      }
+    },
+    {
+      "id": "n03",
+      "name": "Extract & Deduplicate",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        680,
+        300
+      ],
+      "parameters": {
+        "jsCode": "// Pull latest Substack post, skip if already published\nconst posts = $input.first().json;\nconst post = Array.isArray(posts) ? posts[0] : (posts.posts ? posts.posts[0] : posts);\n\nconst title    = post.title    || 'New from CCN';\nconst subtitle = post.subtitle || '';\nconst slug     = post.slug     || '';\nconst url      = `https://danova.substack.com/p/${slug}`;\nconst imageUrl = post.cover_image || '';\n\n// Deduplication via workflow static data\nconst sd = $workflow.staticData;\nif (!sd.postedUrls) sd.postedUrls = [];\n\nif (sd.postedUrls.includes(url)) {\n  return [{ json: { skip: true, url, reason: 'Already posted' } }];\n}\n\nconst tags = '#ConsciousCultureNOW #CCNow #Kingdom #Faith #HipHop #ElPabellon';\nconst message = `\u271d\ufe0f ${title}\\n\\n${subtitle}\\n\\nRead more \u2192 ${url}\\n\\n${tags}`;\n\nreturn [{ json: { skip: false, title, subtitle, url, imageUrl, message } }];"
+      }
+    },
+    {
+      "id": "n04",
+      "name": "Already Posted?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        920,
+        300
+      ],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "c1",
+              "leftValue": "={{ $json.skip }}",
+              "rightValue": true,
+              "operator": {
+                "type": "boolean",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        }
+      }
+    },
+    {
+      "id": "n05a",
+      "name": "Already Posted \u2014 Skip",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        1160,
+        180
+      ],
+      "parameters": {}
+    },
+    {
+      "id": "n05b",
+      "name": "Get Postiz Integrations",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1160,
+        420
+      ],
+      "parameters": {
+        "method": "GET",
+        "url": "https://postiz.faaaith.org/api/public/v1/integrations",
+        "options": {},
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "985c33d79592da8291de87e1afbca6f02f3a5e8f5aa54d877455087441c4b76f"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "n06",
+      "name": "Build Postiz Payload",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1400,
+        420
+      ],
+      "parameters": {
+        "jsCode": "// Map Postiz integration identifiers \u2192 __type settings object\nconst postData    = $('Extract & Deduplicate').first().json;\nconst integrations = $input.all().map(i => i.json);\n\nif (!integrations || integrations.length === 0) {\n  return [{ json: { skip: true, reason: 'No integrations connected in Postiz' } }];\n}\n\nconst typeMap = {\n  'facebook':            'facebook',\n  'facebook-page':       'facebook',\n  'instagram':           'instagram_graph',\n  'instagram-standalone':'instagram',\n  'threads':             'threads',\n  'linkedin':            'linkedin',\n  'linkedin-page':       'linkedin-page',\n  'x':                   'x',\n  'twitter':             'x',\n  'youtube':             'youtube',\n  'tiktok':              'tiktok',\n  'reddit':              'reddit',\n  'telegram':            'telegram',\n  'bluesky':             'bluesky',\n  'mastodon':            'mastodon',\n  'discord':             'discord',\n  'slack':               'slack',\n  'medium':              'medium',\n  'pinterest':           'pinterest',\n  'whatsapp':            'whatsapp',\n};\n\nconst posts = integrations\n  .filter(i => !i.disabled)\n  .map(i => {\n    const type = typeMap[i.identifier] || i.identifier;\n    return {\n      integration: { id: i.id },\n      value: [{ content: postData.message, image: [] }],\n      settings: { __type: type }\n    };\n  });\n\nreturn [{ json: { skip: false, posts, count: posts.length } }];"
+      }
+    },
+    {
+      "id": "n07",
+      "name": "Has Integrations?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        1640,
+        420
+      ],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "c2",
+              "leftValue": "={{ $json.skip }}",
+              "rightValue": true,
+              "operator": {
+                "type": "boolean",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        }
+      }
+    },
+    {
+      "id": "n07a",
+      "name": "Telegram \u2014 No Integrations",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1880,
+        300
+      ],
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.telegram.org/bot8114393629:AAGUGJWpV-4KSlJ1Mq6Iu3Qg9qj-Uc8ImxE/sendMessage",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "chat_id",
+              "value": "1401562511"
+            },
+            {
+              "name": "text",
+              "value": "\u26a0\ufe0f CCN Social Hub: No integrations connected in Postiz. Visit https://postiz.faaaith.org to connect your social channels."
+            }
+          ]
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "n08",
+      "name": "Schedule Post in Postiz",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1880,
+        540
+      ],
+      "parameters": {
+        "method": "POST",
+        "url": "https://postiz.faaaith.org/api/public/v1/posts",
+        "sendBody": true,
+        "contentType": "json",
+        "body": "={{ JSON.stringify({ type: 'now', shortLink: false, tags: [], posts: $json.posts }) }}",
+        "options": {},
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "985c33d79592da8291de87e1afbca6f02f3a5e8f5aa54d877455087441c4b76f"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "n09",
+      "name": "Mark as Posted",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2120,
+        540
+      ],
+      "parameters": {
+        "jsCode": "// Record posted URL in workflow static data\nconst url = $('Extract & Deduplicate').first().json.url;\nconst sd  = $workflow.staticData;\nif (!sd.postedUrls) sd.postedUrls = [];\nif (!sd.postedUrls.includes(url)) {\n  sd.postedUrls.push(url);\n  if (sd.postedUrls.length > 200) sd.postedUrls = sd.postedUrls.slice(-200);\n}\nconst postizResp = $input.first().json;\nreturn [{ json: { marked: true, url, postizId: postizResp.id || null } }];"
+      }
+    },
+    {
+      "id": "n10",
+      "name": "Telegram \u2014 Success",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        2360,
+        540
+      ],
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.telegram.org/bot8114393629:AAGUGJWpV-4KSlJ1Mq6Iu3Qg9qj-Uc8ImxE/sendMessage",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "chat_id",
+              "value": "1401562511"
+            },
+            {
+              "name": "text",
+              "value": "={{ '\u2705 CCN Social Hub posted via Postiz!\\n\\n\ud83d\udcdd ' + $('Extract & Deduplicate').first().json.title + '\\n\ud83d\udd17 ' + $('Extract & Deduplicate').first().json.url + '\\n\ud83d\udce1 Platforms: ' + $('Build Postiz Payload').first().json.count }}"
+            }
+          ]
+        },
+        "options": {}
+      }
+    }
+  ],
+  "connections": {
+    "Schedule \u2014 Mon/Wed/Fri/Sun 9AM AST": {
+      "main": [
+        [
+          {
+            "node": "Fetch Latest Substack Post",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Fetch Latest Substack Post": {
+      "main": [
+        [
+          {
+            "node": "Extract & Deduplicate",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract & Deduplicate": {
+      "main": [
+        [
+          {
+            "node": "Already Posted?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Already Posted?": {
+      "main": [
+        [
+          {
+            "node": "Already Posted \u2014 Skip",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Get Postiz Integrations",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Postiz Integrations": {
+      "main": [
+        [
+          {
+            "node": "Build Postiz Payload",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Build Postiz Payload": {
+      "main": [
+        [
+          {
+            "node": "Has Integrations?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Has Integrations?": {
+      "main": [
+        [
+          {
+            "node": "Telegram \u2014 No Integrations",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Schedule Post in Postiz",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Schedule Post in Postiz": {
+      "main": [
+        [
+          {
+            "node": "Mark as Posted",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mark as Posted": {
+      "main": [
+        [
+          {
+            "node": "Telegram \u2014 Success",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "timezone": "America/Puerto_Rico",
+    "executionOrder": "v1",
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner",
+    "errorWorkflow": ""
+  },
+  "staticData": {},
+  "meta": null,
+  "pinData": null,
+  "versionId": "3aed251e-266a-4005-8f0e-7f2e817ca427",
+  "activeVersionId": null,
+  "versionCounter": 1,
+  "triggerCount": 0,
+  "shared": [
+    {
+      "updatedAt": "2026-05-27T18:29:02.906Z",
+      "createdAt": "2026-05-27T18:29:02.906Z",
+      "role": "workflow:owner",
+      "workflowId": "V88IWFi7cCNZxzwU",
+      "projectId": "0usdjiQds7AEcRJu",
+      "project": {
+        "updatedAt": "2026-05-25T11:43:26.656Z",
+        "createdAt": "2026-05-25T11:31:07.643Z",
+        "id": "0usdjiQds7AEcRJu",
+        "name": "Carlos Villanueva <dominalo.con.cristo@gmail.com>",
+        "type": "personal",
+        "icon": null,
+        "description": null,
+        "creatorId": "5302868a-298b-4c6b-9444-68468b976576"
+      }
+    }
+  ],
+  "tags": [],
+  "parentFolder": null,
+  "activeVersion": null
+}

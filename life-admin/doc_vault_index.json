@@ -1,6 +1,6 @@
 {
   "_description": "Document Vault \u2014 known categories and expected documents. Scanned from leeegaaal@gmail.com Google Drive. Update documents_confirmed when you upload a file.",
-  "last_scanned": "2026-05-24",
+  "last_scanned": "2026-05-27",
   "profile": "leeegaaal",
   "categories": {
     "section8": {
@@ -2478,5 +2478,5 @@
       "first_seen": "2026-05-24"
     }
   },
-  "last_alert_sent": null
+  "last_alert_sent": "2026-05-27"
 }

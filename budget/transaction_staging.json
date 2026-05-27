@@ -1,6 +1,17 @@
 [
   {
     "bank": "Fifth Third",
+    "date": "2026-05-26",
+    "description": "PRE-AUTHORIZATION DEBIT AT CLARO PR, 7877492175, ON 052626 FROM CARD#: XXXXXXXXXXXX8360",
+    "merchant": "Claro Pr",
+    "amount": 59.6,
+    "category_plaid": "",
+    "category": "Phone/Internet",
+    "pending": true,
+    "transaction_id": "5bQMnYOaa6t1LEXRqeDyTxyBDL1p6QUmEmv785"
+  },
+  {
+    "bank": "Fifth Third",
     "date": "2026-05-22",
     "description": "MERCHANT PAYMENT SAMS CLUB #6225 - 250069 CARR #2 KM 180 BO. SABE MAYAGUEZ PR ON 052226 FROM CARD#: XXXXXXXXXXXX836X",
     "merchant": "Sam's Club",
@@ -66,59 +77,26 @@
     "transaction_id": "MeaLBvK33xsQA6ejV7xxCVE3jVOdKwCDABQj5"
   },
   {
-    "bank": "Fifth Third",
-    "date": "2026-05-19",
-    "description": "WEB INITIATED PAYMENT AT FID BKG SVC LLC MONEYLINE Z294044951HEV67 051926",
-    "merchant": "Fidelity",
-    "amount": 5.0,
+    "bank": "Banco Popular",
+    "date": "2026-05-27",
+    "description": "IN PROCESS MOVIL 9999",
+    "merchant": "",
+    "amount": 1.0,
     "category_plaid": "",
     "category": "Personal/Misc",
     "pending": false,
-    "transaction_id": "ekLdDA7EE3IjP6V0aqrbTO4wJAp0OOI4xE559"
+    "transaction_id": "aa6k7JYeBYTKBNkYqgLdHNna4JRYdgI3q37KRw"
   },
   {
-    "bank": "Fifth Third",
-    "date": "2026-05-19",
-    "description": "Walgreens",
-    "merchant": "Walgreens",
-    "amount": 4.18,
-    "category_plaid": "",
-    "category": "Medicare/Medical",
-    "pending": false,
-    "transaction_id": "zY5JanBxxmSqj94N7EAxs4M0NZqv44IMA9qqV"
-  },
-  {
-    "bank": "Fifth Third",
-    "date": "2026-05-18",
-    "description": "DEBIT CARD PURCHASE AT CLAUDE.AI SUBSCRIP, SAN FRANCISCO, CA ON 051726 FROM CARD#: XXXXXXXXXXXX8360",
-    "merchant": "Claude.ai",
-    "amount": 22.3,
+    "bank": "Banco Popular",
+    "date": "2026-05-26",
+    "description": "TRANF ATHM GATHERING 9999 ON 05/24/26",
+    "merchant": "Tranf Athm Gathering",
+    "amount": 1.0,
     "category_plaid": "",
     "category": "Personal/Misc",
     "pending": false,
-    "transaction_id": "wVJ4RX1rrgf8g4VxPZD4SPJ3ZPXM3JfKyndOR"
-  },
-  {
-    "bank": "Fifth Third",
-    "date": "2026-05-18",
-    "description": "Planet Fitness",
-    "merchant": "Planet Fitness",
-    "amount": 27.87,
-    "category_plaid": "",
-    "category": "Personal/Misc",
-    "pending": false,
-    "transaction_id": "dK6bLkmMM3hYMwz5Pr4wU3g813j48guKym0kK"
-  },
-  {
-    "bank": "Fifth Third",
-    "date": "2026-05-18",
-    "description": "RECURRING PURCHASE AT SUNO INC., CAMBRIDGE, MA ON 051526 FROM CARD#: XXXXXXXXXXXX8360",
-    "merchant": "Suno Inc.",
-    "amount": 33.45,
-    "category_plaid": "",
-    "category": "Personal/Misc",
-    "pending": false,
-    "transaction_id": "mxKBkJ7qq9trJzMYEqbzSkn1QkAp1ntB3wrRM"
+    "transaction_id": "4AxdDr1Lo1FkqjDLvXz7t6JejrAXZVHzjzRDez"
   },
   {
     "bank": "Banco Popular",
@@ -130,16 +108,5 @@
     "category": "Personal/Misc",
     "pending": false,
     "transaction_id": "nM0ombYzJYsaMLERNZdLTr03pjKdzqIjwzOyK"
-  },
-  {
-    "bank": "Banco Popular",
-    "date": "2026-05-18",
-    "description": "TRANF ATHM GATHERING 9999 ON 05/17/26",
-    "merchant": "Tranf Athm Gathering",
-    "amount": 5.0,
-    "category_plaid": "",
-    "category": "Personal/Misc",
-    "pending": false,
-    "transaction_id": "AbkAry4je4toxYD9mz5VfQjQkjNwqQiwygPQA"
   }
 ]
