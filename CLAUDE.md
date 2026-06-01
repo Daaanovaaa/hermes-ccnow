@@ -153,6 +153,15 @@ Two Google accounts:
 
 ---
 
+## N.O.A.H. Vault
+
+- **Path**: `/root/obsidian-vault/`
+- **Inbox**: `/root/obsidian-vault/00-INBOX/` — always use this path, never `/Inbox/`
+- `OBSIDIAN_VAULT_PATH=/root/obsidian-vault` is set in `/root/.hermes/.env`
+- Vault syncs to Dell automatically via Syncthing — do not manually copy files
+
+---
+
 ## Active Cron Jobs
 
 | Schedule | Script | Delivery |
