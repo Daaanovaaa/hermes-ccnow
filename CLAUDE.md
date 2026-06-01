@@ -134,6 +134,16 @@ hermes-ccnow/
 
 ---
 
+## CCN Voice Corpus
+
+- **Path**: `/root/hermes-ccnow/voice-corpus/`
+- 14 ministry transcripts embedded in ChromaDB; model: `nomic-embed-text` via Ollama
+- Use for: social posts, emails, brand content written in Carlos's voice
+- `embed.py` rebuilds `corpus.db` from the `raw_text/` folder
+- **Never run `wayback_crawler.py`** — permanently disabled (domain hijacked)
+
+---
+
 ## Environment Variables
 
 All secrets live in `/root/.hermes/.env` — never in this repo.
