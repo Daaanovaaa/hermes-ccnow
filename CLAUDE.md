@@ -128,6 +128,11 @@ hermes-ccnow/
 │   ├── SIMULATION.md                  → How to add modules + run sims
 │   └── modules/                       → One .sim.py per Hermes module
 │
+├── voice-corpus/                      ← Carlos's voice embeddings (ChromaDB)
+│   ├── embed.py                       → Rebuilds corpus.db from raw_text/
+│   ├── corpus.db                      → ChromaDB; 14 ministry transcripts
+│   └── raw_text/                      → Source transcripts (plain text)
+│
 └── docs/
     └── hetzner_cleanup_report.md      → VPS cleanup log (pending review)
 ```
