@@ -1,0 +1,201 @@
+<svg width="100%" viewBox="0 0 680 1180" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Conscious Culture NOW! — System Architecture</title>
+<desc>Full stack diagram: VPS, Hermes, Paperclip, Cloudflare Pages, NVIDIA, departments, shared brain, content pipeline, finance, and domains</desc>
+<defs>
+  <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+    <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </marker>
+</defs>
+
+<!-- TITLE -->
+<text font-family="sans-serif" font-weight="500" font-size="15" fill="#1a1a1a" x="340" y="28" text-anchor="middle">Conscious Culture NOW! — System Map</text>
+<text font-family="sans-serif" font-size="12" fill="#666" x="340" y="46" text-anchor="middle">June 2026 · Carlos M.C. DaNova · Board Authority</text>
+
+<!-- LAYER 1: Public Internet -->
+<rect x="30" y="60" width="620" height="56" rx="12" fill="#f1efe8" stroke="#888780" stroke-width="0.5"/>
+<text font-family="sans-serif" font-weight="500" font-size="14" fill="#444441" x="50" y="82">Public Internet</text>
+<text font-family="sans-serif" font-size="12" fill="#5f5e5a" x="50" y="98">faaaith.org (GoDaddy DNS) · paperclip.faaaith.org · postiz.faaaith.org · hermes.faaaith.org</text>
+
+<!-- LAYER 2: Cloudflare Pages -->
+<rect x="30" y="132" width="300" height="72" rx="10" fill="#e1f5ee" stroke="#0f6e56" stroke-width="0.5"/>
+<text font-family="sans-serif" font-weight="500" font-size="14" fill="#085041" x="180" y="158" text-anchor="middle">Cloudflare Pages (free)</text>
+<text font-family="sans-serif" font-size="12" fill="#0f6e56" x="180" y="175" text-anchor="middle">faaaith.org · B.E.T.A. subdomain</text>
+<text font-family="sans-serif" font-size="12" fill="#0f6e56" x="180" y="190" text-anchor="middle">Unlimited bandwidth · 500 builds/mo</text>
+
+<!-- LAYER 2: NVIDIA NIM -->
+<rect x="350" y="132" width="300" height="72" rx="10" fill="#eaf3de" stroke="#3b6d11" stroke-width="0.5"/>
+<text font-family="sans-serif" font-weight="500" font-size="14" fill="#27500a" x="500" y="158" text-anchor="middle">NVIDIA NIM (cloud)</text>
+<text font-family="sans-serif" font-size="12" fill="#3b6d11" x="500" y="175" text-anchor="middle">Nemotron · 262K ctx · free tier</text>
+<text font-family="sans-serif" font-size="12" fill="#3b6d11" x="500" y="190" text-anchor="middle">Run-anywhere · rate-limited</text>
+
+<!-- Arrows from internet to layer 2 -->
+<line x1="180" y1="116" x2="180" y2="130" stroke="#888" stroke-width="1" marker-end="url(#arrow)"/>
+<line x1="500" y1="116" x2="500" y2="130" stroke="#888" stroke-width="1" marker-end="url(#arrow)"/>
+
+<!-- LAYER 3: Hetzner VPS -->
+<rect x="30" y="222" width="620" height="44" rx="10" fill="#e6f1fb" stroke="#185fa5" stroke-width="0.5"/>
+<text font-family="sans-serif" font-weight="500" font-size="14" fill="#0c447c" x="340" y="240" text-anchor="middle">Hetzner VPS · ubuntu-8gb-hil-1 · 8GB RAM · Ubuntu 24.04</text>
+<text font-family="sans-serif" font-size="12" fill="#185fa5" x="340" y="257" text-anchor="middle">IP: 5.78.214.131 · GitHub: github.com/Daaanovaaa/hermes-ccnow · CLAUDE.md briefing</text>
+
+<!-- Arrow to VPS -->
+<line x1="340" y1="204" x2="340" y2="220" stroke="#888" stroke-width="1" marker-end="url(#arrow)"/>
+
+<!-- LAYER 4: Hermes -->
+<rect x="30" y="283" width="290" height="80" rx="10" fill="#eeedfe" stroke="#534ab7" stroke-width="0.5"/>
+<text font-family="sans-serif" font-weight="500" font-size="14" fill="#3c3489" x="175" y="306" text-anchor="middle">Hermes Agent (Nous Research)</text>
+<text font-family="sans-serif" font-size="12" fill="#534ab7" x="175" y="322" text-anchor="middle">Self-improving · skill creation</text>
+<text font-family="sans-serif" font-size="12" fill="#534ab7" x="175" y="338" text-anchor="middle">MCP: GitHub + Plaid + Postiz</text>
+<text font-family="sans-serif" font-size="12" fill="#534ab7" x="175" y="353" text-anchor="middle">Telegram gateway · cron jobs · Omi</text>
+
+<!-- LAYER 4: Paperclip -->
+<rect x="360" y="283" width="290" height="80" rx="10" fill="#faece7" stroke="#993c1d" stroke-width="0.5"/>
+<text font-family="sans-serif" font-weight="500" font-size="14" fill="#712b13" x="505" y="306" text-anchor="middle">Paperclip (MIT open source)</text>
+<text font-family="sans-serif" font-size="12" fill="#993c1d" x="505" y="322" text-anchor="middle">paperclip.faaaith.org</text>
+<text font-family="sans-serif" font-size="12" fill="#993c1d" x="505" y="338" text-anchor="middle">Agent org-chart · React dashboard</text>
+<text font-family="sans-serif" font-size="12" fill="#993c1d" x="505" y="353" text-anchor="middle">Node.js · PostgreSQL · Redis</text>
+
+<!-- Arrows to agents layer -->
+<line x1="175" y1="363" x2="175" y2="400" stroke="#888" stroke-width="1" marker-end="url(#arrow)"/>
+<line x1="505" y1="363" x2="505" y2="400" stroke="#888" stroke-width="1" marker-end="url(#arrow)"/>
+
+<!-- Hermes / N.O.A.H. root agent -->
+<rect x="240" y="400" width="200" height="52" rx="8" fill="#faeeda" stroke="#854f0b" stroke-width="0.5"/>
+<text font-family="sans-serif" font-weight="500" font-size="14" fill="#633806" x="340" y="422" text-anchor="middle">Hermes / N.O.A.H.</text>
+<text font-family="sans-serif" font-size="12" fill="#854f0b" x="340" y="438" text-anchor="middle">Chief Ops Agent · $60/mo budget</text>
+
+<!-- Dept agents -->
+<rect x="30" y="480" width="108" height="48" rx="8" fill="#e1f5ee" stroke="#0f6e56" stroke-width="0.5"/>
+<text font-family="sans-serif" font-weight="500" font-size="13" fill="#085041" x="84" y="500" text-anchor="middle">Ezra</text>
+<text font-family="sans-serif" font-size="11" fill="#0f6e56" x="84" y="515" text-anchor="middle">Marketing</text>
+
+<rect x="148" y="480" width="108" height="48" rx="8" fill="#e1f5ee" stroke="#0f6e56" stroke-width="0.5"/>
+<text font-family="sans-serif" font-weight="500" font-size="13" fill="#085041" x="202" y="500" text-anchor="middle">Bezaleel</text>
+<text font-family="sans-serif" font-size="11" fill="#0f6e56" x="202" y="515" text-anchor="middle">Creative</text>
+
+<rect x="266" y="480" width="108" height="48" rx="8" fill="#e1f5ee" stroke="#0f6e56" stroke-width="0.5"/>
+<text font-family="sans-serif" font-weight="500" font-size="13" fill="#085041" x="320" y="500" text-anchor="middle">Solomon</text>
+<text font-family="sans-serif" font-size="11" fill="#0f6e56" x="320" y="515" text-anchor="middle">Intelligence</text>
+
+<rect x="384" y="480" width="108" height="48" rx="8" fill="#e1f5ee" stroke="#0f6e56" stroke-width="0.5"/>
+<text font-family="sans-serif" font-weight="500" font-size="13" fill="#085041" x="438" y="500" text-anchor="middle">Barnabas</text>
+<text font-family="sans-serif" font-size="11" fill="#0f6e56" x="438" y="515" text-anchor="middle">Sales</text>
+
+<rect x="502" y="480" width="118" height="48" rx="8" fill="#e1f5ee" stroke="#0f6e56" stroke-width="0.5"/>
+<text font-family="sans-serif" font-weight="500" font-size="13" fill="#085041" x="561" y="500" text-anchor="middle">Nehemiah</text>
+<text font-family="sans-serif" font-size="11" fill="#0f6e56" x="561" y="515" text-anchor="middle">Operations</text>
+
+<!-- Connect Hermes to dept agents -->
+<line x1="340" y1="452" x2="84"  y2="478" stroke="#888" stroke-width="0.8" marker-end="url(#arrow)"/>
+<line x1="340" y1="452" x2="202" y2="478" stroke="#888" stroke-width="0.8" marker-end="url(#arrow)"/>
+<line x1="340" y1="452" x2="320" y2="478" stroke="#888" stroke-width="0.8" marker-end="url(#arrow)"/>
+<line x1="340" y1="452" x2="438" y2="478" stroke="#888" stroke-width="0.8" marker-end="url(#arrow)"/>
+<line x1="340" y1="452" x2="561" y2="478" stroke="#888" stroke-width="0.8" marker-end="url(#arrow)"/>
+
+<!-- LAYER 5: SHARED BRAIN / MEMORY BUS -->
+<rect x="30" y="548" width="620" height="14" rx="4" fill="#185fa5" opacity="0.15"/>
+<text font-family="sans-serif" font-size="10" fill="#185fa5" x="340" y="559" text-anchor="middle">── SHARED BRAIN / MEMORY BUS ──</text>
+
+<!-- Vault Dell -->
+<rect x="30" y="568" width="290" height="72" rx="10" fill="#e6f1fb" stroke="#185fa5" stroke-width="0.5"/>
+<text font-family="sans-serif" font-weight="500" font-size="13" fill="#0c447c" x="175" y="590" text-anchor="middle">NOAH-Vault · Dell (Obsidian)</text>
+<text font-family="sans-serif" font-size="11" fill="#185fa5" x="175" y="606" text-anchor="middle">C:\Users\danov\NOAH-Vault</text>
+<text font-family="sans-serif" font-size="11" fill="#185fa5" x="175" y="620" text-anchor="middle">FRONT-OFFICE · BACK-OFFICE · 08-DEVOPS</text>
+<text font-family="sans-serif" font-size="11" fill="#185fa5" x="175" y="634" text-anchor="middle">Filesystem connector · Claude Desktop access</text>
+
+<!-- Syncthing arrow bidirectional -->
+<line x1="322" y1="604" x2="356" y2="604" stroke="#185fa5" stroke-width="1.5" marker-end="url(#arrow)"/>
+<line x1="356" y1="614" x2="322" y2="614" stroke="#185fa5" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text font-family="sans-serif" font-size="10" fill="#185fa5" x="339" y="600" text-anchor="middle">Sync</text>
+
+<!-- Vault VPS -->
+<rect x="358" y="568" width="292" height="72" rx="10" fill="#e6f1fb" stroke="#185fa5" stroke-width="0.5"/>
+<text font-family="sans-serif" font-weight="500" font-size="13" fill="#0c447c" x="504" y="590" text-anchor="middle">obsidian-vault · VPS</text>
+<text font-family="sans-serif" font-size="11" fill="#185fa5" x="504" y="606" text-anchor="middle">/root/obsidian-vault/</text>
+<text font-family="sans-serif" font-size="11" fill="#185fa5" x="504" y="620" text-anchor="middle">AGENTS.md · 08-DEVOPS registry</text>
+<text font-family="sans-serif" font-size="11" fill="#185fa5" x="504" y="634" text-anchor="middle">vault-watcher · 15min Telegram ping</text>
+
+<!-- Arrow from vault to Hermes -->
+<line x1="175" y1="568" x2="175" y2="530" stroke="#185fa5" stroke-width="0.8" stroke-dasharray="4,3" marker-end="url(#arrow)"/>
+<line x1="504" y1="568" x2="340" y2="452" stroke="#185fa5" stroke-width="0.8" stroke-dasharray="4,3" marker-end="url(#arrow)"/>
+
+<!-- LAYER 6: AGENT REGISTRY / CLAUDE DESKTOP -->
+<rect x="30" y="656" width="620" height="14" rx="4" fill="#534ab7" opacity="0.15"/>
+<text font-family="sans-serif" font-size="10" fill="#534ab7" x="340" y="667" text-anchor="middle">── CLAUDE DESKTOP AGENTS ──</text>
+
+<rect x="30" y="676" width="143" height="52" rx="8" fill="#eeedfe" stroke="#534ab7" stroke-width="0.5"/>
+<text font-family="sans-serif" font-weight="500" font-size="11" fill="#3c3489" x="101" y="696" text-anchor="middle">Desktop #2</text>
+<text font-family="sans-serif" font-size="10" fill="#534ab7" x="101" y="710" text-anchor="middle">Infra · System Map</text>
+<text font-family="sans-serif" font-size="10" fill="#534ab7" x="101" y="722" text-anchor="middle">Vault Design</text>
+
+<rect x="183" y="676" width="143" height="52" rx="8" fill="#eeedfe" stroke="#534ab7" stroke-width="0.5"/>
+<text font-family="sans-serif" font-weight="500" font-size="11" fill="#3c3489" x="254" y="696" text-anchor="middle">Desktop #3</text>
+<text font-family="sans-serif" font-size="10" fill="#534ab7" x="254" y="710" text-anchor="middle">Paperclip · Org-Chart</text>
+<text font-family="sans-serif" font-size="10" fill="#534ab7" x="254" y="722" text-anchor="middle">Dept Agents</text>
+
+<rect x="336" y="676" width="143" height="52" rx="8" fill="#eeedfe" stroke="#534ab7" stroke-width="0.5"/>
+<text font-family="sans-serif" font-weight="500" font-size="11" fill="#3c3489" x="407" y="696" text-anchor="middle">Desktop #4</text>
+<text font-family="sans-serif" font-size="10" fill="#534ab7" x="407" y="710" text-anchor="middle">faaaith.org · Brand</text>
+<text font-family="sans-serif" font-size="10" fill="#534ab7" x="407" y="722" text-anchor="middle">SEO · Embeds</text>
+
+<rect x="489" y="676" width="161" height="52" rx="8" fill="#eeedfe" stroke="#534ab7" stroke-width="0.5"/>
+<text font-family="sans-serif" font-weight="500" font-size="11" fill="#3c3489" x="569" y="696" text-anchor="middle">Claude Code CLI</text>
+<text font-family="sans-serif" font-size="10" fill="#534ab7" x="569" y="710" text-anchor="middle">VPS Execution</text>
+<text font-family="sans-serif" font-size="10" fill="#534ab7" x="569" y="722" text-anchor="middle">Sole GitHub Committer</text>
+
+<!-- LAYER 7: CONTENT PIPELINE -->
+<rect x="30" y="744" width="620" height="14" rx="4" fill="#854f0b" opacity="0.15"/>
+<text font-family="sans-serif" font-size="10" fill="#854f0b" x="340" y="755" text-anchor="middle">── CONTENT PIPELINE ──</text>
+
+<rect x="30" y="764" width="196" height="56" rx="8" fill="#faeeda" stroke="#854f0b" stroke-width="0.5"/>
+<text font-family="sans-serif" font-weight="500" font-size="12" fill="#633806" x="128" y="784" text-anchor="middle">Voice Corpus</text>
+<text font-family="sans-serif" font-size="10" fill="#854f0b" x="128" y="798" text-anchor="middle">14 transcripts · ChromaDB</text>
+<text font-family="sans-serif" font-size="10" fill="#854f0b" x="128" y="812" text-anchor="middle">/root/hermes-ccnow/voice-corpus/</text>
+
+<rect x="236" y="764" width="196" height="56" rx="8" fill="#faeeda" stroke="#854f0b" stroke-width="0.5"/>
+<text font-family="sans-serif" font-weight="500" font-size="12" fill="#633806" x="334" y="784" text-anchor="middle">Postiz Social</text>
+<text font-family="sans-serif" font-size="10" fill="#854f0b" x="334" y="798" text-anchor="middle">6 channels · postiz.faaaith.org</text>
+<text font-family="sans-serif" font-size="10" fill="#854f0b" x="334" y="812" text-anchor="middle">FB·IG·LinkedIn·Threads</text>
+
+<rect x="442" y="764" width="208" height="56" rx="8" fill="#faeeda" stroke="#854f0b" stroke-width="0.5"/>
+<text font-family="sans-serif" font-weight="500" font-size="12" fill="#633806" x="546" y="784" text-anchor="middle">Brand Ecosystem</text>
+<text font-family="sans-serif" font-size="10" fill="#854f0b" x="546" y="798" text-anchor="middle">CCN · Crown Town · Superposición</text>
+<text font-family="sans-serif" font-size="10" fill="#854f0b" x="546" y="812" text-anchor="middle">RACE(2)10k · La Fortaleza</text>
+
+<!-- LAYER 8: FINANCE & LIFE ADMIN -->
+<rect x="30" y="836" width="620" height="14" rx="4" fill="#0f6e56" opacity="0.15"/>
+<text font-family="sans-serif" font-size="10" fill="#0f6e56" x="340" y="847" text-anchor="middle">── FINANCE &amp; LIFE ADMIN ──</text>
+
+<rect x="30" y="856" width="196" height="56" rx="8" fill="#e1f5ee" stroke="#0f6e56" stroke-width="0.5"/>
+<text font-family="sans-serif" font-weight="500" font-size="12" fill="#085041" x="128" y="876" text-anchor="middle">Budget System</text>
+<text font-family="sans-serif" font-size="10" fill="#0f6e56" x="128" y="890" text-anchor="middle">Actual Budget · SSH tunnel</text>
+<text font-family="sans-serif" font-size="10" fill="#0f6e56" x="128" y="904" text-anchor="middle">Dave Ramsey envelope · Plaid sync</text>
+
+<rect x="236" y="856" width="196" height="56" rx="8" fill="#e1f5ee" stroke="#0f6e56" stroke-width="0.5"/>
+<text font-family="sans-serif" font-weight="500" font-size="12" fill="#085041" x="334" y="876" text-anchor="middle">Prayer Finance</text>
+<text font-family="sans-serif" font-size="10" fill="#0f6e56" x="334" y="890" text-anchor="middle">Weekly IPO research · Fidelity</text>
+<text font-family="sans-serif" font-size="10" fill="#0f6e56" x="334" y="904" text-anchor="middle">Fri ping → Sat buy → Sun journal</text>
+
+<rect x="442" y="856" width="208" height="56" rx="8" fill="#e1f5ee" stroke="#0f6e56" stroke-width="0.5"/>
+<text font-family="sans-serif" font-weight="500" font-size="12" fill="#085041" x="546" y="876" text-anchor="middle">Life Admin</text>
+<text font-family="sans-serif" font-size="10" fill="#0f6e56" x="546" y="890" text-anchor="middle">3 Gmail · 7K Contacts CRM</text>
+<text font-family="sans-serif" font-size="10" fill="#0f6e56" x="546" y="904" text-anchor="middle">Doc vault · Correspondence alerts</text>
+
+<!-- Flagship project -->
+<rect x="30" y="928" width="620" height="52" rx="10" fill="#faeeda" stroke="#854f0b" stroke-width="0.5"/>
+<text font-family="sans-serif" font-weight="500" font-size="14" fill="#633806" x="340" y="950" text-anchor="middle">El Pabellón de la Victoria (North Star)</text>
+<text font-family="sans-serif" font-size="12" fill="#854f0b" x="340" y="966" text-anchor="middle">Carr 2 Km 162.8, Hormigueros PR · abandoned church → events/culture/business hub</text>
+
+<!-- Board governance -->
+<rect x="30" y="996" width="620" height="52" rx="10" fill="#eeedfe" stroke="#534ab7" stroke-width="0.5"/>
+<text font-family="sans-serif" font-weight="500" font-size="14" fill="#3c3489" x="340" y="1018" text-anchor="middle">Board Authority — Carlos M.C. DaNova</text>
+<text font-family="sans-serif" font-size="12" fill="#534ab7" x="340" y="1034" text-anchor="middle">dominalo.con.cristo@gmail.com · Spend &gt;$20 / publish / theological → Board approval</text>
+
+<!-- Philosophy strip -->
+<rect x="30" y="1064" width="620" height="44" rx="8" fill="#f1efe8" stroke="#888780" stroke-width="0.5"/>
+<text font-family="sans-serif" font-size="12" fill="#5f5e5a" x="340" y="1081" text-anchor="middle">HOLY GHOST = CEO · Debt-free (Dave Ramsey) · Prayer is the firewall</text>
+<text font-family="sans-serif" font-size="12" fill="#5f5e5a" x="340" y="1097" text-anchor="middle">StoryBrand · Start With Why · Art of War · Sell with a Story · "For JESUS, for profit."</text>
+
+<!-- Version -->
+<text font-family="sans-serif" font-size="10" fill="#aaa" x="340" y="1170" text-anchor="middle">v2.0 · 2026-06-02 · Architect: Claude Desktop #2 · Committer: Claude Code CLI</text>
+
+</svg>
