@@ -1,0 +1,66 @@
+---
+source: Official - February 2026 La Fortaleza Magazine PR - Issue 12
+language: EN
+chunk: 3
+date_processed: 20260601
+words: 1171
+source_url: https://heyzine.com/flip-book/20e4065aea.html
+---
+
+● Intake & alignment ○ Quick call or brief to clarify goals, audience, timelines, budget, and deliverables. ○ This keeps us from over-building or under-scoping and makes sure we’re solving the right problem from day one.
+
+●If the core story or positioning is fuzzy, it’s usually a strategy/branding problem, not a motion or layout problem. In that case, we’ll push to clarify the message and structure before we worry about visuals.
+
+● Scope, structure, and pricing ○ We map out what’s actually needed (concept, edit-only, motion package, branding, AI help, etc.) and propose a lean scope, timeline, and cost. ○ The focus is on senior execution without extra layers, so clients know exactly what they’re getting and when.
+
+●If the idea is strong but the execution feels dated or inconsistent, we lean into motion, design, and cleanup— things like refreshed type, tighter pacing, better hierarchy, and stronger color and finishing.
+
+● Build: creative and systems ○For video and motion: treatments, visual approach, animatics, and motion systems; for branding: identity, typography, color, and key applications; for AI/strategy: content systems and workflows. ○ This front-loads decision-making so production and post move quickly with fewer revisions.
+
+● If we’re fighting the underlying system (incoherent brand, broken layouts, assets that can’t scale), that’s a signal it’s time for a rebuild or new visual system instead of more revisions on a shaky base. Because the team is senior-led, those calls get made quickly—usually in an early working session where we review what exists, what’s working, and what’s getting in the way. The goal is always the same:
+
+● Execute: production and post ○ Editing, animation, motion graphics, VFX/compositing, color, sound, and any design or deck work are handled by senior talent, not passed down a ladder. ○ Direct communication and tight feedback loops keep things moving without the usual agency drag.
+
+choose the smallest move that will actually make the work clearer, faster, and more effective, instead of piling on pretty extras that don’t fix the core problem.
+
+● Refine and finalize ○ We run focused review rounds with clear options instead of endless versions, adjust based on real feedback, and lock picture/creative. ○ The aim is work that looks more expensive than it was, shipped without drama.
+
+● Delivery and rollout support ○ Final masters are delivered in the formats clients actually need (broadcast, social, web, internal), along with any supporting assets or documentation. ○ When needed, we help plug the work into broader campaigns or systems so it performs, not just looks good in a deck.
+
+The short version: pricing isn’t about making things mysterious—it’s about matching the level of craft, complexity, and revision room to what the project actually needs, so you get work that performs without paying for a bunch of unnecessary theater. Scalability is someone rarely offered in big box agencies, it’s more of an old- school “all or nothing” approach that just doesn’t work in today’s economy and margins.
+
+The Valuation / Labor & Logic
+
+3.Many clients don’t understand why design tasks are
+
+priced differently. Could you humbly explain how factors like time, complexity, motion, and revisions influence the cost of a project?
+
+Most of the cost comes down to how many smart, focused hours it actually takes to make something look great, work correctly, and survive real-world use. The tricky part is that not all “design tasks” are created equal, even if they sound similar on paper. Here’s how different factors quietly move the price up or down:
+
+The Pragmatic Path / Need & Nuance
+
+4.How do you help clients prioritize their budget when
+
+they can’t afford everything they want but still need a professional result?
+
+The short answer is: start with impact, then work backward into the “nice-to-haves.” The goal is to make the work look expensive even when the budget isn’t, without wasting money on things the audience will never notice. Here’s how that usually plays out:
+
+Time and depth of thinking ● A simple layout tweak with clear direction might be an hour or two. A net-new concept, visual language, or motion system takes more time up front—exploring options, pressure-testing ideas, and making sure it all scales. You’re not just paying for execution; you’re paying for faster, better decisions that avoid three rounds of rework later.
+
+●Clarify the one non-negotiable outcome First, we get aligned on what “a win” looks like: is this about selling, explaining, or simply not embarrassing the brand in front of a key audience. That helps separate essential work (things that affect performance) from optional polish (things that are just cool to have).
+
+● Complexity and number of pieces One hero asset is very different from a full set of deliverables. A single: 30 edit is one thing; a master plus multiple cutdowns, aspect ratios, language versions, and platform-specific tweaks is another. Every variation adds choices, exports, checks, and QA—which all take real time.
+
+● Prioritize foundation over volume If the budget is tight, we’d rather make one or two hero pieces truly strong than spread the money across a big list of mediocre assets. That might mean one great master video plus a small set of smart cutdowns instead of a dozen half-baked variations.
+
+● Motion vs. static Motion almost always costs more than static because there are more layers to manage: timing, pacing, transitions, animation curves, easing, sound sync, and platform specs. A logo on a slide is simple; that same logo animated in 3D with type, particles, and sound design is a much bigger lift.
+
+● Choose the right level of craft Not every project needs full 3D, heavy VFX, or a ground-up rebrand. Sometimes sharp editing, better pacing, stronger typography, and solid color/finishing get you 80% of the way there for a fraction of the cost. We’ll flag where high- end craft will actually move the needle and where “clean and clear” is enough.
+
+● VFX, 3D, and polish level Cleanup, compositing, color workflows, and 3D all add technical complexity. The more “invisible” the polish (tracking, cleanup, beauty work, subtle comps), the more time and expertise it takes. That’s often what makes something feel “broadcast-ready” instead of “good enough.”
+
+● Use systems to stretch the budget When it makes sense, we build simple motion or design systems that can be reused—templates, graphic packages, social versions—so the initial investment keeps paying off across future content. That’s especially useful for agencies, startups, and teams that need to produce a lot without growing headcount.
+
+● Revision approach A project with one or two tight review rounds is priced very differently than one with open-ended feedback and multiple stakeholders. If feedback is focused and decisions are fast, costs stay lean. If the brief drifts or direction keeps changing, time and budget follow.
+
+● Be honest about tradeoffs We’re upfront about what fits and what doesn’t. If the wish list and budget don’t match, we’ll lay out a phased approach: what to do now, what can wait, and what to skip entirely. The point is to protect the result, not just the scope.

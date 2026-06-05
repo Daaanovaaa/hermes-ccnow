@@ -1,6 +1,6 @@
 {
   "_instructions": "Update due_date fields when you receive a renewal notice. Format: YYYY-MM-DD. Leave as YYYY-MM-DD if the date is not yet known \u2014 the tracker will skip unknown dates safely.",
-  "last_updated": "2026-05-26",
+  "last_updated": "2026-05-31",
   "obligations": [
     {
       "id": "section8_recertification",
@@ -151,7 +151,9 @@
         7,
         1
       ],
-      "alert_sent": {},
+      "alert_sent": {
+        "30": "2026-05-31"
+      },
       "status": "OPEN \u2014 overdue, also verify 2024 return was filed"
     },
     {

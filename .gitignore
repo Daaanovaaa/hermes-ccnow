@@ -3,6 +3,10 @@
 # Everything below stays OFF GitHub. No exceptions.
 # ============================================================
 
+# --- Browser / yt-dlp cookies (contain session tokens) ---
+cookies_*.txt
+*.cookies.txt
+
 # --- Credentials & API keys (never commit these) ---
 .env
 *.env
