@@ -1,12 +1,12 @@
 # Hermes Dashboard
-*Last sync: 2026-06-22 at 10 PM AST*
+*Last sync: 2026-06-23 at 10 PM AST*
 
 ---
 
 ## 💰 Budget Status
-- Fifth Third: $27.30
-- Banco Popular: $5.59
-- **Total: $32.89**
+- Fifth Third: $0.00
+- Banco Popular: $0.00
+- **Total: $0.00**
 
 → [[budget_overview|Full Budget Details]]
 
